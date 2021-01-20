@@ -149,7 +149,6 @@ const Theme = ({ props_themes,seoPage,list_store }) => {
               </Breadcrumb>
             </div>
           </div>
-          <MenuToolBar list_store={list_store} sortData={sortData}/>
           <div className="container index-container mt-5">
             <div className="row list-items favorite-themes">
               {
