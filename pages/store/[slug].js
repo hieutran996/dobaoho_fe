@@ -8,7 +8,6 @@ import Layout from "../../components/layout"
 import ImageLazy from 'next/image'
 //ant
 import { Spin,Skeleton,Breadcrumb } from 'antd'
-import MenuToolBar from '../../common/layout/MenuToolBar'
 
 const limit = 8
 
@@ -37,7 +36,6 @@ const Theme = ({ props_themes,seoPage,list_store }) => {
                 </Breadcrumb>
               </div>
             </div>
-            <MenuToolBar list_store={list_store} />
           </div>
         </div>
       </Layout>

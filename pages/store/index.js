@@ -8,7 +8,6 @@ import Seo from "../../components/seo"
 import ImageLazy from 'next/image'
 //animation
 import Zoom from 'react-reveal/Zoom';
-import MenuToolBar from '../../common/layout/MenuToolBar'
 import { Carousel } from 'antd';
 
 
@@ -90,7 +89,6 @@ const Store = ({ list_store }) => {
             </div>
           </div>
         </div>
-        <MenuToolBar list_store={list_store} />
         <div className="favorite-themes">
           <div className="container">
             <h2>Top giao diện web</h2>
