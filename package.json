@@ -1,0 +1,46 @@
+{
+  "name": "strapi-starter-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "develop": "next dev",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT"
+  },
+  "dependencies": {
+    "@tanem/react-nprogress": "^3.0.50",
+    "antd": "^4.9.3",
+    "axios": "^0.21.1",
+    "moment": "^2.24.0",
+    "next": "^10.0.0",
+    "nodemailer": "^6.4.16",
+    "qs": "^6.9.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-markdown": "^4.2.2",
+    "react-moment": "^0.9.6",
+    "react-reveal": "^1.2.2",
+    "react-spring": "^8.0.27",
+    "recoil": "^0.1.2"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.10",
+    "@types/react": "^16.14.2",
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "eslint": "6.x",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "4.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "2.x",
+    "prettier": "^2.1.2",
+    "typescript": "^4.1.2"
+  }
+}

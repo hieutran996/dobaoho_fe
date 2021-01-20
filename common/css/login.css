@@ -1,0 +1,14 @@
+.login_parent {
+    height: 100%;
+    display: flex;
+}
+.login-form {
+    min-width: 300px;
+    margin: auto;
+}
+.login-form-forgot {
+    float: right;
+}
+.login-form-button {
+    width: 100%;
+}
