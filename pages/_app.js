@@ -5,8 +5,11 @@ import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
 
-import '../common/css/main.css'
+import '../common/css/bootstrap_css.css'
+import '../common/css/index.css'
 import '../common/css/login.css'
+import '../common/css/site.css'
+import '../common/css/style_dbh.css'
 //recoil
 import {
   RecoilRoot
@@ -17,7 +20,6 @@ import { BackTop } from 'antd';
 import Loading from '../components/loading/index'
 //layout
 import Header from '../common/layout/Header'
-import Menubar from '../common/layout/Menu'
 import ImageLazy from 'next/image'
 
 
@@ -90,11 +92,11 @@ const MyApp = ({ Component, pageProps }) => {
       <Loading isRouteChanging={state.isRouteChanging} key={state.loadingKey} />
       <Head>
         <meta charSet="utf-8" />
-        <title>Thiết kế web chuyên nghiệp HT</title>
+        <title>Quần Áo Bảo Hộ Lao Động, Găng Tay Bảo Hộ, Giày Ủng Bảo Hộ, Kính Bảo Hộ, Mũ Kính Bảo Hộ Lao Động. Trang Thiết Bị Bảo Hộ Lao Động Các Loại Tại Bảo</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="shortcut icon" href={getStrapiMedia(global.favicon)} />
-        <meta property="og:url" content="https://hieutran.website/" />
+        <meta property="og:url" content="https://dobaoho.store/" />
         <meta property="og:type" content="website" />
         <meta property="fb:app_id" content="752469465517671" />
         <link
@@ -103,14 +105,7 @@ const MyApp = ({ Component, pageProps }) => {
         />
       </Head>
       <GlobalContext.Provider value={global}>
-        {
-          router.pathname.split('/')[1] !== 'demo' && router.pathname.split('/')[1] !== 'admin'
-          &&
-          <>
-            <Header />
-            <Menubar />
-          </>
-        }
+        <Header />
         <Component {...pageProps} />
       </GlobalContext.Provider>
       <BackTop>

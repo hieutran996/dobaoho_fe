@@ -16,546 +16,1470 @@ const Home = ({ stores, homepage,themes }) => {
   return (
     <Layout>
       <Seo seo={homepage.seo} />
-      <div id="wrapper" className="clearfix">
-        <div className="ld-sellatwebsite">
-          <div className="banner">
-            <div className="container mb-5">
-              <div className="row">
-                <div className="col-xl-5 col-12 block-content">
-                  <Fade top cascade>
-                    <div>
-                      <h1>
-                        Thiết kế website bán hàng{' '}
-                        <br className="d-none d-md-block" />
-                        chuyên nghiệp
-                      </h1>
-                      <p className="font-light">
-                        Tăng doanh thu bán hàng online với trang web bán hàng
-                        <br className="d-none d-md-block" />
-                        được lập chuẩn SEO, bắt mắt
-                      </p>
-                      <Link href="/contact">
-                        <a className="btn-registration">
-                          <Flip left cascade>
-                            Liên hệ sử dụng
-                          </Flip>
-                        </a>                      
-                      </Link>
-                    </div>
-                  </Fade>
-                </div>
-                <div className="col-xl-7 d-none d-xl-block block-img">
-                  <div className="ladi-group mt-5">
-                    <Flip  top>
-                      <div id="IMAGE22" className="ladi-element ladi-animation">
-                        <div className="ladi-image">
-                          <div className="ladi-image-background" />
-                        </div>
-                      </div>
-                    </Flip >
-                    <Fade top>
-                      <div id="IMAGE25" className="ladi-element ladi-animation">
-                        <div className="ladi-image">
-                          <div className="ladi-image-background" />
-                        </div>
-                      </div>
-                    </Fade>
-                    <Fade top>
-                      <div id="IMAGE26" className="ladi-element ladi-animation">
-                        <div className="ladi-image">
-                          <div className="ladi-image-background" />
-                        </div>
-                      </div>
-                    </Fade>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="scroll-down">
-              <i className="ti-arrow-down" aria-hidden="true" />
-            </div>
+      <div className="page-body">
+        <section className="awe-section-1">	
+          <div id="magik-slideshow" className="magik-slideshow slick-initialized slick-slider">
+            <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '1680px', transform: 'translate3d(0px, 0px, 0px)'}}><div className="items slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide00" style={{width: '1680px'}}>
+                  <a href="#" tabIndex={0}>
+                    <picture>
+                      <source media="(min-width: 1200px)" srcSet="images/slide-img1_1.jpg" />
+                      <source media="(min-width: 992px)" srcSet="images/slide-img1_1.jpg" />
+                      <source media="(min-width: 569px)" srcSet="images/slide-img1_1.jpg" />
+                      <source media="(min-width: 480px)" srcSet="images/slide-img1.jpg" />
+                      <img src="images/slide-img1.jpg" alt="ND Tool" />
+                    </picture>
+                  </a>
+                </div></div></div>
           </div>
-          <div className="benefit text-left ">
+        </section>
+        <section className="awe-section-2">	
+          <section className="section_banner">
             <div className="container">
               <div className="row">
-                <div className="col-lg-6 col-12 block-left">
-                  <Fade left cascade duration={700}>
-                    <div>
-                      <h2>
-                        4 lợi ích không thể phủ nhận{' '}
-                        <br className="d-none d-lg-block" />
-                        với chủ shop &amp; doanh nghiệp
-                      </h2>
-                      <div className="imageLazyBenefit img-desktop d-none d-lg-block">
-                        <ImageLazy
-                          src='/images/loi-ich-cua-thiet-ke-web-ban-hang.png'
-                          alt="Lợi ích của thiết kế website bán hàng"
-                          layout='fill'
-                        />
-                      </div>
-                    </div>
-                  </Fade>
-                </div>
-                <div className="col-lg-6 col-12 block-right">
-                  <Fade right cascade duration={700}>
-                    <div className="row">
-                      <div className="col-lg-6 col-12">
-                        <div className="d-none d-lg-block">
-                          <ImageLazy
-                            src='/images/benefit-icon-1.png'
-                            alt="Tiếp cận 61% người mua hàng trên website"
-                            layout='fixed'
-                            width={70}
-                            height={70}
-                          />
-                        </div>
-                        <h3>
-                          Tiếp cận 61% người mua{' '}
-                          <br className="d-none d-lg-block" />
-                          hàng trên website
-                        </h3>
-                        <p>
-                          Mặc dù xu hướng mua hàng trên sàn TMĐT, mạng xã hội
-                          ngày càng cao, nhất là Facebook, Shopee và Lazada,
-                          nhưng khách hàng vẫn tin tưởng lựa chọn website là nơi
-                          mua sắm uy tín
-                        </p>
-                      </div>
-                      <div className="col-lg-6 col-12">
-                        <div className="d-none d-lg-block">
-                          <ImageLazy
-                            src='/images/benefit-icon-2.png'
-                            alt="Tăng hiệu quả hoạt động quảng cáo"
-                            layout='fixed'
-                            width={70}
-                            height={70}
-                          />
-                        </div>         
-                        <h3>
-                          Tăng hiệu quả hoạt động{' '}
-                          <br className="d-none d-lg-block" />
-                          quảng cáo
-                        </h3>
-                        <p>
-                          Nhờ tính ổn định và bảo mật, mọi hoạt động quảng cáo
-                          trực tuyến đều lấy website làm trung tâm. Thiết kế
-                          website chuyên nghiệp sẽ làm tăng hiệu quả SEO và
-                          chuyển đổi quảng cáo
-                        </p>
-                      </div>
-                      <div className="col-lg-6 col-12">
-                        <div className="d-none d-lg-block">
-                          <ImageLazy
-                            src='/images/benefit-icon-3.png'
-                            alt="Xây dựng được uy tín và thương hiệu"
-                            layout='fixed'
-                            width={70}
-                            height={70}
-                          />
-                        </div>
-                        <h3>
-                          Xây dựng được uy tín và{' '}
-                          <br className="d-none d-lg-block" />
-                          thương hiệu
-                        </h3>
-                        <p>
-                          Tạo website bán hàng với giao diện chuyên nghiệp và
-                          đẹp mắt, hỗ trợ mua sắm online tiện lợi sẽ khiến cho
-                          khách hàng yêu quý, tin tưởng hơn vào sản phẩm và
-                          thương hiệu của bạn
-                        </p>
-                      </div>
-                      <div className="col-lg-6 col-12">
-                        <div className="d-none d-lg-block">
-                          <ImageLazy
-                            src='/images/benefit-icon-4.png'
-                            alt="Hỗ trợ Chăm sóc khách hàng 24/7"
-                            layout='fixed'
-                            width={70}
-                            height={70}
-                          />
-                        </div>
-                        <h3>
-                          Hỗ trợ Chăm sóc khách hàng{' '}
-                          <br className="d-none d-lg-block" />
-                          24/7
-                        </h3>
-                        <p>
-                          Khách hàng có thể xem và đặt hàng bất cứ lúc nào trong
-                          ngày, và bạn có thể tư vấn cho khách hàng 24/7 ngay
-                          trên website. Từ đó, doanh thu của bạn sẽ tăng lên
-                          nhanh chóng
-                        </p>
-                      </div>
-                    </div>
-                  </Fade>
-                </div>
-                <Fade left>
-                  <div className="block-img" style={{width: '100%'}}>
-                    <div className="d-block d-lg-none fade show">
-                      <ImageLazy
-                        src='/images/loi-ich-cua-thiet-ke-web-ban-hang.png'
-                        alt="Lợi ích của thiết kế website bán hàng"
-                        layout='responsive'
-                        width=""
-                        height=""
-                      />
-                    </div>
+                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 banner-1">
+                  <div className="banner">
+                    <a href="#" title="ND Cơ Khí">
+                      <img className="img-responsive lazyload loaded" src="images/img_banner_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner_1.jpg?1610636210110" alt="ND Cơ Khí" data-was-processed="true" />
+                    </a>
                   </div>
-                </Fade>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 banner-2">
+                  <div className="banner">
+                    <a href="#" title="ND Cơ Khí">
+                      <img className="img-responsive lazyload loaded" src="images/img_banner_2.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner_2.jpg?1610636210110" alt="ND Cơ Khí" data-was-processed="true" />
+                    </a>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 banner-3">
+                  <div className="banner">
+                    <a href="#" title="ND Cơ Khí">
+                      <img className="img-responsive lazyload loaded" src="images/img_banner_3.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner_3.jpg?1610636210110" alt="ND Cơ Khí" data-was-processed="true" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="supported">
-            <div className="container">
-              <Fade left>
-                <h2>HT Web giúp bạn thiết kế website chuyên nghiệp</h2>
-              </Fade>
-              <Fade right>
-                <p>
-                  Không cần biết thiết kế hay lập trình bạn vẫn có thể tạo{' '}
-                  <br className="d-none d-lg-block" />
-                  website bán hàng với nhiều tiện ích hiện đại
-                </p>
-              </Fade>
-
-              <div className="row">
-                <div className="col-lg-6 col-12">
-                  <div className="item-line active">
-                    <Fade left cascade duration={700}>
-                      <div>
-                        <h3>
-                          400+ giao diện Responsive đẹp mắt
-                        </h3>
-                        <p>Giao diện web của HT Web được đầu tư thiết kế tỉ mỉ và đa dạng, sẵn
-                          sàng đáp ứng nhu cầu làm trang web bán hàng cho hơn 30
-                          ngành nghề khác nhau. Đặc biệt, tất cả giao diện này
-                          đều được ứng dụng công nghệ Responsive nên có thể hiển
-                          thị tối ưu trên mọi thiết bị. Dù cho khách hàng của
-                          bạn online bằng thiết bị gì, máy tính, máy tính bảng
-                          hay điện thoại di động thì website đều hiển thị đẹp
-                          mắt
-                        </p>
-                      </div>
-                    </Fade>
-                  </div>
-                  <Fade bottom cascade duration={700}>
-                    <div>
-                      <div className="item-line">
-                        <h4 data-id=".data-2">
-                          Bảo mật tuyệt đối website với chứng chỉ SSL{' '}
-                        </h4>
-                      </div>
-                      <div className="item-line">
-                        <h4 data-id=".data-4">
-                          Tích hợp báo cáo Google Analytics trên quản trị
-                          website{' '}
-                        </h4>
-                      </div>
-                      <div>
-                        
-                        <Link href="/contact">
-                          <a className="btn-registration">
-                            Liên hệ sử dụng
-                          </a>                      
-                        </Link>
-                      </div>
-                    </div>
-                  </Fade>
-                </div>
-                <Fade right>
-                  <div className="col-lg-6 col-12 block-image d-none d-lg-block" style={{zIndex: 1}}>
-                    <div className="active data-1">
-                      <ImageLazy
-                        src='/images/thiet-ke-website-chuyen-nghiep-1.png'
-                        alt="Lập website bán hàng"
-                        layout='fill'
-                      />
-                    </div>
-                  </div>
-                </Fade>
-              </div>
-              <div className="scroll-down">
-                <i className="ti-arrow-down" aria-hidden="true" />
-              </div>
-            </div>
-          </div>
-          <div className="seo-ads text-center">
+          </section>
+        </section>
+        <section className="awe-section-3">	
+          <section className="section_deal_hot_product">
             <div className="container">
               <div className="row">
-                <div className="col-lg-6 col-12 block-img">
-                  <Fade left cascade duration={700}>
-                    <div>
-                      <p>
-                        Làm sao để có đến hàng trăm đơn hàng{' '}
-                        <br className="d-none d-lg-block" />
-                        mỗi ngày từ website?
-                      </p>
-                      <h2>
-                        HT Web giúp tối ưu hiệu{' '}
-                        <br className="d-none d-lg-block" />
-                        quả SEO và quảng cáo
-                      </h2>
-                      <div className="d-none d-lg-block seo_lazyload"> 
-                        <ImageLazy
-                          src='/images/thiet-ke-web-chuan-seo.png'
-                          alt="Thiết kế website chuẩn SEO"
-                          layout='fixed'
-                          width={584}
-                          height={521}
-                        />
-                      </div>  
-                    </div>
-                  </Fade>
-                </div>
-                <div className="col-lg-6 col-12 block-content">
-                  <Fade right cascade duration={700}>
-                    <div>
-                      <div className="line-item">
-                        <h3>Hỗ trợ tối ưu cho SEO</h3>
-                        <p>
-                          Với dịch vụ thiết kế web chuyên nghiệp của HT Web,
-                          không cần phải là một chuyên gia SEO bạn vẫn có thể
-                          đưa website của mình lên top 1 Google. HT Web giúp bạn
-                          thiết kế web chuẩn SEO với cấu trúc website đã được
-                          tối ưu thân thiện với công cụ tìm kiếmwebsite đã được
-                          tối ưu thân thiện với công cụ tìm kiếm. Ngoài ra, bạn
-                          có thể tùy chỉnh thẻ tiêu đề (Title), mô tả (Meta
-                          Description) và URL trong website, thêm thẻ alt của
-                          hình ảnh
-                        </p>
-                      </div>
-                      <div className="line-item">
-                        <h4>Tăng hiệu quả quảng cáo</h4>
-                        <p>
-                          Bên cạnh việc hỗ trợ quảng bá web tự nhiên thông qua
-                          SEO, tạo web bán hàng với HT Web còn mang đến cho bạn
-                          một trang đích tuyệt vời nhằm phát huy tốt nhất hiệu
-                          quả quảng cáo trả phí như Google Adwords hay Facebook
-                          Ads. Phương pháp này giúp website ngay lập tức tiếp
-                          cận đến khách hàng tiềm năng, đồng thời hỗ trợ để các
-                          chiến dịch quảng bá tự nhiên hiệu quả hơn
-                        </p>
-                      </div>
-                      <div className="line-item">
-                        <h4>Hỗ trợ quảng cáo mua sắm Google Shopping</h4>
-                        <p>
-                          Quảng cáo Google Shopping đang ngày càng khẳng định vị
-                          thế với tỉ lệ click vào quảng cáo cao hơn 35% hình
-                          thức quảng cáo thông thường. Với HT web, bạn có thể
-                          đồng bộ sản phẩm trên website với Google Merchant
-                          Center một cách nhanh chóng, đồng thời xem toàn bộ báo
-                          cáo ngay trên trang quản trị HT Web mà không cần đăng
-                          nhập vào hệ thống báo cáo phức tạp của Google
-                        </p>
-                      </div>
-                    </div>
-                  </Fade>
-                </div>
-                <Fade left>
-                  <div className="block-img">
-                    <div className="d-block d-lg-none fade show">
-                      <ImageLazy
-                        src='/images/thiet-ke-web-chuan-seo.png'
-                        alt="Thiết kế website chuẩn SEO"
-                        layout='responsive'
-                        width=""
-                        height=""
-                      />
-                    </div>
-                  </div>
-                </Fade>
-              </div>
-            </div>
-          </div>
-          <div className="technology text-center">
-            <div className="container">
-              <Flip left cascade>
-                <div>
-                  <p>Với công nghệ vượt trội và tính năng khác biệt</p>
-                  <h2>
-                    Thiết kế website bán hàng HT Web{' '}
-                    <br className="d-none d-lg-block" />
-                    giúp bán hàng 24/7
+                <div className="col-lg-4 col-md-4 col-xs-12 col-sm-12 deal_hot">
+                  <h2 className="section_title">
+                    <a href="san-pham-khuyen-mai" title="Khuyến mãi">
+                      Khuyến mãi
+                    </a>
                   </h2>
+                  <div className="section_content">
+                    <div className="slick_deal_hot slick-initialized slick-slider">
+                      <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '740px', transform: 'translate3d(0px, 0px, 0px)'}}><div className="item slick-slide slick-current slick-active" style={{width: '370px'}} data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide10">
+                            <div className="col-item">
+                              <div className="sale-label sale-top-right"><span>- 
+                                  10% 
+                                </span></div>
+                              <div className="product-thumb">
+                                <a href="/may-khoan-pin-18v-dewalt-dcd796m2-1" className="thumb" title="Máy khoan pin 18V Dewalt DCD796M2" tabIndex={0}>
+                                  <img className="lazyload loaded" src="images/sp1-7a859f40-6a62-4602-884a-2c273e115b8e.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp1-7a859f40-6a62-4602-884a-2c273e115b8e.jpg?v=1603967160000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </a>
+                                <div className="actions hidden-xs hidden-sm">
+                                  <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564843" encType="multipart/form-data">
+                                    <input type="hidden" name="variantId" defaultValue={37690000} tabIndex={0} />
+                                    <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" tabIndex={0}>
+                                      Thêm vào giỏ hàng
+                                    </button>
+                                  </form>       
+                                </div>
+                              </div>
+                              <div className="clockdiv" data-countdown="2021/12/12" style={{display: 'block !important'}}><div className="date-time time-day"><span className="days"><b>325</b><small>Ngày</small></span></div><span className="clocks" /><div className="date-time time-hour"><span className="hours "><b>08</b><small>Giờ</small></span></div><span className="clocks" /><div className="date-time time-min"><span className="minutes "><b>32</b><small>Phút</small></span></div><span className="clocks" /><div className="date-time time-sec"><span className="seconds"><b>06</b><small>Giây</small></span></div></div>
+                              <div className="product-info">
+                                <div className="product_type" />
+                                <h3 className="title"> <a href="/may-khoan-pin-18v-dewalt-dcd796m2-1" title="Máy khoan pin 18V Dewalt DCD796M2" tabIndex={0}>Máy khoan pin 18V Dewalt DCD796M2 </a> </h3>
+                                <div className="content">
+                                  <div className="item-price">    
+                                    <div className="price-box"> 
+                                      <span className="special-price"> 
+                                        4.900.000₫
+                                      </span>
+                                      <span className="old-price"> 
+                                        5.450.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="thumbs-list">
+                                <div className="thumbs-list-item active">
+                                  <img className="lazyload loaded" src="images/sp1-7a859f40-6a62-4602-884a-2c273e115b8e_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-7a859f40-6a62-4602-884a-2c273e115b8e.jpg?v=1603967160000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-7a859f40-6a62-4602-884a-2c273e115b8e.jpg?v=1603967160000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </div>
+                                <div className="thumbs-list-item ">
+                                  <img className="lazyload loaded" src="images/sp1-2-d30ac025-471e-4755-ba5a-a14a537fe335.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-2-d30ac025-471e-4755-ba5a-a14a537fe335.jpg?v=1603967161000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-2-d30ac025-471e-4755-ba5a-a14a537fe335.jpg?v=1603967161000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </div>
+                                <div className="thumbs-list-item ">
+                                  <img className="lazyload loaded" src="images/sp1-3-01685be1-3f4d-4d2b-8121-db8928eb1c42.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-3-01685be1-3f4d-4d2b-8121-db8928eb1c42.jpg?v=1603967161000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-3-01685be1-3f4d-4d2b-8121-db8928eb1c42.jpg?v=1603967161000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </div>
+                                <div className="thumbs-list-item ">
+                                  <img className="lazyload loaded" src="images/sp1-4-3c7d7bba-ba8e-4f15-8608-5410c9b30892.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-4-3c7d7bba-ba8e-4f15-8608-5410c9b30892.jpg?v=1603967162000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-4-3c7d7bba-ba8e-4f15-8608-5410c9b30892.jpg?v=1603967162000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </div>
+                              </div>
+                            </div>
+                          </div><div className="item slick-slide slick-active" style={{width: '370px'}} data-slick-index={1} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide11">
+                            <div className="col-item">
+                              <div className="product-thumb">
+                                <a href="/may-khoan-pin-18v-dewalt-dcd796m2" className="thumb" title="Máy khoan pin 18V Dewalt DCD796M2" tabIndex={0}>
+                                  <img className="lazyload loaded" src="images/sp1_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp1.jpg?v=1603966959000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </a>
+                                <div className="actions hidden-xs hidden-sm">
+                                  <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564815" encType="multipart/form-data">
+                                    <input type="hidden" name="variantId" defaultValue={37689793} tabIndex={0} />
+                                    <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" tabIndex={0}>
+                                      Thêm vào giỏ hàng
+                                    </button>
+                                  </form>       
+                                </div>
+                              </div>
+                              <div className="clockdiv" data-countdown="2021/12/12" style={{display: 'block !important'}}><div className="date-time time-day"><span className="days"><b>325</b><small>Ngày</small></span></div><span className="clocks" /><div className="date-time time-hour"><span className="hours "><b>08</b><small>Giờ</small></span></div><span className="clocks" /><div className="date-time time-min"><span className="minutes "><b>32</b><small>Phút</small></span></div><span className="clocks" /><div className="date-time time-sec"><span className="seconds"><b>06</b><small>Giây</small></span></div></div>
+                              <div className="product-info">
+                                <div className="product_type" />
+                                <h3 className="title"> <a href="/may-khoan-pin-18v-dewalt-dcd796m2" title="Máy khoan pin 18V Dewalt DCD796M2" tabIndex={0}>Máy khoan pin 18V Dewalt DCD796M2 </a> </h3>
+                                <div className="content">
+                                  <div className="item-price">    
+                                    <div className="price-box"> 
+                                      <span className="special-price">4.920.000₫</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="thumbs-list">
+                                <div className="thumbs-list-item active">
+                                  <img className="lazyload loaded" src="images/sp1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1.jpg?v=1603966959000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1.jpg?v=1603966959000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </div>
+                                <div className="thumbs-list-item ">
+                                  <img className="lazyload loaded" src="images/sp1-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-2.jpg?v=1603966960000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-2.jpg?v=1603966960000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </div>
+                                <div className="thumbs-list-item ">
+                                  <img className="lazyload loaded" src="images/sp1-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-3.jpg?v=1603966961000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-3.jpg?v=1603966961000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </div>
+                                <div className="thumbs-list-item ">
+                                  <img className="lazyload loaded" src="images/sp1-4.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-4.jpg?v=1603966961000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-4.jpg?v=1603966961000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                </div>
+                              </div>
+                            </div>
+                          </div></div></div></div>
+                  </div>
                 </div>
-              </Flip>
-
-              <div className="row">
-                <div className="col-lg-7 col-12 block-content">
-                  <Fade left cascade duration={700}>
-                    <div>
-                      <div className="line-item">
-                        <h3>Tích hợp phần mềm chatlive</h3>
-                        <p>
-                          Mọi thắc mắc của khách hàng sẽ được trả lời nhanh
-                          chóng, không những giúp bạn ghi điểm trong mắt khách
-                          hàng mà còn tăng khả năng chốt đơn hàng. Tạo website
-                          bán hàng HT Web đã được tích hợp sẵn sàng với các phần
-                          mềm live chat hàng đầu như Zopim, Subiz..., giúp chủ
-                          cửa hàng chat với khách hàng ngay trên website bất cứ
-                          khi nào
-                        </p>
+                <div className="col-lg-8 col-md-8 col-xs-12 col-sm-12 product_nb">
+                  <div className="box-title">
+                    <h2 className="section_title">
+                      <a href="san-pham-noi-bat" title="Bán chạy">
+                        Bán chạy
+                      </a>
+                    </h2>
+                    <ul className="link_list hidden-xs">
+                      <li><a className="ef" href="/" title="Trang chủ">Trang chủ</a></li>
+                      <li><a className="ef" href="/gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
+                      <li><a className="ef" href="/collections/all" title="Sản phẩm">Sản phẩm</a></li>
+                      <li><a className="ef" href="/tin-tuc" title="Tin tức">Tin tức</a></li>
+                    </ul>
+                  </div>
+                  <div className="section_content">
+                    <div className="row">
+                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/bua-khoan-soi-thuy-tinh-3-lb" className="thumb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">
+                              <img className="lazyload loaded" src="images/25_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/25.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
+                            </a>
+                            <div className="actions hidden-xs hidden-sm">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568520" encType="multipart/form-data">
+                                <input type="hidden" name="variantId" defaultValue={37701058} />
+                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                  Thêm vào giỏ hàng
+                                </button>
+                              </form>       
+                            </div>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/bua-khoan-soi-thuy-tinh-3-lb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">BÚA KHOAN SỢI THỦY TINH 3 LB. </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price">10.499.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="thumbs-list">
+                            <div className="thumbs-list-item active">
+                              <img className="lazyload loaded" src="images/25.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/25.jpg?v=1604029328000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/25.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/25-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/25-2.jpg?v=1604029328000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/25-2.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/25-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/25-3.jpg?v=1604029331000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/25-3.jpg?v=1604029331000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="line-item">
-                        <h4>Quy trình đặt hàng tự động</h4>
-                        <p>
-                          Khách hàng của bạn có thể tiến hành đặt hàng trên web
-                          bất cứ khi nào. Bởi vậy, lập trang web bán hàng với
-                          quy trình đặt hàng hoàn toàn tự động sẽ giúp họ sở hữu
-                          món đồ ưa thích chỉ sau một vài thao tác đơn giản mà
-                          không cần phải tốn thời gian gọi điện hay nhắn tin cho
-                          chủ shop
-                        </p>
+                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">
+                              <img className="lazyload loaded" src="images/24_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/24.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
+                            </a>
+                            <div className="actions hidden-xs hidden-sm">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568517" encType="multipart/form-data">
+                                <input type="hidden" name="variantId" defaultValue={37701054} />
+                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                  Thêm vào giỏ hàng
+                                </button>
+                              </form>       
+                            </div>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price">11.000.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="thumbs-list">
+                            <div className="thumbs-list-item active">
+                              <img className="lazyload loaded" src="images/24.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/24.jpg?v=1604029308000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/24.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/24-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/24-2.jpg?v=1604029308000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/24-2.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="line-item">
-                        <h4>
-                          Tăng tỉ lệ hoàn thành đơn hàng với Abandoned Checkout
-                        </h4>
-                        <p>
-                          Với tính năng Abandoned Checkout, HT Web sẽ giúp bạn
-                          thu thập thông tin khách hàng ngay cả khi họ chưa hoàn
-                          tất đơn hàng. Từ những thông tin này bạn có thể gửi
-                          email marketing, coupons khuyến mại ...để "thúc giục"
-                          khách hàng hoàn tất đơn đặt hàng
-                        </p>
+                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" className="thumb" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">
+                              <img className="lazyload loaded" src="images/23_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/23.jpg?v=1604029278000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
+                            </a>
+                            <div className="actions hidden-xs hidden-sm">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568513" encType="multipart/form-data">
+                              </form>       
+                            </div>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="thumbs-list">
+                            <div className="thumbs-list-item active">
+                              <img className="lazyload loaded" src="images/23.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/23.jpg?v=1604029278000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/23.jpg?v=1604029278000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/23-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/23-2.jpg?v=1604029279000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/23-2.jpg?v=1604029279000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/23-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/23-3.jpg?v=1604029280000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/23-3.jpg?v=1604029280000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <Link href="/contact">
-                          <a className="btn-registration">
-                            Liên hệ sử dụng
-                          </a>                      
-                        </Link>
+                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/bo-cuon-phan-6-1" className="thumb" title="BỘ CUỘN PHẤN 6:1">
+                              <img className="lazyload loaded" src="images/22_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/22.jpg?v=1604029251000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
+                            </a>
+                            <div className="actions hidden-xs hidden-sm">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568509" encType="multipart/form-data">
+                              </form>       
+                            </div>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/bo-cuon-phan-6-1" title="BỘ CUỘN PHẤN 6:1">BỘ CUỘN PHẤN 6:1 </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="thumbs-list">
+                            <div className="thumbs-list-item active">
+                              <img className="lazyload loaded" src="images/22.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/22.jpg?v=1604029251000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/22.jpg?v=1604029251000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/22-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/22-2.jpg?v=1604029252000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/22-2.jpg?v=1604029252000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/sung-bam-ghim-bang-soi-carbon" className="thumb" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">
+                              <img className="lazyload loaded" src="images/21_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/21.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
+                            </a>
+                            <div className="actions hidden-xs hidden-sm">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568505" encType="multipart/form-data">
+                              </form>       
+                            </div>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/sung-bam-ghim-bang-soi-carbon" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">SÚNG BẤM GHIM BẰNG SỢI CARBON </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="thumbs-list">
+                            <div className="thumbs-list-item active">
+                              <img className="lazyload loaded" src="images/21.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/21.jpg?v=1604029219000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/21.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/21-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/21-2.jpg?v=1604029219000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/21-2.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/21-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/21-3.jpg?v=1604029220000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/21-3.jpg?v=1604029220000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">
+                              <img className="lazyload loaded" src="images/20.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                            </a>
+                            <div className="actions hidden-xs hidden-sm">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
+                                <input type="hidden" name="variantId" defaultValue={37700810} />
+                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                  Thêm vào giỏ hàng
+                                </button>
+                              </form>       
+                            </div>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX * </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price">15.000.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="thumbs-list">
+                            <div className="thumbs-list-item active">
+                              <img className="lazyload loaded" src="images/20_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20.jpg?v=1604028085000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/20-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20-2.jpg?v=1604028086000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20-2.jpg?v=1604028086000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/20-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20-3.jpg?v=1604028086000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20-3.jpg?v=1604028086000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/may-suoi-canh-quat-khong-day-cuong-buc-20v-max-70-000-btu" className="thumb" title="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU">
+                              <img className="lazyload loaded" src="images/19_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/19.jpg?v=1604028014000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
+                            </a>
+                            <div className="actions hidden-xs hidden-sm">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568359" encType="multipart/form-data">
+                              </form>       
+                            </div>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/may-suoi-canh-quat-khong-day-cuong-buc-20v-max-70-000-btu" title="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU">MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="thumbs-list">
+                            <div className="thumbs-list-item active">
+                              <img className="lazyload loaded" src="images/19.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/19.jpg?v=1604028014000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/19.jpg?v=1604028014000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/19-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/19-2.jpg?v=1604028016000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/19-2.jpg?v=1604028016000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/flexvolt-20v-60v-max-12-0-ah-pin" className="thumb" title="FLEXVOLT 20V / 60V MAX 12.0 AH PIN">
+                              <img className="lazyload loaded" src="images/18_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/18.jpg?v=1604027973000" alt="FLEXVOLT 20V / 60V MAX 12.0 AH PIN" data-was-processed="true" />
+                            </a>
+                            <div className="actions hidden-xs hidden-sm">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568356" encType="multipart/form-data">
+                              </form>       
+                            </div>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/flexvolt-20v-60v-max-12-0-ah-pin" title="FLEXVOLT 20V / 60V MAX 12.0 AH PIN">FLEXVOLT 20V / 60V MAX 12.0 AH PIN </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="thumbs-list">
+                            <div className="thumbs-list-item active">
+                              <img className="lazyload loaded" src="images/18.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/18.jpg?v=1604027973000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/18.jpg?v=1604027973000" alt="FLEXVOLT 20V / 60V MAX 12.0 AH PIN" data-was-processed="true" />
+                            </div>
+                            <div className="thumbs-list-item ">
+                              <img className="lazyload loaded" src="images/18-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/18-2.jpg?v=1604027975000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/18-2.jpg?v=1604027975000" alt="FLEXVOLT 20V / 60V MAX 12.0 AH PIN" data-was-processed="true" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </Fade>
-                </div>
-                <div className="col-lg-5 col-12 block-img">
-                  <Fade right>
-                    <ImageLazy
-                      src='/images/tao-website-ban-hang.png'
-                      alt="Tạo website bán hàng"
-                      layout='responsive'
-                      width={543}
-                      height={708}
-                    />
-                  </Fade>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="optimize text-center">
-            <div className="container">
-              <div className="scroll-down">
-                <i className="ti-arrow-down" aria-hidden="true" />
-              </div>
-              <Flip bottom cascade>
-                <div>
-                  <p className="otp-link">Bạn đang kinh doanh lĩnh vực nào?</p>
-                  <h2>HT Web mang đến giải pháp dành riêng cho bạn</h2>
-                </div>
-              </Flip>
-
-              <div className="list_category">
-                <Zoom top cascade duration={900}>
-                  <div className="row">
-                    {
-                      stores.map((value,index) => {
-                        return(
-                          <div className="col-lg-2" key={index}>
-                            <Link as={`/store/${value.slug}`} href="/store/[id]">
-                              <a rel="nofollow">
-                                <ImageLazy
-                                  src={getStrapiMedia(value.image_store)}
-                                  alt={value.name}
-                                  layout='fill'
-                                  style={{
-                                    borderRadius: "30%",
-                                    height: 100,
-                                    width: 100,
-                                    marginBottom: 10
-                                  }}
-                                />
-                                <span>{value.name}</span>
-                              </a>
-                            </Link>
-                          </div>
-                        )
-                      })
-                    }
                   </div>
-                </Zoom>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="top-refer-website sellatweb text-center">
-            <div className="container form_example_theme">
-              <LightSpeed left>
-                <h2>Các mẫu website đẹp do HT web cung cấp</h2>
-              </LightSpeed>
-              <div className="slide-referwebsite">
-                <div className="swiper-container swiper-container-horizontal">
-                    <Flip left cascade>
-                        <div className="row">
-                          {
-                            themes.themes.map((value,index) => {
-                              return(
-                                <div className="swiper-slide swiper-slide-active col-md-6 col-lg-4 col-12" key={index}>
-                                  <div className="item">
-                                    <div className="website-item">
-                                      <div className="item-infomation">
-                                        <div className="item-thumbnail">
-                                          <Link as={`/demo/${value.slug}`} href="/demo/[id]">
-                                            <a
-                                              rel="nofollow"
-                                              title={value.name}
-                                            >
-                                              <div className="item-img">
-                                                <ImageLazy
-                                                  src={getStrapiMedia(value.image)}
-                                                  alt={value.name}
-                                                  layout='responsive'
-                                                  width={584}
-                                                  height={650}
-                                                />
-                                              </div>
-                                            </a>
-                                          </Link>
-                                        </div>
-                                      </div>
-                                      <div className="website-name">
-                                        <Link as={`/demo/${value.slug}`} href="/demo/[id]">
-                                          <a rel="nofollow" title={value.name}>
-                                            Xem thử
-                                          </a>
-                                        </Link>
+          </section>
+        </section>
+        <section className="awe-section-4">	
+          <section className="section_category">
+            <div className="container">
+              <div className="text-center">
+                <h2 className="section_title_2">
+                  Danh mục sản phẩm
+                </h2>
+              </div>
+              <div className="section_content">
+                <div className="row">
+                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div className="block-item">
+                      <div className="block-image">
+                        <a href="#" title="Dụng cụ điện">
+                          <img className="img-responsive lazyload loaded" src="images/image_cat_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_1.jpg?1610636210110" alt="Dụng cụ điện" data-was-processed="true" />
+                        </a>
+                      </div>
+                      <div className="block-content">
+                        <h3>
+                          <a href="#" title="Dụng cụ điện">
+                            Dụng cụ điện
+                          </a>
+                        </h3>
+                        <div className="menu-cat">
+                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
+                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
+                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
+                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
+                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
+                        </div>
+                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div className="block-item">
+                      <div className="block-image">
+                        <a href="#" title="Dụng cụ cầm tay">
+                          <img className="img-responsive lazyload loaded" src="images/image_cat_2.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_2.jpg?1610636210110" alt="Dụng cụ cầm tay" data-was-processed="true" />
+                        </a>
+                      </div>
+                      <div className="block-content">
+                        <h3>
+                          <a href="#" title="Dụng cụ cầm tay">
+                            Dụng cụ cầm tay
+                          </a>
+                        </h3>
+                        <div className="menu-cat">
+                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
+                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
+                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
+                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
+                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
+                        </div>
+                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div className="block-item">
+                      <div className="block-image">
+                        <a href="#" title="Phụ kiện">
+                          <img className="img-responsive lazyload loaded" src="images/image_cat_3.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_3.jpg?1610636210110" alt="Phụ kiện" data-was-processed="true" />
+                        </a>
+                      </div>
+                      <div className="block-content">
+                        <h3>
+                          <a href="#" title="Phụ kiện">
+                            Phụ kiện
+                          </a>
+                        </h3>
+                        <div className="menu-cat">
+                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
+                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
+                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
+                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
+                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
+                        </div>
+                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div className="block-item">
+                      <div className="block-image">
+                        <a href="#" title="Thiết bị ngoài trời">
+                          <img className="img-responsive lazyload loaded" src="images/image_cat_4.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_4.jpg?1610636210110" alt="Thiết bị ngoài trời" data-was-processed="true" />
+                        </a>
+                      </div>
+                      <div className="block-content">
+                        <h3>
+                          <a href="#" title="Thiết bị ngoài trời">
+                            Thiết bị ngoài trời
+                          </a>
+                        </h3>
+                        <div className="menu-cat">
+                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
+                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
+                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
+                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
+                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
+                        </div>
+                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div className="block-item">
+                      <div className="block-image">
+                        <a href="#" title="Công cụ máy móc">
+                          <img className="img-responsive lazyload loaded" src="images/image_cat_5.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_5.jpg?1610636210110" alt="Công cụ máy móc" data-was-processed="true" />
+                        </a>
+                      </div>
+                      <div className="block-content">
+                        <h3>
+                          <a href="#" title="Công cụ máy móc">
+                            Công cụ máy móc
+                          </a>
+                        </h3>
+                        <div className="menu-cat">
+                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
+                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
+                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
+                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
+                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
+                        </div>
+                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div className="block-item">
+                      <div className="block-image">
+                        <a href="#" title="Đồ bảo hộ">
+                          <img className="img-responsive lazyload loaded" src="images/image_cat_6.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_6.jpg?1610636210110" alt="Đồ bảo hộ" data-was-processed="true" />
+                        </a>
+                      </div>
+                      <div className="block-content">
+                        <h3>
+                          <a href="#" title="Đồ bảo hộ">
+                            Đồ bảo hộ
+                          </a>
+                        </h3>
+                        <div className="menu-cat">
+                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
+                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
+                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
+                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
+                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
+                        </div>
+                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section className="awe-section-5">	
+          <div className="section_tab_san_pham">
+            <div className="container">
+              <div className="bg">
+                <h2 className="section_title">Nổi bật trong tuần</h2>
+                <div className="e-tabs not-dqtab ajax-tab-2" data-section="ajax-tab-2" data-view="grid_4">
+                  <div className="content">
+                    <span className="hidden-md hidden-lg button_show_tab">
+                      <span className="icon-bar" />
+                      <span className="icon-bar" />
+                      <span className="icon-bar" />
+                    </span>
+                    <div className="row">
+                      <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <ul className="tabs tabs-title tab-desktop ajax clearfix evo-close">
+                          <li className="tab-link has-content current" data-tab="tab-1" data-url="/dung-cu-dien">
+                            <span title="Dụng cụ điện">
+                              <img className="img-responsive lazyload loaded" src="images/screwdriver.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/screwdriver.png?v=1604029430450" alt="Dụng cụ điện" data-was-processed="true" />
+                              <span className="link_title">Dụng cụ điện</span>
+                            </span>
+                          </li>
+                          <li className="tab-link " data-tab="tab-2" data-url="/dung-cu-cam-tay">
+                            <span title="Dụng cụ cầm tay">
+                              <img className="img-responsive lazyload loaded" src="images/hand-tool.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/hand-tool.png?v=1604029667243" alt="Dụng cụ cầm tay" data-was-processed="true" />
+                              <span className="link_title">Dụng cụ cầm tay</span>
+                            </span>
+                          </li>
+                          <li className="tab-link " data-tab="tab-3" data-url="/phu-kien">
+                            <span title="Phụ kiện">
+                              <img className="img-responsive lazyload loaded" src="images/pliers-hand-tool-outline.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/pliers-hand-tool-outline.png?v=1604030004387" alt="Phụ kiện" data-was-processed="true" />
+                              <span className="link_title">Phụ kiện</span>
+                            </span>
+                          </li>
+                          <li className="tab-link " data-tab="tab-4" data-url="/ngoai-troi">
+                            <span title="Ngoài trời">
+                              <img className="img-responsive lazyload loaded" src="images/lawn-mower.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/lawn-mower.png?v=1604030105093" alt="Ngoài trời" data-was-processed="true" />
+                              <span className="link_title">Ngoài trời</span>
+                            </span>
+                          </li>
+                          <li className="tab-link " data-tab="tab-5" data-url="/do-bao-ho">
+                            <span title="Đồ bảo hộ">
+                              <img className="img-responsive lazyload loaded" src="images/worker.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/worker.png?v=1604030308643" alt="Đồ bảo hộ" data-was-processed="true" />
+                              <span className="link_title">Đồ bảo hộ</span>
+                            </span>
+                          </li>
+                          <li className="tab-link " data-tab="tab-6" data-url="/oc-vit">
+                            <span title="Ốc vít">
+                              <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bizweb.dktcdn.net/100/408/894/collections/screw.png?v=1604030672857" alt="Ốc vít" />
+                              <span className="link_title">Ốc vít</span>
+                            </span>
+                          </li>
+                          <li className="tab-link " data-tab="tab-7" data-url="/co-khi-neo">
+                            <span title="Cơ khí neo">
+                              <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bizweb.dktcdn.net/100/408/894/collections/car-parts.png?v=1604030694580" alt="Cơ khí neo" />
+                              <span className="link_title">Cơ khí neo</span>
+                            </span>
+                          </li>
+                          <li className="tab-link " data-tab="tab-8" data-url="/cua-tay">
+                            <span title="Cưa tay">
+                              <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bizweb.dktcdn.net/100/408/894/collections/saw-blade-10d180f5-38f6-4b33-9e65-3680f7b7746f.png?v=1604029713940" alt="Cưa tay" />
+                              <span className="link_title">Cưa tay</span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div className="tab-1 tab-content current">
+                          <div className="row">
+                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">
+                                    <img className="lazyload loaded" src="images/20.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                                  </a>
+                                  <div className="actions hidden-xs hidden-sm">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
+                                      <input type="hidden" name="variantId" defaultValue={37700810} />
+                                      <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                        Thêm vào giỏ hàng
+                                      </button>
+                                    </form>       
+                                  </div>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX * </a> </h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price">15.000.000₫</span>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              )
-                            })
-                          }
+                                <div className="thumbs-list">
+                                  <div className="thumbs-list-item active">
+                                    <img className="lazyload loaded" src="images/20_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20.jpg?v=1604028085000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/20-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20-2.jpg?v=1604028086000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20-2.jpg?v=1604028086000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/20-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20-3.jpg?v=1604028086000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20-3.jpg?v=1604028086000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <a href="/may-suoi-canh-quat-khong-day-cuong-buc-20v-max-70-000-btu" className="thumb" title="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU">
+                                    <img className="lazyload loaded" src="images/19_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/19.jpg?v=1604028014000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
+                                  </a>
+                                  <div className="actions hidden-xs hidden-sm">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568359" encType="multipart/form-data">
+                                    </form>       
+                                  </div>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"> <a href="/may-suoi-canh-quat-khong-day-cuong-buc-20v-max-70-000-btu" title="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU">MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU </a> </h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price"> 
+                                          Liên hệ
+                                        </span> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="thumbs-list">
+                                  <div className="thumbs-list-item active">
+                                    <img className="lazyload loaded" src="images/19.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/19.jpg?v=1604028014000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/19.jpg?v=1604028014000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/19-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/19-2.jpg?v=1604028016000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/19-2.jpg?v=1604028016000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <a href="/may-cat-gach-da-op-muler-m089" className="thumb" title="Máy Cắt Gạch - Đá Ốp MULER M089">
+                                    <img className="lazyload loaded" src="images/15.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/15.jpg?v=1604026094000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
+                                  </a>
+                                  <div className="actions hidden-xs hidden-sm">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19567995" encType="multipart/form-data">
+                                    </form>       
+                                  </div>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"> <a href="/may-cat-gach-da-op-muler-m089" title="Máy Cắt Gạch - Đá Ốp MULER M089">Máy Cắt Gạch - Đá Ốp MULER M089 </a> </h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price"> 
+                                          Liên hệ
+                                        </span> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="thumbs-list">
+                                  <div className="thumbs-list-item active">
+                                    <img className="lazyload loaded" src="images/15_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/15.jpg?v=1604026094000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/15.jpg?v=1604026094000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/15-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/15-2.jpg?v=1604026095000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/15-2.jpg?v=1604026095000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/15-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/15-3.jpg?v=1604026095000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/15-3.jpg?v=1604026095000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/15-4.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/15-4.jpg?v=1604026095000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/15-4.jpg?v=1604026095000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <a href="/may-cat-co-cam-tay-gardena-09856-20" className="thumb" title="Máy cắt cỏ cầm tay gardena 09856-20">
+                                    <img className="lazyload loaded" src="images/14_1.png" data-src="https://bizweb.dktcdn.net/100/408/894/products/14.png?v=1604026062000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
+                                  </a>
+                                  <div className="actions hidden-xs hidden-sm">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19567992" encType="multipart/form-data">
+                                    </form>       
+                                  </div>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"> <a href="/may-cat-co-cam-tay-gardena-09856-20" title="Máy cắt cỏ cầm tay gardena 09856-20">Máy cắt cỏ cầm tay gardena 09856-20 </a> </h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price"> 
+                                          Liên hệ
+                                        </span> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="thumbs-list">
+                                  <div className="thumbs-list-item active">
+                                    <img className="lazyload loaded" src="images/14.png" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/14.png?v=1604026062000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/14.png?v=1604026062000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/14-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/14-2.jpg?v=1604026063000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/14-2.jpg?v=1604026063000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/14-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/14-3.jpg?v=1604026064000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/14-3.jpg?v=1604026064000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/14-4.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/14-4.jpg?v=1604026064000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/14-4.jpg?v=1604026064000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <a href="/may-mai-cat-goc-cam-tay-hikari-master-k100b" className="thumb" title="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B">
+                                    <img className="lazyload loaded" src="images/13_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/13.jpg?v=1604026030000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
+                                  </a>
+                                  <div className="actions hidden-xs hidden-sm">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19567990" encType="multipart/form-data">
+                                    </form>       
+                                  </div>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"> <a href="/may-mai-cat-goc-cam-tay-hikari-master-k100b" title="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B">Máy Mài Cắt Góc Cầm Tay Hikari Master K100B </a> </h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price"> 
+                                          Liên hệ
+                                        </span> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="thumbs-list">
+                                  <div className="thumbs-list-item active">
+                                    <img className="lazyload loaded" src="images/13.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/13.jpg?v=1604026030000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/13.jpg?v=1604026030000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/13-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/13-2.jpg?v=1604026031000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/13-2.jpg?v=1604026031000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/13-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/13-3.jpg?v=1604026031000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/13-3.jpg?v=1604026031000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
+                                  </div>
+                                  <div className="thumbs-list-item ">
+                                    <img className="lazyload loaded" src="images/13-4.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/13-4.jpg?v=1604026031000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/13-4.jpg?v=1604026031000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <a href="/may-khoan-cam-tay-18v-dewalt-dcd785d2-b1" className="thumb" title="Máy khoan cầm tay 18V Dewalt DCD785D2-B1">
+                                    <img className="lazyload loaded" src="images/sp9.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp9.jpg?v=1603967642000" alt="Máy khoan cầm tay 18V Dewalt DCD785D2-B1" data-was-processed="true" />
+                                  </a>
+                                  <div className="actions hidden-xs hidden-sm">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564921" encType="multipart/form-data">
+                                    </form>       
+                                  </div>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"> <a href="/may-khoan-cam-tay-18v-dewalt-dcd785d2-b1" title="Máy khoan cầm tay 18V Dewalt DCD785D2-B1">Máy khoan cầm tay 18V Dewalt DCD785D2-B1 </a> </h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price"> 
+                                          Liên hệ
+                                        </span> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="thumbs-list">
+                                  <div className="thumbs-list-item active">
+                                    <img className="lazyload loaded" src="images/sp9_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp9.jpg?v=1603967642000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp9.jpg?v=1603967642000" alt="Máy khoan cầm tay 18V Dewalt DCD785D2-B1" data-was-processed="true" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <a href="/than-may-van-vit-dung-pin-18v-dewalt-dcf887n-kr" className="thumb" title="Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR">
+                                    <img className="lazyload loaded" src="images/sp8_1.png" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp8.png?v=1603967625000" alt="Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR" data-was-processed="true" />
+                                  </a>
+                                  <div className="actions hidden-xs hidden-sm">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564919" encType="multipart/form-data">
+                                    </form>       
+                                  </div>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"> <a href="/than-may-van-vit-dung-pin-18v-dewalt-dcf887n-kr" title="Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR">Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR </a> </h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price"> 
+                                          Liên hệ
+                                        </span> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="thumbs-list">
+                                  <div className="thumbs-list-item active">
+                                    <img className="lazyload loaded" src="images/sp8.png" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp8.png?v=1603967625000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp8.png?v=1603967625000" alt="Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR" data-was-processed="true" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <a href="/than-may-khoan-dong-luc-dung-pin-18v-dewalt-dcd996n-kr-khong-choi-than" className="thumb" title="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)">
+                                    <img className="lazyload loaded" src="images/sp7.png" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp7.png?v=1603967585000" alt="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)" data-was-processed="true" />
+                                  </a>
+                                  <div className="actions hidden-xs hidden-sm">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564913" encType="multipart/form-data">
+                                    </form>       
+                                  </div>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"> <a href="/than-may-khoan-dong-luc-dung-pin-18v-dewalt-dcd996n-kr-khong-choi-than" title="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)">Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than) </a> </h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price"> 
+                                          Liên hệ
+                                        </span> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="thumbs-list">
+                                  <div className="thumbs-list-item active">
+                                    <img className="lazyload loaded" src="images/sp7_1.png" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp7.png?v=1603967585000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp7.png?v=1603967585000" alt="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)" data-was-processed="true" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </Flip>
-                  
-                  <span
-                    className="swiper-notification"
-                    aria-live="assertive"
-                    aria-atomic="true"
-                  />
+                        <div className="tab-2 tab-content">
+                        </div>
+                        <div className="tab-3 tab-content">
+                        </div>
+                        <div className="tab-4 tab-content">
+                        </div>
+                        <div className="tab-5 tab-content">
+                        </div>
+                        <div className="tab-6 tab-content">
+                        </div>
+                        <div className="tab-7 tab-content">
+                        </div>
+                        <div className="tab-8 tab-content">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <Link href="/store/giao-dien-moi">
-                <a rel="nofollow" className="btn-registration">
-                  <Flip left cascade>
-                    Xem thêm giao diện
-                  </Flip>
-                </a>
-              </Link>
             </div>
           </div>
-        </div>
+        </section>
+        <section className="awe-section-6">	
+          <section className="section_why_choose">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <h2 className="section_title_2">
+                    Vì sao chọn chúng tôi?
+                  </h2>
+                  <div className="section_content">
+                    <div className="item">
+                      <div className="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 476 476" style={{enableBackground: 'new 0 0 476 476'}} xmlSpace="preserve">
+                          <g>
+                            <path d="M400.85,181v-18.3c0-43.8-15.5-84.5-43.6-114.7c-28.8-31-68.4-48-111.6-48h-15.1c-43.2,0-82.8,17-111.6,48   c-28.1,30.2-43.6,70.9-43.6,114.7V181c-34.1,2.3-61.2,30.7-61.2,65.4V275c0,36.1,29.4,65.5,65.5,65.5h36.9c6.6,0,12-5.4,12-12   V192.8c0-6.6-5.4-12-12-12h-17.2v-18.1c0-79.1,56.4-138.7,131.1-138.7h15.1c74.8,0,131.1,59.6,131.1,138.7v18.1h-17.2   c-6.6,0-12,5.4-12,12v135.6c0,6.6,5.4,12,12,12h16.8c-4.9,62.6-48,77.1-68,80.4c-5.5-16.9-21.4-29.1-40.1-29.1h-30   c-23.2,0-42.1,18.9-42.1,42.1s18.9,42.2,42.1,42.2h30.1c19.4,0,35.7-13.2,40.6-31c9.8-1.4,25.3-4.9,40.7-13.9   c21.7-12.7,47.4-38.6,50.8-90.8c34.3-2.1,61.5-30.6,61.5-65.4v-28.6C461.95,211.7,434.95,183.2,400.85,181z M104.75,316.4h-24.9   c-22.9,0-41.5-18.6-41.5-41.5v-28.6c0-22.9,18.6-41.5,41.5-41.5h24.9V316.4z M268.25,452h-30.1c-10,0-18.1-8.1-18.1-18.1   s8.1-18.1,18.1-18.1h30.1c10,0,18.1,8.1,18.1,18.1S278.25,452,268.25,452z M437.95,274.9c0,22.9-18.6,41.5-41.5,41.5h-24.9V204.8   h24.9c22.9,0,41.5,18.6,41.5,41.5V274.9z" />
+                          </g>
+                        </svg>
+                      </div>
+                      <div className="info">
+                        <h3>
+                          Hỗ trợ 24/7
+                        </h3>
+                        <div className="des">
+                          Tùy chọn tự trợ giúp có sẵn 24/7, nơi bạn có thể duyệt qua bài viết hỗ trợ của chúng tôi, hỗ trợ trò chuyện trực tuyến trực tiếp cũng hoạt động 24/7.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item">
+                      <div className="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style={{enableBackground: 'new 0 0 512 512'}} xmlSpace="preserve">
+                          <g>
+                            <g>
+                              <path d="M288.502,32.502c-108.328,0-198.827,77.485-219.166,179.899l-42.482-53.107L0,180.784l68.769,85.961    c3.352,4.178,8.338,6.447,13.427,6.447c2.596,0,5.226-0.585,7.685-1.805l103.153-51.577l-15.387-30.757l-75.8,37.892    c14.063-90.5,92.27-160.059,186.655-160.059c104.271,0,189.114,84.843,189.114,189.114s-84.843,189.114-189.114,189.114v34.384    C411.735,479.498,512,379.233,512,256S411.735,32.502,288.502,32.502z" />
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div className="info">
+                        <h3>
+                          Dễ dàng đổi trả
+                        </h3>
+                        <div className="des">
+                          Nó đã tồn tại không chỉ năm thế kỷ, mà còn là bước nhảy vọt trong lĩnh vực sắp chữ điện tử, về cơ bản vẫn không thay đổi.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item">
+                      <div className="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="479pt" viewBox="0 0 479 479.84995" width="479pt"><path d="m293.773438 195.351562-72.097657 68.097657-34.601562-35.597657c-3.835938-3.949218-10.152344-4.039062-14.097657-.203124-3.949218 3.839843-4.039062 10.152343-.203124 14.101562l41.5 42.601562c3.855468 3.878907 10.085937 4.011719 14.101562.296876l79.300781-74.796876c1.925781-1.816406 3.050781-4.324218 3.125-6.96875.074219-2.644531-.90625-5.210937-2.726562-7.132812-3.859375-4.011719-10.222657-4.1875-14.300781-.398438zm0 0" /><path d="m240.273438 90.550781c-82.398438 0-149.398438 67-149.398438 149.398438 0 82.402343 67 149.402343 149.398438 149.402343 82.402343 0 149.402343-67 149.402343-149.402343 0-82.398438-67-149.398438-149.402343-149.398438zm0 278.800781c-71.398438 0-129.398438-58.101562-129.398438-129.402343s58-129.398438 129.398438-129.398438c71.46875 0 129.402343 57.933594 129.402343 129.398438 0 71.464843-57.933593 129.402343-129.402343 129.402343zm0 0" /><path d="m445.875 184.949219 3.300781-59.300781c.230469-3.980469-1.933593-7.71875-5.5-9.5l-52.800781-26.699219-26.699219-52.800781c-1.816406-3.535157-5.53125-5.6875-9.5-5.5l-59.402343 3.203124-49.5-32.703124c-3.335938-2.199219-7.660157-2.199219-11 0l-49.5 32.703124-59.296876-3.300781c-3.984374-.234375-7.71875 1.929688-9.5 5.5l-26.703124 52.800781-52.796876 26.699219c-3.539062 1.8125-5.6875 5.527344-5.5 9.5l3.296876 59.300781-32.699219 49.5c-2.199219 3.335938-2.199219 7.660157 0 11l32.601562 49.597657-3.300781 59.300781c-.230469 3.980469 1.929688 7.71875 5.5 9.5l52.800781 26.699219 26.699219 52.800781c1.8125 3.539062 5.527344 5.6875 9.5 5.5l59.300781-3.300781 49.5 32.699219c3.316407 2.269531 7.683594 2.269531 11 0l49.5-32.699219 59.300781 3.300781c3.980469.230469 7.714844-1.933594 9.5-5.5l26.699219-52.800781 52.800781-26.699219c3.535157-1.816406 5.6875-5.527344 5.5-9.5l-3.300781-59.300781 32.699219-49.5c2.199219-3.335938 2.199219-7.664063 0-11zm-18.601562 101.800781c-1.21875 1.789062-1.785157 3.941406-1.597657 6.101562l3.097657 56.097657-49.898438 25.199219c-1.902344.953124-3.445312 2.5-4.398438 4.402343l-25.203124 49.898438-56.097657-3.097657c-2.148437-.078124-4.269531.476563-6.101562 1.597657l-46.800781 30.902343-46.796876-30.902343c-1.625-1.097657-3.539062-1.691407-5.5-1.699219h-.5l-56.101562 3.101562-25.199219-49.902343c-.953125-1.902344-2.496093-3.445313-4.402343-4.398438l-50-25.101562 3.101562-56.097657c.078125-2.148437-.480469-4.269531-1.601562-6.101562l-30.898438-46.800781 30.898438-46.800781c1.222656-1.785157 1.789062-3.941407 1.601562-6.097657l-3.101562-56.101562 49.902343-25.199219c1.902344-.953125 3.445313-2.496094 4.398438-4.398438l25.199219-49.902343 56.101562 3.101562c2.144531.074219 4.265625-.480469 6.101562-1.601562l46.796876-30.898438 46.800781 30.898438c1.789062 1.222656 3.945312 1.789062 6.101562 1.601562l56.097657-3.101562 25.203124 49.902343c.953126 1.902344 2.496094 3.445313 4.398438 4.398438l49.898438 25.199219-3.097657 56.101562c-.078125 2.144531.480469 4.265625 1.597657 6.097657l30.902343 46.800781zm0 0" /></svg>
+                      </div>
+                      <div className="info">
+                        <h3>
+                          Chất lượng cao
+                        </h3>
+                        <div className="des">
+                          Chúng tôi mong muốn tiếp tục sản xuất các sản phẩm chất lượng hàng đầu trong khi giảm tác động của chúng tôi đến môi trường.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section className="awe-section-7">	
+          <section className="section_product_two">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 one">
+                  <h2 className="section_title">
+                    <a href="san-pham-noi-bat" title="Phụ kiện">
+                      Phụ kiện
+                    </a>
+                  </h2>
+                  <div className="section_content">
+                    <div className="row">
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/bua-khoan-soi-thuy-tinh-3-lb" className="thumb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">
+                              <img className="lazyload loaded" src="images/25_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/25.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/bua-khoan-soi-thuy-tinh-3-lb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">BÚA KHOAN SỢI THỦY TINH 3 LB. </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price">10.499.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">
+                              <img className="lazyload loaded" src="images/24_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/24.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price">11.000.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" className="thumb" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">
+                              <img className="lazyload loaded" src="images/23_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/23.jpg?v=1604029278000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/bo-cuon-phan-6-1" className="thumb" title="BỘ CUỘN PHẤN 6:1">
+                              <img className="lazyload loaded" src="images/22_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/22.jpg?v=1604029251000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/bo-cuon-phan-6-1" title="BỘ CUỘN PHẤN 6:1">BỘ CUỘN PHẤN 6:1 </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/sung-bam-ghim-bang-soi-carbon" className="thumb" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">
+                              <img className="lazyload loaded" src="images/21_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/21.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/sung-bam-ghim-bang-soi-carbon" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">SÚNG BẤM GHIM BẰNG SỢI CARBON </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">
+                              <img className="lazyload loaded" src="images/20.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX * </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price">15.000.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <h2 className="section_title">
+                    <a href="san-pham-noi-bat" title="Sản phẩm khác">
+                      Sản phẩm khác
+                    </a>
+                  </h2>
+                  <div className="section_content">
+                    <div className="row">
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/bua-khoan-soi-thuy-tinh-3-lb" className="thumb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">
+                              <img className="lazyload loaded" src="images/25_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/25.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/bua-khoan-soi-thuy-tinh-3-lb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">BÚA KHOAN SỢI THỦY TINH 3 LB. </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price">10.499.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">
+                              <img className="lazyload loaded" src="images/24_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/24.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price">11.000.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" className="thumb" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">
+                              <img className="lazyload loaded" src="images/23_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/23.jpg?v=1604029278000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/bo-cuon-phan-6-1" className="thumb" title="BỘ CUỘN PHẤN 6:1">
+                              <img className="lazyload loaded" src="images/22_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/22.jpg?v=1604029251000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/bo-cuon-phan-6-1" title="BỘ CUỘN PHẤN 6:1">BỘ CUỘN PHẤN 6:1 </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/sung-bam-ghim-bang-soi-carbon" className="thumb" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">
+                              <img className="lazyload loaded" src="images/21_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/21.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/sung-bam-ghim-bang-soi-carbon" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">SÚNG BẤM GHIM BẰNG SỢI CARBON </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price"> 
+                                    Liên hệ
+                                  </span> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
+                        <div className="col-item">
+                          <div className="product-thumb">
+                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">
+                              <img className="lazyload loaded" src="images/20.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                            </a>
+                          </div>
+                          <div className="product-info">
+                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX * </a> </h3>
+                            <div className="content">
+                              <div className="item-price">    
+                                <div className="price-box"> 
+                                  <span className="special-price">15.000.000₫</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section className="awe-section-8">	
+          <section className="section_banner2">
+            <div className="container">
+              <div className="banner banner-1">
+                <a href="#" title="ND Cơ Khí">
+                  <img className="img-responsive lazyload loaded" src="images/img_banner2_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner2_1.jpg?1610636210110" alt="ND Cơ Khí" data-was-processed="true" />
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section className="awe-section-9">	
+          <section className="section_blog_danhgia">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 section-block">
+                  <h2 className="section_title">
+                    <a href="tin-tuc" title="Tin tức">
+                      Tin tức
+                    </a>
+                  </h2>
+                  <div className="section_content">
+                    <div className="slick_blog_index slick-initialized slick-slider"><button type="button" data-role="none" className="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true" style={{display: 'block'}}>Previous</button><div aria-live="polite" className="slick-list draggable" style={{height: '349px'}}><div className="slick-track" role="listbox" style={{opacity: 1, width: '1460px', transform: 'translate3d(0px, 0px, 0px)'}}><div className="slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide40" style={{width: '730px'}}><div><div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
+                                <div className="blog-img">
+                                  <a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>
+                                    <picture>
+                                      <source media="(min-width: 1200px)" srcSet="images/tin-tuc-6_1.jpg" />
+                                      <source media="(min-width: 992px)" srcSet="images/tin-tuc-6_1.jpg" />
+                                      <source media="(min-width: 569px)" srcSet="images/tin-tuc-6_1.jpg" />
+                                      <source media="(min-width: 480px)" srcSet="images/tin-tuc-6.jpg" />
+                                      <img src="images/tin-tuc-6.jpg" alt="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" />
+                                    </picture>
+                                  </a>
+                                </div>
+                                <div className="blog-content">
+                                  <h3><a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light</a> </h3>
+                                  <div className="justify des">                   TOWSON, MD (ngày 16 tháng 4 năm 2020) - DEWALT công...</div>
+                                </div>
+                              </div></div><div><div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
+                                <div className="blog-img">
+                                  <a href="/dewalt-hoi-sinh-dong-luu-tru-di-dong-voi-toughsystem-2-0" title="DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0" tabIndex={0}>
+                                    <picture>
+                                      <source media="(min-width: 1200px)" srcSet="images/tin-tuc-5_1.jpg" />
+                                      <source media="(min-width: 992px)" srcSet="images/tin-tuc-5_1.jpg" />
+                                      <source media="(min-width: 569px)" srcSet="images/tin-tuc-5_1.jpg" />
+                                      <source media="(min-width: 480px)" srcSet="images/tin-tuc-5.jpg" />
+                                      <img src="images/tin-tuc-5.jpg" alt="DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0" />
+                                    </picture>
+                                  </a>
+                                </div>
+                                <div className="blog-content">
+                                  <h3><a href="/dewalt-hoi-sinh-dong-luu-tru-di-dong-voi-toughsystem-2-0" title="DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0" tabIndex={0}>DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0</a> </h3>
+                                  <div className="justify des">                   TOWSON, MD (ngày 18 tháng 8 năm 2020) - DEWALT®, nhà...</div>
+                                </div>
+                              </div></div></div><div className="slick-slide" data-slick-index={1} aria-hidden="true" tabIndex={-1} role="option" aria-describedby="slick-slide41" style={{width: '730px'}}><div><div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
+                                <div className="blog-img">
+                                  <a href="/dewalt-cong-bo-kim-bam-hang-rao-khong-day-20v-max" title="DEWALT công bố kim bấm hàng rào không dây 20V MAX *" tabIndex={-1}>
+                                    <picture>
+                                      <source media="(min-width: 1200px)" srcSet="images/tin-tuc-4_1.jpg" />
+                                      <source media="(min-width: 992px)" srcSet="images/tin-tuc-4_1.jpg" />
+                                      <source media="(min-width: 569px)" srcSet="images/tin-tuc-4_1.jpg" />
+                                      <source media="(min-width: 480px)" srcSet="images/tin-tuc-4.jpg" />
+                                      <img src="images/tin-tuc-4.jpg" alt="DEWALT công bố kim bấm hàng rào không dây 20V MAX *" />
+                                    </picture>
+                                  </a>
+                                </div>
+                                <div className="blog-content">
+                                  <h3><a href="/dewalt-cong-bo-kim-bam-hang-rao-khong-day-20v-max" title="DEWALT công bố kim bấm hàng rào không dây 20V MAX *" tabIndex={-1}>DEWALT công bố kim bấm hàng rào không dây 20V MAX *</a> </h3>
+                                  <div className="justify des">                   TOWSON, MD (ngày 17 tháng 7 năm 2019) - DEWALT giới...</div>
+                                </div>
+                              </div></div><div /></div></div></div><button type="button" data-role="none" className="slick-next slick-arrow" aria-label="Next" role="button" style={{display: 'block'}} aria-disabled="false">Next</button></div>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 section-danhgia">
+                  <div className="bg">
+                    <div className="slick_danhgia_index slick-initialized slick-slider slick-dotted" role="toolbar">
+                      <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '2920px', transform: 'translate3d(-730px, 0px, 0px)'}}><div className="item slick-slide slick-cloned" data-slick-index={-1} aria-hidden="true" tabIndex={-1} style={{width: '730px'}}>
+                            <div className="inner">
+                              <div className="thumb">
+                                <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_2.jpg?1610636210110" alt="Toni" />
+                              </div>
+                              <div className="name">
+                                Toni
+                              </div>
+                              <div className="job">
+                                CEO ND
+                              </div>
+                              <div className="des">
+                                Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc ND Tool phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm cơ khí tốt nhất Việt Nam, tôi tin chắc điều đó.
+                              </div>
+                            </div>
+                          </div><div className="item slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide30" style={{width: '730px'}}>
+                            <div className="inner">
+                              <div className="thumb">
+                                <img className="img-responsive lazyload loaded" src="images/img_danhgia_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_1.jpg?1610636210110" alt="Nguyễn Anh Dũng" data-was-processed="true" />
+                              </div>
+                              <div className="name">
+                                Nguyễn Anh Dũng
+                              </div>
+                              <div className="job">
+                                CEO OH
+                              </div>
+                              <div className="des">
+                                Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc ND Tool phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm cơ khí tốt nhất Việt Nam, tôi tin chắc điều đó.
+                              </div>
+                            </div>
+                          </div><div className="item slick-slide" data-slick-index={1} aria-hidden="true" tabIndex={-1} role="option" aria-describedby="slick-slide31" style={{width: '730px'}}>
+                            <div className="inner">
+                              <div className="thumb">
+                                <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_2.jpg?1610636210110" alt="Toni" />
+                              </div>
+                              <div className="name">
+                                Toni
+                              </div>
+                              <div className="job">
+                                CEO ND
+                              </div>
+                              <div className="des">
+                                Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc ND Tool phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm cơ khí tốt nhất Việt Nam, tôi tin chắc điều đó.
+                              </div>
+                            </div>
+                          </div><div className="item slick-slide slick-cloned" data-slick-index={2} aria-hidden="true" tabIndex={-1} style={{width: '730px'}}>
+                            <div className="inner">
+                              <div className="thumb">
+                                <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_1.jpg?1610636210110" alt="Nguyễn Anh Dũng" />
+                              </div>
+                              <div className="name">
+                                Nguyễn Anh Dũng
+                              </div>
+                              <div className="job">
+                                CEO OH
+                              </div>
+                              <div className="des">
+                                Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc ND Tool phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm cơ khí tốt nhất Việt Nam, tôi tin chắc điều đó.
+                              </div>
+                            </div>
+                          </div></div></div>
+                      <ul className="slick-dots" style={{display: 'block'}} role="tablist"><li className="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation30" id="slick-slide30"><button type="button" data-role="none" role="button" tabIndex={0}>1</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation31" id="slick-slide31"><button type="button" data-role="none" role="button" tabIndex={0}>2</button></li></ul></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
       </div>
     </Layout>
   );
