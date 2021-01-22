@@ -19,7 +19,7 @@ const Home = ({ stores, homepage,themes }) => {
       <div className="page-body">
         <section className="awe-section-1">	
           <div id="magik-slideshow" className="magik-slideshow slick-initialized slick-slider">
-            <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '1680px', transform: 'translate3d(0px, 0px, 0px)'}}><div className="items slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide00" style={{width: '1680px'}}>
+            <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '100%', transform: 'translate3d(0px, 0px, 0px)'}}><div className="items slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide00" style={{width: '100%'}}>
                   <a href="#" tabIndex={0}>
                     <picture>
                       <source media="(min-width: 1200px)" srcSet="images/slide-img1_1.jpg" />
