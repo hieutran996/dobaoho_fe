@@ -11,6 +11,7 @@ import ImageLazy from 'next/image'
 import { fetchAPI } from "../lib/api";
 import { getStrapiMedia } from "../lib/media";
 import Link from "next/link";
+import { Carousel } from 'antd';
 
 const Home = ({ stores, homepage,themes }) => {
   return (
@@ -19,17 +20,25 @@ const Home = ({ stores, homepage,themes }) => {
       <div className="page-body">
         <section className="awe-section-1">	
           <div id="magik-slideshow" className="magik-slideshow slick-initialized slick-slider">
-            <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '100%', transform: 'translate3d(0px, 0px, 0px)'}}><div className="items slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide00" style={{width: '100%'}}>
-                  <a href="#" tabIndex={0}>
-                    <picture>
-                      <source media="(min-width: 1200px)" srcSet="images/slide-img1_1.jpg" />
-                      <source media="(min-width: 992px)" srcSet="images/slide-img1_1.jpg" />
-                      <source media="(min-width: 569px)" srcSet="images/slide-img1_1.jpg" />
-                      <source media="(min-width: 480px)" srcSet="images/slide-img1.jpg" />
-                      <img src="images/slide-img1.jpg" alt="ND Tool" />
-                    </picture>
-                  </a>
-                </div></div></div>
+            <div aria-live="polite" className="slick-list draggable">
+              <div className="slick-track" role="listbox" style={{opacity: 1, width: '100%', transform: 'translate3d(0px, 0px, 0px)', background: 'black'}}>
+                <div className="items slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide00" style={{width: '100%'}}>
+                  <Carousel autoplay autoplaySpeed={3000}>
+                    <div>
+                      <a href="#" tabIndex={0}>
+                        <picture>
+                          <source media="(min-width: 992px)" srcSet="https://dainese-cdn.thron.com/delivery/public/image/dainese/5593071b-3def-4f26-8a52-e0d68eae80c7/bzrjrq/std/768x768/1" />
+                          <source media="(min-width: 569px)" srcSet="https://dainese-cdn.thron.com/delivery/public/image/dainese/5593071b-3def-4f26-8a52-e0d68eae80c7/bzrjrq/std/768x768/1" />
+                          <source media="(min-width: 480px)" srcSet="https://dainese-cdn.thron.com/delivery/public/image/dainese/5593071b-3def-4f26-8a52-e0d68eae80c7/bzrjrq/std/768x768/1" />
+                          <img src="https://dainese-cdn.thron.com/delivery/public/image/dainese/5593071b-3def-4f26-8a52-e0d68eae80c7/bzrjrq/std/768x768/1" alt="ND Tool" />
+                        </picture>
+                      </a>
+                    </div>
+                  </Carousel>
+                  
+                </div>
+                </div>
+                </div>
           </div>
         </section>
         <section className="awe-section-2">	
