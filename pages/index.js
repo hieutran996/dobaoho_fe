@@ -13,7 +13,7 @@ import { getStrapiMedia } from "../lib/media";
 import Link from "next/link";
 import { Carousel } from 'antd';
 
-const Home = ({ stores, homepage,themes }) => {
+const Home = ({ homepage }) => {
   return (
     <Layout>
       <Seo seo={homepage.seo} />
@@ -1496,14 +1496,12 @@ const Home = ({ stores, homepage,themes }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [stores, homepage, themes] = await Promise.all([
-    fetchAPI("/stores?type_store=solution"),
-    fetchAPI("/homepage"),
-    fetchAPI("/stores?_publicationState=preview&published_at_null=true&slug=giao-dien-moi-trang-chu"),
+  const [homepage] = await Promise.all([
+    fetchAPI("/homepage")
   ]);
 
   return {
-    props: { stores , homepage, themes: themes[0] },
+    props: {homepage},
     revalidate: 1,
   };
 }
