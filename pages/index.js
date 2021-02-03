@@ -27,10 +27,10 @@ const Home = ({ homepage }) => {
                     <div>
                       <a href="#" tabIndex={0}>
                         <picture>
-                          <source media="(min-width: 992px)" srcSet="https://dainese-cdn.thron.com/delivery/public/image/dainese/5593071b-3def-4f26-8a52-e0d68eae80c7/bzrjrq/std/768x768/1" />
-                          <source media="(min-width: 569px)" srcSet="https://dainese-cdn.thron.com/delivery/public/image/dainese/5593071b-3def-4f26-8a52-e0d68eae80c7/bzrjrq/std/768x768/1" />
-                          <source media="(min-width: 480px)" srcSet="https://dainese-cdn.thron.com/delivery/public/image/dainese/5593071b-3def-4f26-8a52-e0d68eae80c7/bzrjrq/std/768x768/1" />
-                          <img src="https://dainese-cdn.thron.com/delivery/public/image/dainese/5593071b-3def-4f26-8a52-e0d68eae80c7/bzrjrq/std/768x768/1" alt="ND Tool" />
+                          <source media="(min-width: 992px)" srcSet="images/agv_helmet.jpeg" />
+                          <source media="(min-width: 569px)" srcSet="images/agv_helmet.jpeg" />
+                          <source media="(min-width: 480px)" srcSet="images/agv_helmet.jpeg" />
+                          <img src="images/agv_helmet.jpeg" alt="Agv" />
                         </picture>
                       </a>
                     </div>
