@@ -194,7 +194,7 @@ export default function Header() {
               </div>
               <div className="col-lg-2 col-md-2 col-xs-12 col-sm-12 logo">
                 <a href="/" title="Logo">
-                  <img src="images/logo.png" alt="ND Tool" />
+                  <img src={getStrapiMedia(logo)} alt="logo do bao ho" />
                 </a>
               </div>
               <div className="col-lg-5 col-md-5 hidden-xs hidden-sm topbar-login">
