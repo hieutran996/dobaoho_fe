@@ -93,7 +93,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <meta charSet="utf-8" />
         <title>Quần Áo Bảo Hộ Lao Động, Găng Tay Bảo Hộ, Giày Ủng Bảo Hộ, Kính Bảo Hộ, Mũ Kính Bảo Hộ Lao Động. Trang Thiết Bị Bảo Hộ Lao Động Các Loại Tại Bảo</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="shortcut icon" href={getStrapiMedia(global.favicon)} />
         <meta property="og:url" content="https://dobaoho.store/" />
