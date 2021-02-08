@@ -21,7 +21,7 @@ export default function Header() {
             <div className="row d-flex">
               <div className="col-lg-3 col-md-3 header-logo">
                 <a href="/" title="Logo">
-                  <img src={getStrapiMedia(logo)} alt="logo do bao ho"  style={{paddingRight: '25px'}}/>
+                  <img src={getStrapiMedia(logo[0])} alt="logo do bao ho"  style={{paddingRight: '25px'}}/>
                 </a>
               </div>
               <div className="col-lg-9 col-md-9 header-content">
@@ -213,7 +213,7 @@ export default function Header() {
               </div>
               <div className="col-lg-2 col-md-2 col-xs-12 col-sm-12 logo">
                 <a href="/" title="Logo">
-                  <img src={getStrapiMedia(logo)} alt="logo do bao ho" />
+                  <img src={getStrapiMedia(logo[0])} alt="logo do bao ho" />
                 </a>
               </div>
               <div className="col-lg-5 col-md-5 hidden-xs hidden-sm topbar-login">
@@ -249,7 +249,7 @@ export default function Header() {
               </div>
               <div className="hidden-lg hidden-md col-sm-12 col-xs-12 search-box">
                 <div className="menu-bar button-menu hidden-md hidden-lg f-left">
-                  <a href="javascript:;">
+                  <a href="/#">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 384 384" style={{enableBackground: 'new 0 0 384 384'}} xmlSpace="preserve">
                       <g>
                         <g>

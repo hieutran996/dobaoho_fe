@@ -21,7 +21,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "pages/sendmail/index.js"
+    "**/*.tsx", "pages/sendmail/index.js", "common/layout/Footer.js"
   ],
   "exclude": [
     "node_modules"

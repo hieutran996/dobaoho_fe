@@ -14,31 +14,25 @@ import Link from "next/link";
 import { Carousel } from 'antd';
 
 const Home = ({ homepage }) => {
+  console.log(homepage)
   return (
     <Layout>
       <Seo seo={homepage.seo} />
       <div className="page-body">
         <section className="awe-section-1">	
           <div id="magik-slideshow" className="magik-slideshow slick-initialized slick-slider">
-            <div aria-live="polite" className="slick-list draggable">
-              <div className="slick-track" role="listbox" style={{opacity: 1, width: '100%', transform: 'translate3d(0px, 0px, 0px)', background: 'black'}}>
-                <div className="items slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide00" style={{width: '100%'}}>
-                  <Carousel autoplay autoplaySpeed={3000}>
-                    <div>
-                      <a href="#" tabIndex={0}>
-                        <picture>
-                          <source media="(min-width: 992px)" srcSet="images/agv_helmet.jpeg" />
-                          <source media="(min-width: 569px)" srcSet="images/agv_helmet.jpeg" />
-                          <source media="(min-width: 480px)" srcSet="images/agv_helmet.jpeg" />
-                          <img src="images/agv_helmet.jpeg" alt="Agv" />
-                        </picture>
-                      </a>
-                    </div>
-                  </Carousel>
-                  
-                </div>
-                </div>
-                </div>
+            <Carousel autoplay autoplaySpeed={3000}>
+              <div>
+                <a href="#" tabIndex={0}>
+                  <picture>
+                    <source media="(min-width: 992px)" srcSet="images/homepage/agv_helmet.jpeg" />
+                    <source media="(min-width: 569px)" srcSet="images/homepage/agv_helmet.jpeg" />
+                    <source media="(min-width: 480px)" srcSet="images/homepage/agv_helmet.jpeg" />
+                    <img src="images/homepage/agv_helmet.jpeg" alt="Agv" />
+                  </picture>
+                </a>
+              </div>
+            </Carousel>
           </div>
         </section>
         <section className="awe-section-2">	
@@ -47,22 +41,22 @@ const Home = ({ homepage }) => {
               <div className="row">
                 <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 banner-1">
                   <div className="banner">
-                    <a href="#" title="ND Cơ Khí">
-                      <img className="img-responsive lazyload loaded" src="images/img_banner_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner_1.jpg?1610636210110" alt="ND Cơ Khí" data-was-processed="true" />
+                    <a href="#" title="Mũ Ego">
+                      <img className="img-responsive lazyload loaded" src="images/homepage/ego-e7.jpg"  alt="Mũ Ego" data-was-processed="true" />
                     </a>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 banner-2">
                   <div className="banner">
-                    <a href="#" title="ND Cơ Khí">
-                      <img className="img-responsive lazyload loaded" src="images/img_banner_2.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner_2.jpg?1610636210110" alt="ND Cơ Khí" data-was-processed="true" />
+                    <a href="#" title="Mũ LS2">
+                      <img className="img-responsive lazyload loaded" src="images/homepage/ls2-carbon.jpg"  alt="Mũ LS2" data-was-processed="true" />
                     </a>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 banner-3">
                   <div className="banner">
-                    <a href="#" title="ND Cơ Khí">
-                      <img className="img-responsive lazyload loaded" src="images/img_banner_3.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner_3.jpg?1610636210110" alt="ND Cơ Khí" data-was-processed="true" />
+                    <a href="#" title="Mũ Yohe">
+                      <img className="img-responsive lazyload loaded" src="images/homepage/yohe-978-plus.jpg"  alt="Mũ Yohe" data-was-processed="true" />
                     </a>
                   </div>
                 </div>
@@ -82,7 +76,7 @@ const Home = ({ homepage }) => {
                   </h2>
                   <div className="section_content">
                     <div className="slick_deal_hot slick-initialized slick-slider">
-                      <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '740px', transform: 'translate3d(0px, 0px, 0px)'}}><div className="item slick-slide slick-current slick-active" style={{width: '370px'}} data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide10">
+                      <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox"><div className="item slick-slide slick-current slick-active" style={{width: '100%'}} data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide10">
                             <div className="col-item">
                               <div className="sale-label sale-top-right"><span>- 
                                   10% 
@@ -132,49 +126,10 @@ const Home = ({ homepage }) => {
                                 </div>
                               </div>
                             </div>
-                          </div><div className="item slick-slide slick-active" style={{width: '370px'}} data-slick-index={1} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide11">
-                            <div className="col-item">
-                              <div className="product-thumb">
-                                <a href="/may-khoan-pin-18v-dewalt-dcd796m2" className="thumb" title="Máy khoan pin 18V Dewalt DCD796M2" tabIndex={0}>
-                                  <img className="lazyload loaded" src="images/sp1_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp1.jpg?v=1603966959000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
-                                </a>
-                                <div className="actions hidden-xs hidden-sm">
-                                  <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564815" encType="multipart/form-data">
-                                    <input type="hidden" name="variantId" defaultValue={37689793} tabIndex={0} />
-                                    <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" tabIndex={0}>
-                                      Thêm vào giỏ hàng
-                                    </button>
-                                  </form>       
-                                </div>
-                              </div>
-                              <div className="clockdiv" data-countdown="2021/12/12" style={{display: 'block !important'}}><div className="date-time time-day"><span className="days"><b>325</b><small>Ngày</small></span></div><span className="clocks" /><div className="date-time time-hour"><span className="hours "><b>08</b><small>Giờ</small></span></div><span className="clocks" /><div className="date-time time-min"><span className="minutes "><b>32</b><small>Phút</small></span></div><span className="clocks" /><div className="date-time time-sec"><span className="seconds"><b>06</b><small>Giây</small></span></div></div>
-                              <div className="product-info">
-                                <div className="product_type" />
-                                <h3 className="title"> <a href="/may-khoan-pin-18v-dewalt-dcd796m2" title="Máy khoan pin 18V Dewalt DCD796M2" tabIndex={0}>Máy khoan pin 18V Dewalt DCD796M2 </a> </h3>
-                                <div className="content">
-                                  <div className="item-price">    
-                                    <div className="price-box"> 
-                                      <span className="special-price">4.920.000₫</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="thumbs-list">
-                                <div className="thumbs-list-item active">
-                                  <img className="lazyload loaded" src="images/sp1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1.jpg?v=1603966959000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1.jpg?v=1603966959000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
-                                </div>
-                                <div className="thumbs-list-item ">
-                                  <img className="lazyload loaded" src="images/sp1-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-2.jpg?v=1603966960000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-2.jpg?v=1603966960000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
-                                </div>
-                                <div className="thumbs-list-item ">
-                                  <img className="lazyload loaded" src="images/sp1-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-3.jpg?v=1603966961000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-3.jpg?v=1603966961000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
-                                </div>
-                                <div className="thumbs-list-item ">
-                                  <img className="lazyload loaded" src="images/sp1-4.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-4.jpg?v=1603966961000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-4.jpg?v=1603966961000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
-                                </div>
-                              </div>
-                            </div>
-                          </div></div></div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="col-lg-8 col-md-8 col-xs-12 col-sm-12 product_nb">
@@ -693,9 +648,9 @@ const Home = ({ homepage }) => {
                             </span>
                           </li>
                           <li className="tab-link " data-tab="tab-7" data-url="/co-khi-neo">
-                            <span title="Cơ khí neo">
-                              <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bizweb.dktcdn.net/100/408/894/collections/car-parts.png?v=1604030694580" alt="Cơ khí neo" />
-                              <span className="link_title">Cơ khí neo</span>
+                            <span title="đồ bảo hộ neo">
+                              <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bizweb.dktcdn.net/100/408/894/collections/car-parts.png?v=1604030694580" alt="đồ bảo hộ neo" />
+                              <span className="link_title">đồ bảo hộ neo</span>
                             </span>
                           </li>
                           <li className="tab-link " data-tab="tab-8" data-url="/cua-tay">
@@ -1349,8 +1304,8 @@ const Home = ({ homepage }) => {
           <section className="section_banner2">
             <div className="container">
               <div className="banner banner-1">
-                <a href="#" title="ND Cơ Khí">
-                  <img className="img-responsive lazyload loaded" src="images/img_banner2_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner2_1.jpg?1610636210110" alt="ND Cơ Khí" data-was-processed="true" />
+                <a href="#" title="ND đồ bảo hộ">
+                  <img className="img-responsive lazyload loaded" src="images/img_banner2_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner2_1.jpg?1610636210110" alt="ND đồ bảo hộ" data-was-processed="true" />
                 </a>
               </div>
             </div>
@@ -1367,128 +1322,135 @@ const Home = ({ homepage }) => {
                     </a>
                   </h2>
                   <div className="section_content">
-                    <div className="slick_blog_index slick-initialized slick-slider"><button type="button" data-role="none" className="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true" style={{display: 'block'}}>Previous</button><div aria-live="polite" className="slick-list draggable" style={{height: '349px'}}><div className="slick-track" role="listbox" style={{opacity: 1, width: '1460px', transform: 'translate3d(0px, 0px, 0px)'}}><div className="slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide40" style={{width: '730px'}}><div><div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
-                                <div className="blog-img">
-                                  <a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>
-                                    <picture>
-                                      <source media="(min-width: 1200px)" srcSet="images/tin-tuc-6_1.jpg" />
-                                      <source media="(min-width: 992px)" srcSet="images/tin-tuc-6_1.jpg" />
-                                      <source media="(min-width: 569px)" srcSet="images/tin-tuc-6_1.jpg" />
-                                      <source media="(min-width: 480px)" srcSet="images/tin-tuc-6.jpg" />
-                                      <img src="images/tin-tuc-6.jpg" alt="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" />
-                                    </picture>
-                                  </a>
-                                </div>
-                                <div className="blog-content">
-                                  <h3><a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light</a> </h3>
-                                  <div className="justify des">                   TOWSON, MD (ngày 16 tháng 4 năm 2020) - DEWALT công...</div>
-                                </div>
-                              </div></div><div><div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
-                                <div className="blog-img">
-                                  <a href="/dewalt-hoi-sinh-dong-luu-tru-di-dong-voi-toughsystem-2-0" title="DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0" tabIndex={0}>
-                                    <picture>
-                                      <source media="(min-width: 1200px)" srcSet="images/tin-tuc-5_1.jpg" />
-                                      <source media="(min-width: 992px)" srcSet="images/tin-tuc-5_1.jpg" />
-                                      <source media="(min-width: 569px)" srcSet="images/tin-tuc-5_1.jpg" />
-                                      <source media="(min-width: 480px)" srcSet="images/tin-tuc-5.jpg" />
-                                      <img src="images/tin-tuc-5.jpg" alt="DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0" />
-                                    </picture>
-                                  </a>
-                                </div>
-                                <div className="blog-content">
-                                  <h3><a href="/dewalt-hoi-sinh-dong-luu-tru-di-dong-voi-toughsystem-2-0" title="DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0" tabIndex={0}>DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0</a> </h3>
-                                  <div className="justify des">                   TOWSON, MD (ngày 18 tháng 8 năm 2020) - DEWALT®, nhà...</div>
-                                </div>
-                              </div></div></div><div className="slick-slide" data-slick-index={1} aria-hidden="true" tabIndex={-1} role="option" aria-describedby="slick-slide41" style={{width: '730px'}}><div><div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
-                                <div className="blog-img">
-                                  <a href="/dewalt-cong-bo-kim-bam-hang-rao-khong-day-20v-max" title="DEWALT công bố kim bấm hàng rào không dây 20V MAX *" tabIndex={-1}>
-                                    <picture>
-                                      <source media="(min-width: 1200px)" srcSet="images/tin-tuc-4_1.jpg" />
-                                      <source media="(min-width: 992px)" srcSet="images/tin-tuc-4_1.jpg" />
-                                      <source media="(min-width: 569px)" srcSet="images/tin-tuc-4_1.jpg" />
-                                      <source media="(min-width: 480px)" srcSet="images/tin-tuc-4.jpg" />
-                                      <img src="images/tin-tuc-4.jpg" alt="DEWALT công bố kim bấm hàng rào không dây 20V MAX *" />
-                                    </picture>
-                                  </a>
-                                </div>
-                                <div className="blog-content">
-                                  <h3><a href="/dewalt-cong-bo-kim-bam-hang-rao-khong-day-20v-max" title="DEWALT công bố kim bấm hàng rào không dây 20V MAX *" tabIndex={-1}>DEWALT công bố kim bấm hàng rào không dây 20V MAX *</a> </h3>
-                                  <div className="justify des">                   TOWSON, MD (ngày 17 tháng 7 năm 2019) - DEWALT giới...</div>
-                                </div>
-                              </div></div><div /></div></div></div><button type="button" data-role="none" className="slick-next slick-arrow" aria-label="Next" role="button" style={{display: 'block'}} aria-disabled="false">Next</button></div>
+                    <div className="slick_blog_index slick-initialized slick-slider">
+                      <button type="button" data-role="none" className="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true" style={{display: 'block'}}>Previous</button>
+                      <div aria-live="polite" className="slick-list draggable">
+                        <div className="slick-track" role="listbox" >
+                          <div className="slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide40">
+                            <div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
+                              <div className="blog-img">
+                                <a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>
+                                  <picture>
+                                    <source media="(min-width: 1200px)" srcSet="images/tin-tuc-6_1.jpg" />
+                                    <source media="(min-width: 992px)" srcSet="images/tin-tuc-6_1.jpg" />
+                                    <source media="(min-width: 569px)" srcSet="images/tin-tuc-6_1.jpg" />
+                                    <source media="(min-width: 480px)" srcSet="images/tin-tuc-6.jpg" />
+                                    <img src="images/tin-tuc-6.jpg" alt="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" />
+                                  </picture>  
+                                </a>
+                              </div>
+                              <div className="blog-content">
+                                <h3><a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light</a> </h3>
+                                <div className="justify des">TOWSON, MD (ngày 16 tháng 4 năm 2020) - DEWALT công...</div>
+                              </div>
+                            </div>
+                            <div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
+                              <div className="blog-img">
+                                <a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>
+                                  <picture>
+                                    <source media="(min-width: 1200px)" srcSet="images/tin-tuc-6_1.jpg" />
+                                    <source media="(min-width: 992px)" srcSet="images/tin-tuc-6_1.jpg" />
+                                    <source media="(min-width: 569px)" srcSet="images/tin-tuc-6_1.jpg" />
+                                    <source media="(min-width: 480px)" srcSet="images/tin-tuc-6.jpg" />
+                                    <img src="images/tin-tuc-6.jpg" alt="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" />
+                                  </picture>  
+                                </a>
+                              </div>
+                              <div className="blog-content">
+                                <h3><a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light</a> </h3>
+                                <div className="justify des">TOWSON, MD (ngày 16 tháng 4 năm 2020) - DEWALT công...</div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" data-role="none" className="slick-next slick-arrow" aria-label="Next" role="button" style={{display: 'block'}} aria-disabled="false">Next</button></div>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 section-danhgia">
                   <div className="bg">
+                    
                     <div className="slick_danhgia_index slick-initialized slick-slider slick-dotted" role="toolbar">
-                      <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '2920px', transform: 'translate3d(-730px, 0px, 0px)'}}><div className="item slick-slide slick-cloned" data-slick-index={-1} aria-hidden="true" tabIndex={-1} style={{width: '730px'}}>
-                            <div className="inner">
-                              <div className="thumb">
-                                <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_2.jpg?1610636210110" alt="Toni" />
-                              </div>
-                              <div className="name">
-                                Toni
-                              </div>
-                              <div className="job">
-                                CEO ND
-                              </div>
-                              <div className="des">
-                                Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc ND Tool phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm cơ khí tốt nhất Việt Nam, tôi tin chắc điều đó.
-                              </div>
-                            </div>
-                          </div><div className="item slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide30" style={{width: '730px'}}>
-                            <div className="inner">
-                              <div className="thumb">
-                                <img className="img-responsive lazyload loaded" src="images/img_danhgia_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_1.jpg?1610636210110" alt="Nguyễn Anh Dũng" data-was-processed="true" />
-                              </div>
-                              <div className="name">
-                                Nguyễn Anh Dũng
-                              </div>
-                              <div className="job">
-                                CEO OH
-                              </div>
-                              <div className="des">
-                                Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc ND Tool phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm cơ khí tốt nhất Việt Nam, tôi tin chắc điều đó.
+                      <div aria-live="polite" className="slick-list draggable">
+                        <div className="slick-track" role="listbox">
+                          <Carousel autoplay autoplaySpeed={5000}>
+                            <div className="item slick-slide slick-cloned">
+                              <div className="inner">
+                                <div className="thumb">
+                                  <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_2.jpg?1610636210110" alt="Toni" />
+                                </div>
+                                <div className="name">
+                                  Hải Đỗ
+                                </div>
+                                <div className="job">
+                                  CEO QT Group
+                                </div>
+                                <div className="des">
+                                  Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc Hiếu Trần phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm đồ bảo hộ tốt nhất Việt Nam, tôi tin chắc điều đó.
+                                </div>
                               </div>
                             </div>
-                          </div><div className="item slick-slide" data-slick-index={1} aria-hidden="true" tabIndex={-1} role="option" aria-describedby="slick-slide31" style={{width: '730px'}}>
-                            <div className="inner">
-                              <div className="thumb">
-                                <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_2.jpg?1610636210110" alt="Toni" />
-                              </div>
-                              <div className="name">
-                                Toni
-                              </div>
-                              <div className="job">
-                                CEO ND
-                              </div>
-                              <div className="des">
-                                Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc ND Tool phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm cơ khí tốt nhất Việt Nam, tôi tin chắc điều đó.
-                              </div>
-                            </div>
-                          </div><div className="item slick-slide slick-cloned" data-slick-index={2} aria-hidden="true" tabIndex={-1} style={{width: '730px'}}>
-                            <div className="inner">
-                              <div className="thumb">
-                                <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_1.jpg?1610636210110" alt="Nguyễn Anh Dũng" />
-                              </div>
-                              <div className="name">
-                                Nguyễn Anh Dũng
-                              </div>
-                              <div className="job">
-                                CEO OH
-                              </div>
-                              <div className="des">
-                                Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc ND Tool phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm cơ khí tốt nhất Việt Nam, tôi tin chắc điều đó.
+                            <div className="item slick-slide slick-current slick-active">
+                              <div className="inner">
+                                <div className="thumb">
+                                  <img className="img-responsive lazyload loaded" src="images/img_danhgia_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_1.jpg?1610636210110" alt="Nguyễn Anh Dũng" data-was-processed="true" />
+                                </div>
+                                <div className="name">
+                                  Trí Nguyễn
+                                </div>
+                                <div className="job">
+                                  CEO TT Group    
+                                </div>
+                                <div className="des">
+                                  Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc Hiếu Trần phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm đồ bảo hộ tốt nhất Việt Nam, tôi tin chắc điều đó.
+                                </div>
                               </div>
                             </div>
-                          </div></div></div>
-                      <ul className="slick-dots" style={{display: 'block'}} role="tablist"><li className="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation30" id="slick-slide30"><button type="button" data-role="none" role="button" tabIndex={0}>1</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation31" id="slick-slide31"><button type="button" data-role="none" role="button" tabIndex={0}>2</button></li></ul></div>
+                          </Carousel>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
         </section>
+        <div className="sec_brand">
+          <div className="container">
+            <div className="slick_brand slick-initialized slick-slider"><button type="button" data-role="none" className="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true" style={{display: 'block'}}>Previous</button>
+              <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '1309px', transform: 'translate3d(0px, 0px, 0px)'}}><div className="item slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide20" style={{width: '187px'}}>
+                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
+                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand1.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand1.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
+                    </a>
+                  </div><div className="item slick-slide slick-active" data-slick-index={1} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide21" style={{width: '187px'}}>
+                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
+                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand2.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand2.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
+                    </a>
+                  </div><div className="item slick-slide slick-active" data-slick-index={2} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide22" style={{width: '187px'}}>
+                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
+                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand3.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand3.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
+                    </a>
+                  </div><div className="item slick-slide slick-active" data-slick-index={3} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide23" style={{width: '187px'}}>
+                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
+                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand4.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand4.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
+                    </a>
+                  </div><div className="item slick-slide slick-active" data-slick-index={4} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide24" style={{width: '187px'}}>
+                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
+                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand5.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand5.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
+                    </a>
+                  </div><div className="item slick-slide slick-active" data-slick-index={5} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide25" style={{width: '187px'}}>
+                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
+                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand6.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand6.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
+                    </a>
+                  </div><div className="item slick-slide" data-slick-index={6} aria-hidden="true" tabIndex={-1} role="option" aria-describedby="slick-slide26" style={{width: '187px'}}>
+                    <a href title="Hiếu Trần" tabIndex={-1}>
+                      <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand7.jpg?1611839274323" alt="Hiếu Trần" />
+                    </a>
+                  </div></div></div>
+              <button type="button" data-role="none" className="slick-next slick-arrow" aria-label="Next" role="button" style={{display: 'block'}} aria-disabled="false">Next</button></div>
+          </div>
+        </div>
       </div>
     </Layout>
   );
