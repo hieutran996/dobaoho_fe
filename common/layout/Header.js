@@ -4,12 +4,13 @@ import  LinkConfig from "../link_config"
 import {
   useSetRecoilState
 } from 'recoil'
-import { statusMenubar } from '../../recoil/atom'
+import { openCart, statusMenubar } from '../../recoil/atom'
 import { GlobalContext } from "../../pages/_app";
 import { getStrapiMedia } from "../../lib/media";
 
 export default function Header() {
-  const setStatus = useSetRecoilState(statusMenubar);
+  const setCart = useSetRecoilState(openCart);
+  const setMenubar = useSetRecoilState(statusMenubar);
   const { favicon, logo } = useContext(GlobalContext);
   const imageUrl = getStrapiMedia(favicon);
 
@@ -168,12 +169,12 @@ export default function Header() {
                   <div className="header-control">
                     <div className="top-cart-contain">
                       <div className="mini-cart text-xs-center">
-                        <div className="heading-cart">
-                          <a href="/cart" title="Giỏ hàng">
+                        <div className="heading-cart icon_shopping">
+                          <a title="Giỏ hàng" onClick={() => setCart(true)} >
                             <svg viewBox="0 0 19 23"> <path d="M0 22.985V5.995L2 6v.03l17-.014v16.968H0zm17-15H2v13h15v-13zm-5-2.882c0-2.04-.493-3.203-2.5-3.203-2 0-2.5 1.164-2.5 3.203v.912H5V4.647C5 1.19 7.274 0 9.5 0 11.517 0 14 1.354 14 4.647v1.368h-2v-.912z" fill="#222" /> </svg>
                             <span className="cartCount count_item_pr">0</span>
                           </a>
-                        </div>	
+                        </div> 	
                       </div>
                     </div>
                   </div>
@@ -217,39 +218,22 @@ export default function Header() {
                 </a>
               </div>
               <div className="col-lg-5 col-md-5 hidden-xs hidden-sm topbar-login">
-                <div className="account site-account">
-                  <a href="/account" title="Tài khoản" rel="nofollow">
-                    <img src="fonts/icon-user.svg" alt="Tài khoản" style={{height: '35px'}} />
-                    Tài khoản
-                  </a>
-                  <ul>
-                    <li>
-                      <a rel="nofollow" href="/account/login" title="Đăng nhập">
-                        Đăng nhập
-                      </a>
-                    </li>
-                    <li>
-                      <a rel="nofollow" href="/account/register" title="Đăng ký">
-                        Đăng ký
-                      </a>
-                    </li>
-                  </ul>
-                </div>
                 <div className="top-cart-contain">
                   <div className="mini-cart text-xs-center">
                     <div className="heading-cart">
-                      <a href="/cart" title="Giỏ hàng">
+                      <a title="Giỏ hàng" onClick={() => setCart(true)}>
                         <img src="fonts/icon-cart.svg" alt="Giỏ hàng" style={{height: '35px'}} />
                         <span className="cartCount count_item_pr">0</span>
                         Giỏ hàng
                       </a>
-                    </div>	
+                    </div>
+
                   </div>
                 </div>
               </div>
               <div className="hidden-lg hidden-md col-sm-12 col-xs-12 search-box">
                 <div className="menu-bar button-menu hidden-md hidden-lg f-left">
-                  <a href="/#">
+                  <a onClick={() => setMenubar(true)}>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 384 384" style={{enableBackground: 'new 0 0 384 384'}} xmlSpace="preserve">
                       <g>
                         <g>
@@ -278,7 +262,7 @@ export default function Header() {
                 <div className="top-cart-contain hidden-lg hidden-md">
                   <div className="mini-cart text-xs-center">
                     <div className="heading-cart">
-                      <a href="/cart" title="Giỏ hàng">
+                      <a title="Giỏ hàng" onClick={() => setCart(true)}>
                         <svg viewBox="0 0 19 23"> <path d="M0 22.985V5.995L2 6v.03l17-.014v16.968H0zm17-15H2v13h15v-13zm-5-2.882c0-2.04-.493-3.203-2.5-3.203-2 0-2.5 1.164-2.5 3.203v.912H5V4.647C5 1.19 7.274 0 9.5 0 11.517 0 14 1.354 14 4.647v1.368h-2v-.912z" fill="#222" /> </svg>
                         <span className="cartCount count_item_pr" id="cart-total">0</span>
                       </a>

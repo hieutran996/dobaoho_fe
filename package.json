@@ -9,6 +9,7 @@
     "start": "next start -p $PORT"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.5.0",
     "@tanem/react-nprogress": "^3.0.50",
     "antd": "^4.9.3",
     "axios": "^0.21.1",

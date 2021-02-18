@@ -62,3 +62,20 @@ textarea {
 #magik-slideshow {
     background-color: black;
 }
+#product .ant-breadcrumb a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+#product .ant-breadcrumb a:hover,
+#product .ant-breadcrumb-link {
+    color: #fdd400;
+}
+#product .ant-breadcrumb-link {
+    color: #fdd400;
+    font-size: 16px;
+    font-weight: bold;
+}
+#product .ant-breadcrumb-separator {
+    color: #fff;
+}

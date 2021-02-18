@@ -14,7 +14,6 @@ import Link from "next/link";
 import { Carousel } from 'antd';
 
 const Home = ({ homepage }) => {
-  console.log(homepage)
   return (
     <Layout>
       <Seo seo={homepage.seo} />
