@@ -437,7 +437,7 @@ const Home = ({ homepage }) => {
           </section>
         </section>
         <section className="awe-section-4">	
-          <section className="section_category">
+          <section className="section_category list_product">
             <div className="container">
               <div className="text-center">
                 <h2 className="section_title_2">
@@ -449,118 +449,22 @@ const Home = ({ homepage }) => {
                   <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <div className="block-item">
                       <div className="block-image">
-                        <a href="#" title="Dụng cụ điện">
-                          <img className="img-responsive lazyload loaded" src="images/image_cat_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_1.jpg?1610636210110" alt="Dụng cụ điện" data-was-processed="true" />
+                        <a href="#" title="Mũ bảo hiểm">
+                          <img className="img-responsive lazyload loaded" src="images/homepage/pista-gp-r-anniversario.jpg" alt="Mũ bảo hiểm" data-was-processed="true" />
                         </a>
                       </div>
                       <div className="block-content">
                         <h3>
-                          <a href="#" title="Dụng cụ điện">
-                            Dụng cụ điện
+                          <a href="#" title="Mũ bảo hiểm">
+                            Mũ bảo hiểm
                           </a>
                         </h3>
                         <div className="menu-cat">
-                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
-                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
-                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
-                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
-                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
-                        </div>
-                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <div className="block-item">
-                      <div className="block-image">
-                        <a href="#" title="Dụng cụ cầm tay">
-                          <img className="img-responsive lazyload loaded" src="images/image_cat_2.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_2.jpg?1610636210110" alt="Dụng cụ cầm tay" data-was-processed="true" />
-                        </a>
-                      </div>
-                      <div className="block-content">
-                        <h3>
-                          <a href="#" title="Dụng cụ cầm tay">
-                            Dụng cụ cầm tay
-                          </a>
-                        </h3>
-                        <div className="menu-cat">
-                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
-                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
-                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
-                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
-                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
-                        </div>
-                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <div className="block-item">
-                      <div className="block-image">
-                        <a href="#" title="Phụ kiện">
-                          <img className="img-responsive lazyload loaded" src="images/image_cat_3.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_3.jpg?1610636210110" alt="Phụ kiện" data-was-processed="true" />
-                        </a>
-                      </div>
-                      <div className="block-content">
-                        <h3>
-                          <a href="#" title="Phụ kiện">
-                            Phụ kiện
-                          </a>
-                        </h3>
-                        <div className="menu-cat">
-                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
-                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
-                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
-                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
-                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
-                        </div>
-                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <div className="block-item">
-                      <div className="block-image">
-                        <a href="#" title="Thiết bị ngoài trời">
-                          <img className="img-responsive lazyload loaded" src="images/image_cat_4.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_4.jpg?1610636210110" alt="Thiết bị ngoài trời" data-was-processed="true" />
-                        </a>
-                      </div>
-                      <div className="block-content">
-                        <h3>
-                          <a href="#" title="Thiết bị ngoài trời">
-                            Thiết bị ngoài trời
-                          </a>
-                        </h3>
-                        <div className="menu-cat">
-                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
-                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
-                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
-                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
-                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
-                        </div>
-                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <div className="block-item">
-                      <div className="block-image">
-                        <a href="#" title="Công cụ máy móc">
-                          <img className="img-responsive lazyload loaded" src="images/image_cat_5.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_5.jpg?1610636210110" alt="Công cụ máy móc" data-was-processed="true" />
-                        </a>
-                      </div>
-                      <div className="block-content">
-                        <h3>
-                          <a href="#" title="Công cụ máy móc">
-                            Công cụ máy móc
-                          </a>
-                        </h3>
-                        <div className="menu-cat">
-                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
-                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
-                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
-                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
-                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
+                          <a href="/dung-cu-dien" title="AGV">AGV</a>
+                          <a href="/dung-cu-cam-tay" title="LS2">LS2</a>
+                          <a href="/phu-kien" title="Yohe">Yohe</a>
+                          <a href="/do-bao-ho" title="Ego">Ego</a>
+                          <a href="/ngoai-troi" title="BullDog">BullDog</a>
                         </div>
                         <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
                       </div>
@@ -570,7 +474,7 @@ const Home = ({ homepage }) => {
                     <div className="block-item">
                       <div className="block-image">
                         <a href="#" title="Đồ bảo hộ">
-                          <img className="img-responsive lazyload loaded" src="images/image_cat_6.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/image_cat_6.jpg?1610636210110" alt="Đồ bảo hộ" data-was-processed="true" />
+                          <img className="img-responsive lazyload loaded" src="images/homepage/giap_dainese.jpeg" alt="Đồ bảo hộ" data-was-processed="true" />
                         </a>
                       </div>
                       <div className="block-content">
@@ -580,11 +484,32 @@ const Home = ({ homepage }) => {
                           </a>
                         </h3>
                         <div className="menu-cat">
-                          <a href="/dung-cu-dien" title="Dụng cụ điện">Dụng cụ điện</a>
-                          <a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay">Dụng cụ cầm tay</a>
-                          <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
-                          <a href="/ngoai-troi" title="Ngoài trời">Ngoài trời</a>
-                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đồ bảo hộ</a>
+                          <a href="/dung-cu-dien" title="Mũ bảo hiểm">Dainese</a>
+                          <a href="/dung-cu-cam-tay" title="Đồ bảo hộ">Alpinestars</a>
+                        </div>
+                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div className="block-item">
+                      <div className="block-image">
+                        <a href="#" title="Phụ kiện">
+                          <img className="img-responsive lazyload loaded" src="images/homepage/phukien.jpg" alt="Phụ kiện" data-was-processed="true" />
+                        </a>
+                      </div>
+                      <div className="block-content">
+                        <h3>
+                          <a href="#" title="Phụ kiện">
+                            Phụ kiện
+                          </a>
+                        </h3>
+                        <div className="menu-cat">
+                          <a href="/dung-cu-dien" title="Mũ bảo hiểm">Kính mũ</a>
+                          <a href="/dung-cu-cam-tay" title="Đồ bảo hộ">Khoá số</a>
+                          <a href="/phu-kien" title="Phụ kiện">Tai nghe</a>
+                          <a href="/ngoai-troi" title="Ngoài trời">Trùm đầu</a>
+                          <a href="/do-bao-ho" title="Đồ bảo hộ">Đuôi gió</a>
                         </div>
                         <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
                       </div>
@@ -611,51 +536,27 @@ const Home = ({ homepage }) => {
                       <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <ul className="tabs tabs-title tab-desktop ajax clearfix evo-close">
                           <li className="tab-link has-content current" data-tab="tab-1" data-url="/dung-cu-dien">
-                            <span title="Dụng cụ điện">
-                              <img className="img-responsive lazyload loaded" src="images/screwdriver.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/screwdriver.png?v=1604029430450" alt="Dụng cụ điện" data-was-processed="true" />
-                              <span className="link_title">Dụng cụ điện</span>
+                            <span title="Mũ bảo hiểm">
+                              <img className="img-responsive lazyload loaded" src="images/homepage/helmet.svg" alt="Mũ bảo hiểm" data-was-processed="true" />
+                              <span className="link_title">Mũ bảo hiểm</span>
                             </span>
                           </li>
                           <li className="tab-link " data-tab="tab-2" data-url="/dung-cu-cam-tay">
-                            <span title="Dụng cụ cầm tay">
-                              <img className="img-responsive lazyload loaded" src="images/hand-tool.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/hand-tool.png?v=1604029667243" alt="Dụng cụ cầm tay" data-was-processed="true" />
-                              <span className="link_title">Dụng cụ cầm tay</span>
+                            <span title="Đồ bảo hộ">
+                              <img className="img-responsive lazyload loaded" src="images/homepage/bullet-proof-vest.svg" alt="Đồ bảo hộ" data-was-processed="true" />
+                              <span className="link_title">Đồ bảo hộ</span>
                             </span>
                           </li>
                           <li className="tab-link " data-tab="tab-3" data-url="/phu-kien">
                             <span title="Phụ kiện">
-                              <img className="img-responsive lazyload loaded" src="images/pliers-hand-tool-outline.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/pliers-hand-tool-outline.png?v=1604030004387" alt="Phụ kiện" data-was-processed="true" />
+                              <img className="img-responsive lazyload loaded" src="images/homepage/glasses.svg" alt="Phụ kiện" data-was-processed="true" />
                               <span className="link_title">Phụ kiện</span>
                             </span>
                           </li>
-                          <li className="tab-link " data-tab="tab-4" data-url="/ngoai-troi">
-                            <span title="Ngoài trời">
-                              <img className="img-responsive lazyload loaded" src="images/lawn-mower.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/lawn-mower.png?v=1604030105093" alt="Ngoài trời" data-was-processed="true" />
-                              <span className="link_title">Ngoài trời</span>
-                            </span>
-                          </li>
-                          <li className="tab-link " data-tab="tab-5" data-url="/do-bao-ho">
-                            <span title="Đồ bảo hộ">
-                              <img className="img-responsive lazyload loaded" src="images/worker.png" data-src="https://bizweb.dktcdn.net/100/408/894/collections/worker.png?v=1604030308643" alt="Đồ bảo hộ" data-was-processed="true" />
-                              <span className="link_title">Đồ bảo hộ</span>
-                            </span>
-                          </li>
-                          <li className="tab-link " data-tab="tab-6" data-url="/oc-vit">
-                            <span title="Ốc vít">
-                              <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bizweb.dktcdn.net/100/408/894/collections/screw.png?v=1604030672857" alt="Ốc vít" />
-                              <span className="link_title">Ốc vít</span>
-                            </span>
-                          </li>
-                          <li className="tab-link " data-tab="tab-7" data-url="/co-khi-neo">
-                            <span title="đồ bảo hộ neo">
-                              <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bizweb.dktcdn.net/100/408/894/collections/car-parts.png?v=1604030694580" alt="đồ bảo hộ neo" />
-                              <span className="link_title">đồ bảo hộ neo</span>
-                            </span>
-                          </li>
-                          <li className="tab-link " data-tab="tab-8" data-url="/cua-tay">
-                            <span title="Cưa tay">
-                              <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://bizweb.dktcdn.net/100/408/894/collections/saw-blade-10d180f5-38f6-4b33-9e65-3680f7b7746f.png?v=1604029713940" alt="Cưa tay" />
-                              <span className="link_title">Cưa tay</span>
+                          <li className="tab-link " data-tab="tab-3" data-url="/phu-kien">
+                            <span title="Phụ kiện">
+                              <img className="img-responsive lazyload loaded" src="images/homepage/tyre.svg" alt="Phụ kiện" data-was-processed="true" />
+                              <span className="link_title">Đồ chơi xe</span>
                             </span>
                           </li>
                         </ul>
@@ -812,135 +713,6 @@ const Home = ({ homepage }) => {
                                 </div>
                               </div>
                             </div>
-                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                              <div className="col-item">
-                                <div className="product-thumb">
-                                  <a href="/may-mai-cat-goc-cam-tay-hikari-master-k100b" className="thumb" title="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B">
-                                    <img className="lazyload loaded" src="images/13_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/13.jpg?v=1604026030000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
-                                  </a>
-                                  <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19567990" encType="multipart/form-data">
-                                    </form>       
-                                  </div>
-                                </div>
-                                <div className="product-info">
-                                  <h3 className="title"> <a href="/may-mai-cat-goc-cam-tay-hikari-master-k100b" title="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B">Máy Mài Cắt Góc Cầm Tay Hikari Master K100B </a> </h3>
-                                  <div className="content">
-                                    <div className="item-price">    
-                                      <div className="price-box"> 
-                                        <span className="special-price"> 
-                                          Liên hệ
-                                        </span> 
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="thumbs-list">
-                                  <div className="thumbs-list-item active">
-                                    <img className="lazyload loaded" src="images/13.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/13.jpg?v=1604026030000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/13.jpg?v=1604026030000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/13-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/13-2.jpg?v=1604026031000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/13-2.jpg?v=1604026031000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/13-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/13-3.jpg?v=1604026031000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/13-3.jpg?v=1604026031000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/13-4.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/13-4.jpg?v=1604026031000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/13-4.jpg?v=1604026031000" alt="Máy Mài Cắt Góc Cầm Tay Hikari Master K100B" data-was-processed="true" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                              <div className="col-item">
-                                <div className="product-thumb">
-                                  <a href="/may-khoan-cam-tay-18v-dewalt-dcd785d2-b1" className="thumb" title="Máy khoan cầm tay 18V Dewalt DCD785D2-B1">
-                                    <img className="lazyload loaded" src="images/sp9.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp9.jpg?v=1603967642000" alt="Máy khoan cầm tay 18V Dewalt DCD785D2-B1" data-was-processed="true" />
-                                  </a>
-                                  <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564921" encType="multipart/form-data">
-                                    </form>       
-                                  </div>
-                                </div>
-                                <div className="product-info">
-                                  <h3 className="title"> <a href="/may-khoan-cam-tay-18v-dewalt-dcd785d2-b1" title="Máy khoan cầm tay 18V Dewalt DCD785D2-B1">Máy khoan cầm tay 18V Dewalt DCD785D2-B1 </a> </h3>
-                                  <div className="content">
-                                    <div className="item-price">    
-                                      <div className="price-box"> 
-                                        <span className="special-price"> 
-                                          Liên hệ
-                                        </span> 
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="thumbs-list">
-                                  <div className="thumbs-list-item active">
-                                    <img className="lazyload loaded" src="images/sp9_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp9.jpg?v=1603967642000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp9.jpg?v=1603967642000" alt="Máy khoan cầm tay 18V Dewalt DCD785D2-B1" data-was-processed="true" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                              <div className="col-item">
-                                <div className="product-thumb">
-                                  <a href="/than-may-van-vit-dung-pin-18v-dewalt-dcf887n-kr" className="thumb" title="Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR">
-                                    <img className="lazyload loaded" src="images/sp8_1.png" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp8.png?v=1603967625000" alt="Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR" data-was-processed="true" />
-                                  </a>
-                                  <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564919" encType="multipart/form-data">
-                                    </form>       
-                                  </div>
-                                </div>
-                                <div className="product-info">
-                                  <h3 className="title"> <a href="/than-may-van-vit-dung-pin-18v-dewalt-dcf887n-kr" title="Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR">Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR </a> </h3>
-                                  <div className="content">
-                                    <div className="item-price">    
-                                      <div className="price-box"> 
-                                        <span className="special-price"> 
-                                          Liên hệ
-                                        </span> 
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="thumbs-list">
-                                  <div className="thumbs-list-item active">
-                                    <img className="lazyload loaded" src="images/sp8.png" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp8.png?v=1603967625000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp8.png?v=1603967625000" alt="Thân máy vặn vít dùng pin 18V DeWALT DCF887N-KR" data-was-processed="true" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                              <div className="col-item">
-                                <div className="product-thumb">
-                                  <a href="/than-may-khoan-dong-luc-dung-pin-18v-dewalt-dcd996n-kr-khong-choi-than" className="thumb" title="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)">
-                                    <img className="lazyload loaded" src="images/sp7.png" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp7.png?v=1603967585000" alt="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)" data-was-processed="true" />
-                                  </a>
-                                  <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564913" encType="multipart/form-data">
-                                    </form>       
-                                  </div>
-                                </div>
-                                <div className="product-info">
-                                  <h3 className="title"> <a href="/than-may-khoan-dong-luc-dung-pin-18v-dewalt-dcd996n-kr-khong-choi-than" title="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)">Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than) </a> </h3>
-                                  <div className="content">
-                                    <div className="item-price">    
-                                      <div className="price-box"> 
-                                        <span className="special-price"> 
-                                          Liên hệ
-                                        </span> 
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="thumbs-list">
-                                  <div className="thumbs-list-item active">
-                                    <img className="lazyload loaded" src="images/sp7_1.png" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp7.png?v=1603967585000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp7.png?v=1603967585000" alt="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)" data-was-processed="true" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                         <div className="tab-2 tab-content">
@@ -1006,7 +778,7 @@ const Home = ({ homepage }) => {
                           Dễ dàng đổi trả
                         </h3>
                         <div className="des">
-                          Nó đã tồn tại không chỉ năm thế kỷ, mà còn là bước nhảy vọt trong lĩnh vực sắp chữ điện tử, về cơ bản vẫn không thay đổi.
+                          Dịch vụ đổi trả của chúng tôi khi hàng hoá không đạt yêu cầu đều hoàn toàn miễn phí 1 đổi 1.
                         </div>
                       </div>
                     </div>
@@ -1019,7 +791,7 @@ const Home = ({ homepage }) => {
                           Chất lượng cao
                         </h3>
                         <div className="des">
-                          Chúng tôi mong muốn tiếp tục sản xuất các sản phẩm chất lượng hàng đầu trong khi giảm tác động của chúng tôi đến môi trường.
+                          Sản phẩm của chúng tôi đều là những sản phẩm chất lượng cao và đảm bảo chính hãng.
                         </div>
                       </div>
                     </div>
@@ -1295,17 +1067,6 @@ const Home = ({ homepage }) => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-        </section>
-        <section className="awe-section-8">	
-          <section className="section_banner2">
-            <div className="container">
-              <div className="banner banner-1">
-                <a href="#" title="ND đồ bảo hộ">
-                  <img className="img-responsive lazyload loaded" src="images/img_banner2_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_banner2_1.jpg?1610636210110" alt="ND đồ bảo hộ" data-was-processed="true" />
-                </a>
               </div>
             </div>
           </section>

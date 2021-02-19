@@ -1,5 +1,5 @@
 import React,{ useContext } from 'react'
-import  LinkConfig from "../link_config"
+import LinkConfig from "../link_config"
 //Recoil
 import {
   useSetRecoilState
@@ -57,34 +57,28 @@ export default function Header() {
                         <div className="row-noGutter-2">
                           <nav className="header-nav">
                             <ul className="item_big">
-                              <li className="nav-item active ">				
-                                <a className="a-img" href="/" title="Trang chủ">
-                                  <span>Trang chủ</span>
-                                  <span className="label_">
-                                    <i className="label " />
-                                  </span>
-                                </a>
+                              <li className="nav-item active ">	
+                                <LinkConfig href="/">
+                                  <a className="a-img" title="Trang chủ">
+                                    <span>Trang chủ</span>
+                                    <span className="label_">
+                                      <i className="label " />
+                                    </span>
+                                  </a>
+                                </LinkConfig>			
                               </li>
                               <li className="nav-item ">
-                                <a className="a-img" href="/gioi-thieu" title="Giới thiệu">
-                                  <span>Giới thiệu</span>
-                                  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 490.688 490.688" style={{enableBackground: 'new 0 0 490.688 490.688'}} xmlSpace="preserve">
-                                    <path style={{fill: '#FFC107'}} d="M472.328,120.529L245.213,347.665L18.098,120.529c-4.237-4.093-10.99-3.975-15.083,0.262  c-3.992,4.134-3.992,10.687,0,14.82l234.667,234.667c4.165,4.164,10.917,4.164,15.083,0l234.667-234.667  c4.237-4.093,4.354-10.845,0.262-15.083c-4.093-4.237-10.845-4.354-15.083-0.262c-0.089,0.086-0.176,0.173-0.262,0.262  L472.328,120.529z" />
-                                    <path d="M245.213,373.415c-2.831,0.005-5.548-1.115-7.552-3.115L2.994,135.633c-4.093-4.237-3.975-10.99,0.262-15.083  c4.134-3.992,10.687-3.992,14.82,0l227.136,227.115l227.115-227.136c4.093-4.237,10.845-4.354,15.083-0.262  c4.237,4.093,4.354,10.845,0.262,15.083c-0.086,0.089-0.173,0.176-0.262,0.262L252.744,370.279  C250.748,372.281,248.039,373.408,245.213,373.415z" />
-                                  </svg>
-                                  <span className="label_">
-                                    <i className="label " />
-                                  </span>
-                                </a>
-                                <ul className="item_small">
-                                  <li>
-                                    <a href="/faq" title="FAQ">FAQ 
-                                    </a>
-                                  </li>
-                                </ul>
+                                <LinkConfig href="/about-us">
+                                  <a className="a-img" title="Giới thiệu">
+                                    <span>Giới thiệu</span>
+                                    <span className="label_">
+                                      <i className="label " />
+                                    </span>
+                                  </a>
+                                </LinkConfig>	
                               </li>
                               <li className="nav-item  has-mega">
-                                <a className="a-img" href="/collections/all" title="Sản phẩm">
+                                <a className="a-img" title="Sản phẩm">
                                   <span>Sản phẩm</span>
                                   <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 490.688 490.688" style={{enableBackground: 'new 0 0 490.688 490.688'}} xmlSpace="preserve">
                                     <path style={{fill: '#FFC107'}} d="M472.328,120.529L245.213,347.665L18.098,120.529c-4.237-4.093-10.99-3.975-15.083,0.262  c-3.992,4.134-3.992,10.687,0,14.82l234.667,234.667c4.165,4.164,10.917,4.164,15.083,0l234.667-234.667  c4.237-4.093,4.354-10.845,0.262-15.083c-4.093-4.237-10.845-4.354-15.083-0.262c-0.089,0.086-0.176,0.173-0.262,0.262  L472.328,120.529z" />
@@ -97,68 +91,57 @@ export default function Header() {
                                 <div className="mega-content">
                                   <div className="nav-block nav-block-center">
                                     <ul className="level0 row">
-                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/dung-cu-dien" title="Dụng cụ điện"><span>Dụng cụ điện</span></a></h2> 
+                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/dung-cu-dien" title="Mũ bảo hiểm"><span>Mũ bảo hiểm</span></a></h2> 
                                         <ul className="level1">
-                                          <li className="level2"> <a href="/may-nen-khi" title="Máy nén khí"><span>Máy nén khí</span></a> </li>
-                                          <li className="level2"> <a href="/cat-va-uon-cap" title="Cắt và uốn cáp"><span>Cắt và uốn cáp</span></a> </li>
-                                          <li className="level2"> <a href="/bo-dung-cu-ket-hop" title="Bộ dụng cụ kết hợp"><span>Bộ dụng cụ kết hợp</span></a> </li>
-                                          <li className="level2"> <a href="/cong-cu-cat" title="Công cụ cắt"><span>Công cụ cắt</span></a> </li>
-                                          <li className="level2"> <a href="/khoan" title="Khoan"><span>Khoan</span></a> </li>
+                                          <li className="level2"> <a href="/may-nen-khi" title="Máy nén khí"><span>AGV</span></a> </li>
+                                          <li className="level2"> <a href="/cat-va-uon-cap" title="Cắt và uốn cáp"><span>LS2</span></a> </li>
+                                          <li className="level2"> <a href="/bo-dung-cu-ket-hop" title="Bộ dụng cụ kết hợp"><span>Yohe</span></a> </li>
+                                          <li className="level2"> <a href="/cong-cu-cat" title="Công cụ cắt"><span>Ego</span></a> </li>
                                         </ul>
                                       </li>
-                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/dung-cu-cam-tay" title="Dụng cụ cầm tay"><span>Dụng cụ cầm tay</span></a></h2> 
+                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/dung-cu-cam-tay" title="Đồ bảo hộ"><span>Đồ bảo hộ</span></a></h2> 
                                         <ul className="level1">
-                                          <li className="level2"> <a href="/riu-bua-thanh-keo" title="Rìu, Búa & Thanh kéo"><span>Rìu, Búa &amp; Thanh kéo</span></a> </li>
-                                          <li className="level2"> <a href="/kep" title="Kẹp"><span>Kẹp</span></a> </li>
-                                          <li className="level2"> <a href="/cua-tay" title="Cưa tay"><span>Cưa tay</span></a> </li>
-                                          <li className="level2"> <a href="/o-cam-bo-tac-dong" title="Ổ cắm & Bộ tác động"><span>Ổ cắm &amp; Bộ tác động</span></a> </li>
-                                          <li className="level2"> <a href="/tua-vit-chia-khoa-hex" title="Tua vít & Chìa khóa Hex"><span>Tua vít &amp; Chìa khóa Hex</span></a> </li>
+                                          <li className="level2"> <a href="/riu-bua-thanh-keo" title="Rìu, Búa & Thanh kéo"><span>Áo bảo hộ</span></a> </li>
+                                          <li className="level2"> <a href="/kep" title="Kẹp"><span>Găng bảo hộ</span></a> </li>
+                                          <li className="level2"> <a href="/cua-tay" title="Cưa tay"><span>Giày bảo hộ</span></a> </li>
+                                          <li className="level2"> <a href="/o-cam-bo-tac-dong" title="Ổ cắm & Bộ tác động"><span>Balo</span></a> </li>
                                         </ul>
                                       </li>
                                       <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/phu-kien" title="Phụ kiện"><span>Phụ kiện</span></a></h2> 
                                         <ul className="level1">
-                                          <li className="level2"> <a href="/chat-mai-mon" title="Chất mài mòn"><span>Chất mài mòn</span></a> </li>
-                                          <li className="level2"> <a href="/neo-chot" title="Neo & Chốt"><span>Neo &amp; Chốt</span></a> </li>
-                                          <li className="level2"> <a href="/pin-bo-sac" title="Pin & Bộ sạc"><span>Pin &amp; Bộ sạc</span></a> </li>
-                                          <li className="level2"> <a href="/luoi-cua-tron-1" title="Lưỡi cưa tròn"><span>Lưỡi cưa tròn</span></a> </li>
-                                          <li className="level2"> <a href="/chot-va-bat-vit" title="Chốt và bắt vít"><span>Chốt và bắt vít</span></a> </li>
+                                          <li className="level2"> <a href="/chat-mai-mon" title="Chất mài mòn"><span>Kính mũ</span></a> </li>
+                                          <li className="level2"> <a href="/neo-chot" title="Neo & Chốt"><span>Tai nghe</span></a> </li>
+                                          <li className="level2"> <a href="/pin-bo-sac" title="Pin & Bộ sạc"><span>Trùm đầu</span></a> </li>
+                                          <li className="level2"> <a href="/luoi-cua-tron-1" title="Lưỡi cưa tròn"><span>Đuôi gió</span></a> </li>
                                         </ul>
                                       </li>
-                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/ngoai-troi" title="Ngoài trời"><span>Ngoài trời</span></a></h2> 
-                                        <ul className="level1">
-                                          <li className="level2"> <a href="/may-thoi" title="Máy thổi"><span>Máy thổi</span></a> </li>
-                                          <li className="level2"> <a href="/may-cua" title="Máy cưa"><span>Máy cưa</span></a> </li>
-                                          <li className="level2"> <a href="/hedge-trimmers" title="Hedge Trimmers"><span>Hedge Trimmers</span></a> </li>
-                                          <li className="level2"> <a href="/may-cat-co" title="Máy cắt cỏ"><span>Máy cắt cỏ</span></a> </li>
-                                          <li className="level2"> <a href="/may-cat-chuoi" title="Máy cắt chuỗi"><span>Máy cắt chuỗi</span></a> </li>
-                                        </ul>
-                                      </li>
-                                      <li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/do-bao-ho" title="Đồ bảo hộ"><span>Đồ bảo hộ</span></a> </h2>
+                                      <li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/do-bao-ho" title="Đồ bảo hộ"><span>Đồ chơi xe</span></a> </h2>
                                       </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/san-pham-khuyen-mai" title="Sản phẩm khuyến mãi"><span>Sản phẩm khuyến mãi</span></a> </h2>
                                       </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/san-pham-moi" title="Sản phẩm mới"><span>Sản phẩm mới</span></a> </h2>
                                       </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/san-pham-noi-bat" title="Sản phẩm nổi bật"><span>Sản phẩm nổi bật</span></a> </h2>
-                                      </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/oc-vit" title="Ốc vít"><span>Ốc vít</span></a> </h2>
-                                      </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/co-khi-neo" title="Cơ khí neo"><span>Cơ khí neo</span></a> </h2>
-                                      </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/cua" title="Cưa"><span>Cưa</span></a> </h2>
                                       </li></ul>
                                   </div>
                                 </div>
                               </li>
-                              <li className="nav-item ">				
-                                <a className="a-img" href="/tin-tuc" title="Tin tức">
-                                  <span>Tin tức</span>
-                                  <span className="label_">
-                                    <i className="label " />
-                                  </span>
-                                </a>
+                              <li className="nav-item ">		
+                                <LinkConfig href="/news">
+                                  <a className="a-img" title="Tin tức">
+                                    <span>Tin tức</span>
+                                    <span className="label_">
+                                      <i className="label " />
+                                    </span>
+                                  </a>
+                                </LinkConfig>		
                               </li>
-                              <li className="nav-item ">				
-                                <a className="a-img" href="/lien-he" title="Liên hệ">
-                                  <span>Liên hệ</span>
-                                  <span className="label_">
-                                    <i className="label " />
-                                  </span>
-                                </a>
+                              <li className="nav-item ">	
+                                <LinkConfig href="/contact">
+                                  <a className="a-img" title="Liên hệ">
+                                    <span>Liên hệ</span>
+                                    <span className="label_">
+                                      <i className="label " />
+                                    </span>
+                                  </a>
+                                </LinkConfig>			
                               </li>
                             </ul>
                           </nav>

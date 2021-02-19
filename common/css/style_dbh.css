@@ -468,7 +468,9 @@ label.error {
 .no-background {
     background: none !important;
 }
-svg path, svg rect {
+.search_form svg path, .search_form svg rect,
+.foo-contact svg path, .foo-contact svg rect,
+.section_why_choose svg path, .section_why_choose svg rect {
     fill: #fdd400;
 }
 .flexbox, .awe-popup {
@@ -1571,6 +1573,7 @@ svg path, svg rect {
 }
 .btn.btn-primary:hover, input.btn-primary[type="submit"]:hover {
     background: #ffd918;
+    border-color: #ffd918;
 }
 .btn.btn-circle, input.btn-circle[type="submit"] {
     border-radius: 50%;
@@ -2688,10 +2691,10 @@ header nav .nav-item li.dropdown-submenu:hover>.dropdown-menu {
 .bg-header-nav .header-nav>ul.item_big>li.nav-item>ul>li:hover>a svg path, .bg-header-nav .header-nav>ul.item_big>li.nav-item>ul>li:hover>a svg rect {
     fill: #fea72c !important;
 }
-.bg-header-nav .header-nav>ul.item_big>li.active>a {
+.bg-header-nav .header-nav>ul.item_big>li>a.active {
     color: #fea72c;
 }
-.bg-header-nav .header-nav>ul.item_big>li.active>a svg path, .bg-header-nav .header-nav>ul.item_big>li.active>a svg rect {
+.bg-header-nav .header-nav>ul.item_big>li>a.active svg path, .bg-header-nav .header-nav>ul.item_big>li>a.active svg rect {
     fill: #fea72c;
 }
 .bg-header-nav .header-nav ul li ul a.text2line:hover {

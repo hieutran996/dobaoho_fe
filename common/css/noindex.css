@@ -1180,7 +1180,7 @@ p.note.form-success {
 }
 }aside.col-right.sidebar {
     position: sticky;
-    top: 0;
+    top: 120px;
 }
 .search-main form {
     margin: 0 !important;

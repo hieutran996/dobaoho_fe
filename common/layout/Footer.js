@@ -46,7 +46,7 @@ export default function Footer() {
                           </g>
                         </g>
                       </svg>
-                      <span>244/51 Dương Đình Hội, Q9, HCM</span></li>
+                      <span>244 Dương Đình Hội, Quận 9, Thành phố Hồ Chí Minh</span></li>
                     <li>
                       <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 513.64 513.64"  xmlSpace="preserve">
                         <g>
