@@ -13,7 +13,6 @@ const Loading: React.FC<{ isRouteChanging: boolean }> = ({
   return (
     <Container animationDuration={animationDuration} isFinished={isFinished}>
         <Bar animationDuration={animationDuration} progress={progress} />
-        <Spinner />
     </Container>
   )
 }

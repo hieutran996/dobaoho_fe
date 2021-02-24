@@ -547,7 +547,12 @@
     border: 3px solid #fdd400;
 }
 .section_deal_hot_product .deal_hot .section_content .slick_deal_hot .col-item .product-thumb {
-    height: 405px;
+    height: 373px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .section_deal_hot_product .deal_hot .section_content .slick_deal_hot .col-item .product-thumb {
+        height: 550px;
+    }
 }
 @media (max-width: 767px) {
     .section_deal_hot_product .deal_hot .section_content .slick_deal_hot .slick-prev {
@@ -763,7 +768,7 @@
 }
 @media (min-width: 991px) {
     .section_tab_san_pham .content .tabs-title li span {
-    height: 77px;
+    height: 67px;
 }
 }.section_tab_san_pham .content .tabs-title li span p {
     overflow: hidden;

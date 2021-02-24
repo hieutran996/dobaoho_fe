@@ -76,52 +76,38 @@ const Home = ({ homepage }) => {
                   <div className="section_content">
                     <div className="slick_deal_hot slick-initialized slick-slider">
                       <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox"><div className="item slick-slide slick-current slick-active" style={{width: '100%'}} data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide10">
-                            <div className="col-item">
+                            <div className="col-item pt-0">
                               <div className="sale-label sale-top-right"><span>- 
                                   10% 
                                 </span></div>
                               <div className="product-thumb">
-                                <a href="/may-khoan-pin-18v-dewalt-dcd796m2-1" className="thumb" title="Máy khoan pin 18V Dewalt DCD796M2" tabIndex={0}>
-                                  <img className="lazyload loaded" src="images/sp1-7a859f40-6a62-4602-884a-2c273e115b8e.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp1-7a859f40-6a62-4602-884a-2c273e115b8e.jpg?v=1603967160000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
+                                <a href="/may-khoan-pin-18v-dewalt-dcd796m2-1" className="thumb" title="Mũ Fullface LS2 Challenger Carbon FF327" tabIndex={0}>
+                                  <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/LS2-FF327-Challenger-Carbon.jpg" alt="Mũ Fullface LS2 Challenger Carbon FF327" />
                                 </a>
                                 <div className="actions hidden-xs hidden-sm">
                                   <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564843" encType="multipart/form-data">
-                                    <input type="hidden" name="variantId" defaultValue={37690000} tabIndex={0} />
+                                    <input type="hidden" name="variantId" tabIndex={0} />
                                     <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" tabIndex={0}>
                                       Thêm vào giỏ hàng
                                     </button>
                                   </form>       
                                 </div>
                               </div>
-                              <div className="clockdiv" data-countdown="2021/12/12" style={{display: 'block !important'}}><div className="date-time time-day"><span className="days"><b>325</b><small>Ngày</small></span></div><span className="clocks" /><div className="date-time time-hour"><span className="hours "><b>08</b><small>Giờ</small></span></div><span className="clocks" /><div className="date-time time-min"><span className="minutes "><b>32</b><small>Phút</small></span></div><span className="clocks" /><div className="date-time time-sec"><span className="seconds"><b>06</b><small>Giây</small></span></div></div>
+                              <div className="clockdiv" data-countdown="2021/12/12" style={{display: 'block !important'}}><div className="date-time time-day"><span className="days"><b>3</b><small>Ngày</small></span></div><span className="clocks" /><div className="date-time time-hour"><span className="hours "><b>08</b><small>Giờ</small></span></div><span className="clocks" /><div className="date-time time-min"><span className="minutes "><b>32</b><small>Phút</small></span></div><span className="clocks" /><div className="date-time time-sec"><span className="seconds"><b>06</b><small>Giây</small></span></div></div>
                               <div className="product-info">
                                 <div className="product_type" />
-                                <h3 className="title"> <a href="/may-khoan-pin-18v-dewalt-dcd796m2-1" title="Máy khoan pin 18V Dewalt DCD796M2" tabIndex={0}>Máy khoan pin 18V Dewalt DCD796M2 </a> </h3>
+                                <h3 className="title"> <a href="/may-khoan-pin-18v-dewalt-dcd796m2-1" title="Mũ Fullface LS2 Challenger Carbon FF327" tabIndex={0}>Mũ LS2 Challenger Carbon FF327 </a> </h3>
                                 <div className="content">
                                   <div className="item-price">    
                                     <div className="price-box"> 
                                       <span className="special-price"> 
-                                        4.900.000₫
+                                        9,900,000₫
                                       </span>
-                                      <span className="old-price"> 
-                                        5.450.000₫
-                                      </span>
+                                      {/* <span className="old-price"> 
+                                        900,000₫
+                                      </span> */}
                                     </div>
                                   </div>
-                                </div>
-                              </div>
-                              <div className="thumbs-list">
-                                <div className="thumbs-list-item active">
-                                  <img className="lazyload loaded" src="images/sp1-7a859f40-6a62-4602-884a-2c273e115b8e_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-7a859f40-6a62-4602-884a-2c273e115b8e.jpg?v=1603967160000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-7a859f40-6a62-4602-884a-2c273e115b8e.jpg?v=1603967160000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
-                                </div>
-                                <div className="thumbs-list-item ">
-                                  <img className="lazyload loaded" src="images/sp1-2-d30ac025-471e-4755-ba5a-a14a537fe335.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-2-d30ac025-471e-4755-ba5a-a14a537fe335.jpg?v=1603967161000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-2-d30ac025-471e-4755-ba5a-a14a537fe335.jpg?v=1603967161000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
-                                </div>
-                                <div className="thumbs-list-item ">
-                                  <img className="lazyload loaded" src="images/sp1-3-01685be1-3f4d-4d2b-8121-db8928eb1c42.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-3-01685be1-3f4d-4d2b-8121-db8928eb1c42.jpg?v=1603967161000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-3-01685be1-3f4d-4d2b-8121-db8928eb1c42.jpg?v=1603967161000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
-                                </div>
-                                <div className="thumbs-list-item ">
-                                  <img className="lazyload loaded" src="images/sp1-4-3c7d7bba-ba8e-4f15-8608-5410c9b30892.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp1-4-3c7d7bba-ba8e-4f15-8608-5410c9b30892.jpg?v=1603967162000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp1-4-3c7d7bba-ba8e-4f15-8608-5410c9b30892.jpg?v=1603967162000" alt="Máy khoan pin 18V Dewalt DCD796M2" data-was-processed="true" />
                                 </div>
                               </div>
                             </div>
@@ -140,9 +126,9 @@ const Home = ({ homepage }) => {
                     </h2>
                     <ul className="link_list hidden-xs">
                       <li><a className="ef" href="/" title="Trang chủ">Trang chủ</a></li>
-                      <li><a className="ef" href="/gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
-                      <li><a className="ef" href="/collections/all" title="Sản phẩm">Sản phẩm</a></li>
-                      <li><a className="ef" href="/tin-tuc" title="Tin tức">Tin tức</a></li>
+                      <li><a className="ef" href="/about-us" title="Giới thiệu">Giới thiệu</a></li>
+                      <li><a className="ef" href="/news" title="Tin tức">Tin tức</a></li>
+                      <li><a className="ef" href="/contact" title="Liên hệ">Liên hệ</a></li>
                     </ul>
                   </div>
                   <div className="section_content">
@@ -150,8 +136,8 @@ const Home = ({ homepage }) => {
                       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
                         <div className="col-item">
                           <div className="product-thumb">
-                            <a href="/bua-khoan-soi-thuy-tinh-3-lb" className="thumb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">
-                              <img className="lazyload loaded" src="images/25_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/25.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
+                            <a href="/bua-khoan-soi-thuy-tinh-3-lb" className="thumb" title="Mũ Ego E-6">
+                              <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/ego-e6.jpg" alt="Mũ Ego E-6" />
                             </a>
                             <div className="actions hidden-xs hidden-sm">
                               <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568520" encType="multipart/form-data">
@@ -163,24 +149,13 @@ const Home = ({ homepage }) => {
                             </div>
                           </div>
                           <div className="product-info">
-                            <h3 className="title"> <a href="/bua-khoan-soi-thuy-tinh-3-lb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">BÚA KHOAN SỢI THỦY TINH 3 LB. </a> </h3>
+                            <h3 className="title"> <a href="/bua-khoan-soi-thuy-tinh-3-lb" title="Mũ Ego E-6">Mũ Ego E-6 </a> </h3>
                             <div className="content">
                               <div className="item-price">    
                                 <div className="price-box"> 
-                                  <span className="special-price">10.499.000₫</span>
+                                  <span className="special-price">880,000₫</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="thumbs-list">
-                            <div className="thumbs-list-item active">
-                              <img className="lazyload loaded" src="images/25.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/25.jpg?v=1604029328000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/25.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/25-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/25-2.jpg?v=1604029328000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/25-2.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/25-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/25-3.jpg?v=1604029331000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/25-3.jpg?v=1604029331000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
                             </div>
                           </div>
                         </div>
@@ -188,9 +163,8 @@ const Home = ({ homepage }) => {
                       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
                         <div className="col-item">
                           <div className="product-thumb">
-                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">
-                              <img className="lazyload loaded" src="images/24_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/24.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
-                            </a>
+                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="Mũ Ego E-7">
+                             <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/EGO-E-7-Gloss-Black-Orange.jpg" alt="Mũ Ego E-7" />                            </a>
                             <div className="actions hidden-xs hidden-sm">
                               <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568517" encType="multipart/form-data">
                                 <input type="hidden" name="variantId" defaultValue={37701054} />
@@ -201,21 +175,13 @@ const Home = ({ homepage }) => {
                             </div>
                           </div>
                           <div className="product-info">
-                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI </a> </h3>
+                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="Mũ Ego E-7">Mũ Ego E-7 Gloss Black Orange</a> </h3>
                             <div className="content">
                               <div className="item-price">    
                                 <div className="price-box"> 
-                                  <span className="special-price">11.000.000₫</span>
+                                  <span className="special-price">780,000₫</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="thumbs-list">
-                            <div className="thumbs-list-item active">
-                              <img className="lazyload loaded" src="images/24.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/24.jpg?v=1604029308000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/24.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/24-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/24-2.jpg?v=1604029308000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/24-2.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
                             </div>
                           </div>
                         </div>
@@ -223,35 +189,25 @@ const Home = ({ homepage }) => {
                       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
                         <div className="col-item">
                           <div className="product-thumb">
-                            <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" className="thumb" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">
-                              <img className="lazyload loaded" src="images/23_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/23.jpg?v=1604029278000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
-                            </a>
+                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="Mũ Ego E-8">
+                             <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/ego-e8.jpg" alt="Mũ Ego E-8" />                            </a>
                             <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568513" encType="multipart/form-data">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568517" encType="multipart/form-data">
+                                <input type="hidden" name="variantId" defaultValue={37701054} />
+                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                  Thêm vào giỏ hàng
+                                </button>
                               </form>       
                             </div>
                           </div>
                           <div className="product-info">
-                            <h3 className="title"> <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP </a> </h3>
+                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="Mũ Ego E-8">Mũ Ego E-8 </a> </h3>
                             <div className="content">
                               <div className="item-price">    
                                 <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
+                                  <span className="special-price">780,000₫</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="thumbs-list">
-                            <div className="thumbs-list-item active">
-                              <img className="lazyload loaded" src="images/23.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/23.jpg?v=1604029278000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/23.jpg?v=1604029278000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/23-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/23-2.jpg?v=1604029279000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/23-2.jpg?v=1604029279000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/23-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/23-3.jpg?v=1604029280000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/23-3.jpg?v=1604029280000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
                             </div>
                           </div>
                         </div>
@@ -259,32 +215,25 @@ const Home = ({ homepage }) => {
                       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
                         <div className="col-item">
                           <div className="product-thumb">
-                            <a href="/bo-cuon-phan-6-1" className="thumb" title="BỘ CUỘN PHẤN 6:1">
-                              <img className="lazyload loaded" src="images/22_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/22.jpg?v=1604029251000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
-                            </a>
+                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="Mũ Ego E-8 Plus">
+                             <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/ego-e8-plus.jpg" alt="Mũ Ego E-8 Plus" />                            </a>
                             <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568509" encType="multipart/form-data">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568517" encType="multipart/form-data">
+                                <input type="hidden" name="variantId" defaultValue={37701054} />
+                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                  Thêm vào giỏ hàng
+                                </button>
                               </form>       
                             </div>
                           </div>
                           <div className="product-info">
-                            <h3 className="title"> <a href="/bo-cuon-phan-6-1" title="BỘ CUỘN PHẤN 6:1">BỘ CUỘN PHẤN 6:1 </a> </h3>
+                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="Mũ Ego E-8 Plus">Mũ Ego E-8 Plus </a> </h3>
                             <div className="content">
                               <div className="item-price">    
                                 <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
+                                  <span className="special-price">820,000₫</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="thumbs-list">
-                            <div className="thumbs-list-item active">
-                              <img className="lazyload loaded" src="images/22.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/22.jpg?v=1604029251000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/22.jpg?v=1604029251000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/22-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/22-2.jpg?v=1604029252000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/22-2.jpg?v=1604029252000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
                             </div>
                           </div>
                         </div>
@@ -292,35 +241,25 @@ const Home = ({ homepage }) => {
                       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
                         <div className="col-item">
                           <div className="product-thumb">
-                            <a href="/sung-bam-ghim-bang-soi-carbon" className="thumb" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">
-                              <img className="lazyload loaded" src="images/21_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/21.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
-                            </a>
+                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="Mũ Ego E-8 SV">
+                             <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/ego-e8-sv.jpg" alt="Mũ Ego E-8 SV" />                            </a>
                             <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568505" encType="multipart/form-data">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568517" encType="multipart/form-data">
+                                <input type="hidden" name="variantId" defaultValue={37701054} />
+                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                  Thêm vào giỏ hàng
+                                </button>
                               </form>       
                             </div>
                           </div>
                           <div className="product-info">
-                            <h3 className="title"> <a href="/sung-bam-ghim-bang-soi-carbon" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">SÚNG BẤM GHIM BẰNG SỢI CARBON </a> </h3>
+                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="Mũ Ego E-8 SV">Mũ Ego E-8 SV </a> </h3>
                             <div className="content">
                               <div className="item-price">    
                                 <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
+                                  <span className="special-price">820,000₫</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="thumbs-list">
-                            <div className="thumbs-list-item active">
-                              <img className="lazyload loaded" src="images/21.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/21.jpg?v=1604029219000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/21.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/21-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/21-2.jpg?v=1604029219000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/21-2.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/21-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/21-3.jpg?v=1604029220000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/21-3.jpg?v=1604029220000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
                             </div>
                           </div>
                         </div>
@@ -328,8 +267,8 @@ const Home = ({ homepage }) => {
                       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
                         <div className="col-item">
                           <div className="product-thumb">
-                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">
-                              <img className="lazyload loaded" src="images/20.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Ego E-9">
+                            <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/ego-e9-black_yellow.jpg" alt="Mũ Ego E-9" />
                             </a>
                             <div className="actions hidden-xs hidden-sm">
                               <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
@@ -341,24 +280,13 @@ const Home = ({ homepage }) => {
                             </div>
                           </div>
                           <div className="product-info">
-                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX * </a> </h3>
+                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Ego E-9">Mũ Ego E-9 </a> </h3>
                             <div className="content">
                               <div className="item-price">    
                                 <div className="price-box"> 
-                                  <span className="special-price">15.000.000₫</span>
+                                  <span className="special-price">980,000₫</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="thumbs-list">
-                            <div className="thumbs-list-item active">
-                              <img className="lazyload loaded" src="images/20_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20.jpg?v=1604028085000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/20-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20-2.jpg?v=1604028086000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20-2.jpg?v=1604028086000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/20-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20-3.jpg?v=1604028086000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20-3.jpg?v=1604028086000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
                             </div>
                           </div>
                         </div>
@@ -366,32 +294,26 @@ const Home = ({ homepage }) => {
                       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
                         <div className="col-item">
                           <div className="product-thumb">
-                            <a href="/may-suoi-canh-quat-khong-day-cuong-buc-20v-max-70-000-btu" className="thumb" title="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU">
-                              <img className="lazyload loaded" src="images/19_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/19.jpg?v=1604028014000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
+                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 978 Plus">
+                            <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-978-plus.jpg" alt="Mũ Yohe 978 Plus" />
                             </a>
                             <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568359" encType="multipart/form-data">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
+                                <input type="hidden" name="variantId" defaultValue={37700810} />
+                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                  Thêm vào giỏ hàng
+                                </button>
                               </form>       
                             </div>
                           </div>
                           <div className="product-info">
-                            <h3 className="title"> <a href="/may-suoi-canh-quat-khong-day-cuong-buc-20v-max-70-000-btu" title="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU">MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU </a> </h3>
+                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 978 Plus">Mũ Yohe 978 Plus </a> </h3>
                             <div className="content">
                               <div className="item-price">    
                                 <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
+                                  <span className="special-price">1,400,000₫</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="thumbs-list">
-                            <div className="thumbs-list-item active">
-                              <img className="lazyload loaded" src="images/19.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/19.jpg?v=1604028014000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/19.jpg?v=1604028014000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/19-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/19-2.jpg?v=1604028016000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/19-2.jpg?v=1604028016000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
                             </div>
                           </div>
                         </div>
@@ -399,32 +321,26 @@ const Home = ({ homepage }) => {
                       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
                         <div className="col-item">
                           <div className="product-thumb">
-                            <a href="/flexvolt-20v-60v-max-12-0-ah-pin" className="thumb" title="FLEXVOLT 20V / 60V MAX 12.0 AH PIN">
-                              <img className="lazyload loaded" src="images/18_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/18.jpg?v=1604027973000" alt="FLEXVOLT 20V / 60V MAX 12.0 AH PIN" data-was-processed="true" />
+                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 981 Matt Black">
+                            <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-981-matt_black.jpg" alt="Mũ Yohe 981 Matt Black" />
                             </a>
                             <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568356" encType="multipart/form-data">
+                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
+                                <input type="hidden" name="variantId" defaultValue={37700810} />
+                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                  Thêm vào giỏ hàng
+                                </button>
                               </form>       
                             </div>
                           </div>
                           <div className="product-info">
-                            <h3 className="title"> <a href="/flexvolt-20v-60v-max-12-0-ah-pin" title="FLEXVOLT 20V / 60V MAX 12.0 AH PIN">FLEXVOLT 20V / 60V MAX 12.0 AH PIN </a> </h3>
+                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 981 Matt Black">Mũ Yohe 981 Matt Black </a> </h3>
                             <div className="content">
                               <div className="item-price">    
                                 <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
+                                  <span className="special-price">1,500,000₫</span>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div className="thumbs-list">
-                            <div className="thumbs-list-item active">
-                              <img className="lazyload loaded" src="images/18.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/18.jpg?v=1604027973000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/18.jpg?v=1604027973000" alt="FLEXVOLT 20V / 60V MAX 12.0 AH PIN" data-was-processed="true" />
-                            </div>
-                            <div className="thumbs-list-item ">
-                              <img className="lazyload loaded" src="images/18-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/18-2.jpg?v=1604027975000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/18-2.jpg?v=1604027975000" alt="FLEXVOLT 20V / 60V MAX 12.0 AH PIN" data-was-processed="true" />
                             </div>
                           </div>
                         </div>
@@ -567,8 +483,8 @@ const Home = ({ homepage }) => {
                             <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
                               <div className="col-item">
                                 <div className="product-thumb">
-                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">
-                                    <img className="lazyload loaded" src="images/20.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
+                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 977">
+                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-977_gloss_solid.jpg" alt="Mũ Yohe 977" />
                                   </a>
                                   <div className="actions hidden-xs hidden-sm">
                                     <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
@@ -580,24 +496,13 @@ const Home = ({ homepage }) => {
                                   </div>
                                 </div>
                                 <div className="product-info">
-                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX * </a> </h3>
+                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 977">Mũ Yohe 977 </a> </h3>
                                   <div className="content">
                                     <div className="item-price">    
                                       <div className="price-box"> 
-                                        <span className="special-price">15.000.000₫</span>
+                                        <span className="special-price">1,300,000₫</span>
                                       </div>
                                     </div>
-                                  </div>
-                                </div>
-                                <div className="thumbs-list">
-                                  <div className="thumbs-list-item active">
-                                    <img className="lazyload loaded" src="images/20_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20.jpg?v=1604028085000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/20-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20-2.jpg?v=1604028086000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20-2.jpg?v=1604028086000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/20-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/20-3.jpg?v=1604028086000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/20-3.jpg?v=1604028086000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
                                   </div>
                                 </div>
                               </div>
@@ -605,32 +510,26 @@ const Home = ({ homepage }) => {
                             <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
                               <div className="col-item">
                                 <div className="product-thumb">
-                                  <a href="/may-suoi-canh-quat-khong-day-cuong-buc-20v-max-70-000-btu" className="thumb" title="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU">
-                                    <img className="lazyload loaded" src="images/19_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/19.jpg?v=1604028014000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
+                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 978 Plus">
+                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-978-plus.jpg" alt="Mũ Yohe 978 Plus" />
                                   </a>
                                   <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568359" encType="multipart/form-data">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
+                                      <input type="hidden" name="variantId" defaultValue={37700810} />
+                                      <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                        Thêm vào giỏ hàng
+                                      </button>
                                     </form>       
                                   </div>
                                 </div>
                                 <div className="product-info">
-                                  <h3 className="title"> <a href="/may-suoi-canh-quat-khong-day-cuong-buc-20v-max-70-000-btu" title="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU">MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU </a> </h3>
+                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 978 Plus">Mũ Yohe 978 Plus </a> </h3>
                                   <div className="content">
                                     <div className="item-price">    
                                       <div className="price-box"> 
-                                        <span className="special-price"> 
-                                          Liên hệ
-                                        </span> 
+                                        <span className="special-price">1,400,000₫</span>
                                       </div>
                                     </div>
-                                  </div>
-                                </div>
-                                <div className="thumbs-list">
-                                  <div className="thumbs-list-item active">
-                                    <img className="lazyload loaded" src="images/19.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/19.jpg?v=1604028014000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/19.jpg?v=1604028014000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/19-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/19-2.jpg?v=1604028016000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/19-2.jpg?v=1604028016000" alt="MÁY SƯỞI CÁNH QUẠT KHÔNG DÂY CƯỠNG BỨC 20V MAX * 70.000 BTU" data-was-processed="true" />
                                   </div>
                                 </div>
                               </div>
@@ -638,38 +537,29 @@ const Home = ({ homepage }) => {
                             <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
                               <div className="col-item">
                                 <div className="product-thumb">
-                                  <a href="/may-cat-gach-da-op-muler-m089" className="thumb" title="Máy Cắt Gạch - Đá Ốp MULER M089">
-                                    <img className="lazyload loaded" src="images/15.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/15.jpg?v=1604026094000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
+                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 967 Plus">
+                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-967-plus.jpg" alt="Mũ Yohe 967 Plus" />
                                   </a>
                                   <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19567995" encType="multipart/form-data">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
+                                      <input type="hidden" name="variantId" defaultValue={37700810} />
+                                      <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                        Thêm vào giỏ hàng
+                                      </button>
                                     </form>       
                                   </div>
                                 </div>
                                 <div className="product-info">
-                                  <h3 className="title"> <a href="/may-cat-gach-da-op-muler-m089" title="Máy Cắt Gạch - Đá Ốp MULER M089">Máy Cắt Gạch - Đá Ốp MULER M089 </a> </h3>
+                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 967 Plus">Mũ Yohe 967 Plus </a> </h3>
                                   <div className="content">
                                     <div className="item-price">    
                                       <div className="price-box"> 
-                                        <span className="special-price"> 
-                                          Liên hệ
-                                        </span> 
+                                        <span className="special-price">1,500,000₫</span>
+                                        <span className="old-price"> 
+                                          1,800,000₫
+                                        </span>
                                       </div>
                                     </div>
-                                  </div>
-                                </div>
-                                <div className="thumbs-list">
-                                  <div className="thumbs-list-item active">
-                                    <img className="lazyload loaded" src="images/15_1.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/15.jpg?v=1604026094000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/15.jpg?v=1604026094000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/15-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/15-2.jpg?v=1604026095000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/15-2.jpg?v=1604026095000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/15-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/15-3.jpg?v=1604026095000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/15-3.jpg?v=1604026095000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/15-4.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/15-4.jpg?v=1604026095000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/15-4.jpg?v=1604026095000" alt="Máy Cắt Gạch - Đá Ốp MULER M089" data-was-processed="true" />
                                   </div>
                                 </div>
                               </div>
@@ -677,38 +567,26 @@ const Home = ({ homepage }) => {
                             <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
                               <div className="col-item">
                                 <div className="product-thumb">
-                                  <a href="/may-cat-co-cam-tay-gardena-09856-20" className="thumb" title="Máy cắt cỏ cầm tay gardena 09856-20">
-                                    <img className="lazyload loaded" src="images/14_1.png" data-src="https://bizweb.dktcdn.net/100/408/894/products/14.png?v=1604026062000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
+                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Lật Hàm Yohe 938 ">
+                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-938_matt_solid_black.jpg" alt="Mũ Lật Hàm Yohe 938 " />
                                   </a>
                                   <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19567992" encType="multipart/form-data">
+                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
+                                      <input type="hidden" name="variantId" defaultValue={37700810} />
+                                      <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                        Thêm vào giỏ hàng
+                                      </button>
                                     </form>       
                                   </div>
                                 </div>
                                 <div className="product-info">
-                                  <h3 className="title"> <a href="/may-cat-co-cam-tay-gardena-09856-20" title="Máy cắt cỏ cầm tay gardena 09856-20">Máy cắt cỏ cầm tay gardena 09856-20 </a> </h3>
+                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Lật Hàm Yohe 938 ">Mũ Lật Hàm Yohe 938  </a> </h3>
                                   <div className="content">
                                     <div className="item-price">    
                                       <div className="price-box"> 
-                                        <span className="special-price"> 
-                                          Liên hệ
-                                        </span> 
+                                        <span className="special-price">1,700,000₫</span>
                                       </div>
                                     </div>
-                                  </div>
-                                </div>
-                                <div className="thumbs-list">
-                                  <div className="thumbs-list-item active">
-                                    <img className="lazyload loaded" src="images/14.png" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/14.png?v=1604026062000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/14.png?v=1604026062000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/14-2.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/14-2.jpg?v=1604026063000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/14-2.jpg?v=1604026063000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/14-3.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/14-3.jpg?v=1604026064000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/14-3.jpg?v=1604026064000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
-                                  </div>
-                                  <div className="thumbs-list-item ">
-                                    <img className="lazyload loaded" src="images/14-4.jpg" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/14-4.jpg?v=1604026064000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/14-4.jpg?v=1604026064000" alt="Máy cắt cỏ cầm tay gardena 09856-20" data-was-processed="true" />
                                   </div>
                                 </div>
                               </div>

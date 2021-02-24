@@ -24,28 +24,28 @@ function Cart() {
                 <div className="offcanvas-content">
                     {/*begin::Wrapper*/}
                     <div className="offcanvas-wrapper mb-5 scroll-pull scroll ps ps--active-y scroll_cart" style={{overflow: 'hidden'}}>
-                    {/*begin::Item*/}
-                    <div className="d-flex align-items-center justify-content-between py-8">
-                        <div className="d-flex flex-column mr-2">
-                        <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
-                        <span className="text-muted">Mũ bảo hiểm</span>
-                        <div className="d-flex align-items-center mt-2">
-                            <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
-                            <span className="text-muted mr-1">x</span>
-                            <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
-                            <a href="#" className="btn btn-xs btn-light-success btn-icon mr-2">
-                            <MinusOutlined />
-                            </a>
-                            <a href="#" className="btn btn-xs btn-light-success btn-icon">
-                            <PlusOutlined />
+                        {/*begin::Item*/}
+                        <div className="d-flex align-items-center justify-content-between py-8">
+                            <div className="d-flex flex-column mr-2">
+                            <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
+                            <span className="text-muted">Mũ bảo hiểm</span>
+                            <div className="d-flex align-items-center mt-2">
+                                <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
+                                <span className="text-muted mr-1">x</span>
+                                <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
+                                <a href="#" className="btn btn-xs btn-light-success btn-icon mr-2">
+                                <MinusOutlined />
+                                </a>
+                                <a href="#" className="btn btn-xs btn-light-success btn-icon">
+                                <PlusOutlined />
+                                </a>
+                            </div>
+                            </div>
+                            <a href="#" className="symbol symbol-70 flex-shrink-0">
+                            <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
                             </a>
                         </div>
-                        </div>
-                        <a href="#" className="symbol symbol-70 flex-shrink-0">
-                        <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" title alt="" />
-                        </a>
-                    </div>
-                    {/*end::Item*/}
+                        {/*end::Item*/}
                     
                     <div className="separator separator-solid" />
                     {/*end::Separator*/}

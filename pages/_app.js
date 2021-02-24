@@ -5,6 +5,7 @@ import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
 
+import '../common/css/checkout.css'
 import '../common/css/noindex.css'
 import '../common/css/bootstrap_css.css'
 import '../common/css/index.css'
@@ -13,6 +14,8 @@ import '../common/css/site.css'
 import '../common/css/style_dbh.css'
 import '../common/css/collection.css'
 import '../common/css/cssCart.css'
+
+
 
 //recoil
 import {
