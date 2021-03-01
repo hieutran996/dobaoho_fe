@@ -373,7 +373,7 @@
     font-weight: 600;
     margin-bottom: 20px;
     padding: 10px 20px 10px 20px;
-    background: #fdd400;
+    /* background: #fdd400; */
     text-transform: uppercase;
 }
 @media (min-width: 767px) {
@@ -1054,4 +1054,11 @@
 }
 .section_blog_danhgia .section-danhgia .slick-dots li.slick-active button {
     background: #fdd400;
+}
+.ant-menu-item .ant-menu-item-icon, .ant-menu-submenu-title .ant-menu-item-icon, .ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+    font-size: 18px!important;
+}
+.ant-menu-item a.a-img span,
+.ant-menu-submenu span{
+    font-size: 16px;
 }

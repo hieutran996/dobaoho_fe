@@ -14,6 +14,7 @@ import '../common/css/site.css'
 import '../common/css/style_dbh.css'
 import '../common/css/collection.css'
 import '../common/css/cssCart.css'
+import '../common/css/detail.css'
 
 
 

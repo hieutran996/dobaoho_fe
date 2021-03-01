@@ -12,8 +12,50 @@ import { fetchAPI } from "../lib/api";
 import { getStrapiMedia } from "../lib/media";
 import Link from "next/link";
 import { Carousel } from 'antd';
+import { useState } from 'react';
+
+const dataSpecialInWeek = {
+  helmet: [
+    {
+      name: 'Mũ Yohe 977',
+      price: '1,300,000',
+      oldPrice: null,
+      nameFile: 'yohe-977_gloss_solid.jpg',
+      url: 'yohe-977-gloss-solid'
+    },
+    {
+      name: 'Mũ Yohe 978 Plus',
+      price: '1,400,000',
+      oldPrice: null,
+      nameFile: 'yohe-978-plus.jpg',
+      url: 'yohe-978-plus'
+    },
+    {
+      name: 'Mũ Yohe 967 Plus',
+      price: '1,500,000',
+      oldPrice: '1,800,000',
+      nameFile: 'yohe-967-plus.jpg',
+      url: 'yohe-967-plus'
+    },
+    {
+      name: 'Mũ Lật Hàm Yohe 938',
+      price: '1,700,000',
+      oldPrice: null,
+      nameFile: 'yohe-938_matt_solid_black.jpg',
+      url: 'yohe-938-matt-solid-black'
+    }
+  ],
+  protective_gear: [],
+  accessories: [],
+  toy_bike: []
+}
 
 const Home = ({ homepage }) => {
+  const [tabActive,setTabActive] = useState('helmet')
+
+  const onClickSpecialTab = (event) => {
+    setTabActive(event.currentTarget.dataset.name)
+  }
   return (
     <Layout>
       <Seo seo={homepage.seo} />
@@ -125,10 +167,10 @@ const Home = ({ homepage }) => {
                       </a>
                     </h2>
                     <ul className="link_list hidden-xs">
-                      <li><a className="ef" href="/" title="Trang chủ">Trang chủ</a></li>
-                      <li><a className="ef" href="/about-us" title="Giới thiệu">Giới thiệu</a></li>
-                      <li><a className="ef" href="/news" title="Tin tức">Tin tức</a></li>
-                      <li><a className="ef" href="/contact" title="Liên hệ">Liên hệ</a></li>
+                      <li><Link className="ef" href="/" title="Trang chủ">Trang chủ</Link></li>
+                      <li><Link className="ef" href="/about-us" title="Giới thiệu">Giới thiệu</Link></li>
+                      <li><Link className="ef" href="/news" title="Tin tức">Tin tức</Link></li>
+                      <li><Link className="ef" href="/contact" title="Liên hệ">Liên hệ</Link></li>
                     </ul>
                   </div>
                   <div className="section_content">
@@ -451,161 +493,72 @@ const Home = ({ homepage }) => {
                     <div className="row">
                       <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <ul className="tabs tabs-title tab-desktop ajax clearfix evo-close">
-                          <li className="tab-link has-content current" data-tab="tab-1" data-url="/dung-cu-dien">
+                          <li className={`tab-link ${tabActive === "helmet" ? 'has-content current' : ''}`} data-name="helmet" onClick={onClickSpecialTab}>
                             <span title="Mũ bảo hiểm">
                               <img className="img-responsive lazyload loaded" src="images/homepage/helmet.svg" alt="Mũ bảo hiểm" data-was-processed="true" />
                               <span className="link_title">Mũ bảo hiểm</span>
                             </span>
                           </li>
-                          <li className="tab-link " data-tab="tab-2" data-url="/dung-cu-cam-tay">
+                          <li className={`tab-link ${tabActive === "protective_gear" ? 'has-content current' : ''}`} data-name="protective_gear" onClick={onClickSpecialTab}>
                             <span title="Đồ bảo hộ">
                               <img className="img-responsive lazyload loaded" src="images/homepage/bullet-proof-vest.svg" alt="Đồ bảo hộ" data-was-processed="true" />
                               <span className="link_title">Đồ bảo hộ</span>
                             </span>
                           </li>
-                          <li className="tab-link " data-tab="tab-3" data-url="/phu-kien">
+                          <li className={`tab-link ${tabActive === "accessories" ? 'has-content current' : ''}`} data-name="accessories" onClick={onClickSpecialTab}>
                             <span title="Phụ kiện">
                               <img className="img-responsive lazyload loaded" src="images/homepage/glasses.svg" alt="Phụ kiện" data-was-processed="true" />
                               <span className="link_title">Phụ kiện</span>
                             </span>
                           </li>
-                          <li className="tab-link " data-tab="tab-3" data-url="/phu-kien">
-                            <span title="Phụ kiện">
-                              <img className="img-responsive lazyload loaded" src="images/homepage/tyre.svg" alt="Phụ kiện" data-was-processed="true" />
+                          <li className={`tab-link ${tabActive === "toy_bike" ? 'has-content current' : ''}`} data-name="toy_bike" onClick={onClickSpecialTab}>
+                            <span title="Đồ chơi xe">
+                              <img className="img-responsive lazyload loaded" src="images/homepage/tyre.svg" alt="Đồ chơi xe" data-was-processed="true" />
                               <span className="link_title">Đồ chơi xe</span>
                             </span>
                           </li>
                         </ul>
                       </div>
                       <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                        <div className="tab-1 tab-content current">
+                        <div className="tab-content current mt-0">
                           <div className="row">
-                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                              <div className="col-item">
-                                <div className="product-thumb">
-                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 977">
-                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-977_gloss_solid.jpg" alt="Mũ Yohe 977" />
-                                  </a>
-                                  <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
-                                      <input type="hidden" name="variantId" defaultValue={37700810} />
-                                      <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                        Thêm vào giỏ hàng
-                                      </button>
-                                    </form>       
-                                  </div>
-                                </div>
-                                <div className="product-info">
-                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 977">Mũ Yohe 977 </a> </h3>
-                                  <div className="content">
-                                    <div className="item-price">    
-                                      <div className="price-box"> 
-                                        <span className="special-price">1,300,000₫</span>
+                            {
+                              dataSpecialInWeek[tabActive].map((value,index) => {
+                                return(
+                                  <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6" key={index}>
+                                    <div className="col-item">
+                                      <div className="product-thumb">
+                                        <Link href={`/detail/${value.url}`} className="thumb" title={value.name}>
+                                          <ImageLazy layout='fill' className="lazyload loaded" src={`/images/homepage/banchay/${value.nameFile}`} alt={value.name} />
+                                        </Link>
+                                        <div className="actions hidden-xs hidden-sm">
+                                          <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
+                                            <input type="hidden" name="variantId" defaultValue={37700810} />
+                                            <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                              Thêm vào giỏ hàng
+                                            </button>
+                                          </form>       
+                                        </div>
+                                      </div>
+                                      <div className="product-info">
+                                        <h3 className="title"> <Link href={`/detail/${value.url}`} title={value.name}>{value.name}</Link> </h3>
+                                        <div className="content">
+                                          <div className="item-price">    
+                                            <div className="price-box"> 
+                                              <span className="special-price">{value.price}₫</span>
+                                              {
+                                                value.oldPrice !== null && <span className="old-price">{value.oldPrice}₫</span>
+                                              }
+                                            </div>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                              <div className="col-item">
-                                <div className="product-thumb">
-                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 978 Plus">
-                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-978-plus.jpg" alt="Mũ Yohe 978 Plus" />
-                                  </a>
-                                  <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
-                                      <input type="hidden" name="variantId" defaultValue={37700810} />
-                                      <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                        Thêm vào giỏ hàng
-                                      </button>
-                                    </form>       
-                                  </div>
-                                </div>
-                                <div className="product-info">
-                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 978 Plus">Mũ Yohe 978 Plus </a> </h3>
-                                  <div className="content">
-                                    <div className="item-price">    
-                                      <div className="price-box"> 
-                                        <span className="special-price">1,400,000₫</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                              <div className="col-item">
-                                <div className="product-thumb">
-                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 967 Plus">
-                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-967-plus.jpg" alt="Mũ Yohe 967 Plus" />
-                                  </a>
-                                  <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
-                                      <input type="hidden" name="variantId" defaultValue={37700810} />
-                                      <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                        Thêm vào giỏ hàng
-                                      </button>
-                                    </form>       
-                                  </div>
-                                </div>
-                                <div className="product-info">
-                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 967 Plus">Mũ Yohe 967 Plus </a> </h3>
-                                  <div className="content">
-                                    <div className="item-price">    
-                                      <div className="price-box"> 
-                                        <span className="special-price">1,500,000₫</span>
-                                        <span className="old-price"> 
-                                          1,800,000₫
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                              <div className="col-item">
-                                <div className="product-thumb">
-                                  <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Lật Hàm Yohe 938 ">
-                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-938_matt_solid_black.jpg" alt="Mũ Lật Hàm Yohe 938 " />
-                                  </a>
-                                  <div className="actions hidden-xs hidden-sm">
-                                    <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
-                                      <input type="hidden" name="variantId" defaultValue={37700810} />
-                                      <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                        Thêm vào giỏ hàng
-                                      </button>
-                                    </form>       
-                                  </div>
-                                </div>
-                                <div className="product-info">
-                                  <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Lật Hàm Yohe 938 ">Mũ Lật Hàm Yohe 938  </a> </h3>
-                                  <div className="content">
-                                    <div className="item-price">    
-                                      <div className="price-box"> 
-                                        <span className="special-price">1,700,000₫</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                                )
+                              })
+                            }
                           </div>
-                        </div>
-                        <div className="tab-2 tab-content">
-                        </div>
-                        <div className="tab-3 tab-content">
-                        </div>
-                        <div className="tab-4 tab-content">
-                        </div>
-                        <div className="tab-5 tab-content">
-                        </div>
-                        <div className="tab-6 tab-content">
-                        </div>
-                        <div className="tab-7 tab-content">
-                        </div>
-                        <div className="tab-8 tab-content">
                         </div>
                       </div>
                     </div>

@@ -509,7 +509,8 @@ label.error {
 }
 .search_form svg path, .search_form svg rect,
 .foo-contact svg path, .foo-contact svg rect,
-.section_why_choose svg path, .section_why_choose svg rect {
+.section_why_choose svg path, .section_why_choose svg rect,
+#detail_product svg path, #detail_product svg rect {
     fill: #fdd400;
 }
 .flexbox, .awe-popup {
