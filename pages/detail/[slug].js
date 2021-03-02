@@ -218,7 +218,7 @@ const Detail = ({product,global}) => {
                                                         <label className="hqty hidden-xs fixprice box">Số lượng</label>
                                                         <div className="hqty ct2 pull-left fixprice box">
                                                         <div className=" pull-left">
-                                                            <InputNumber size="large" min={1} defaultValue={1} onChange={onChangeInput} style={{ width: "20%" }}/>
+                                                            <InputNumber size="large" min={1} defaultValue={1} onChange={onChangeInput} />
                                                         </div>
                                                         </div>
                                                         <div className="pull-left ct2 fixprice">

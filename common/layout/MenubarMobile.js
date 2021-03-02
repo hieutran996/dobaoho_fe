@@ -43,7 +43,7 @@ function MenubarMobile() {
                     <Menu mode="inline" openKeys={openKeys} onOpenChange={onOpenChange}>
                         <Menu.Item key="1" icon={<HomeOutlined />}>
                             <LinkConfig href="/">
-                                <a className="a-img" title="Trang chủ">
+                                <a className="a-img" title="Trang chủ" onClick={() => setOpenMenubar(!openMenubar)}>
                                     <span>Trang chủ</span>
                                     <span className="label_">
                                     <i className="label " />
@@ -53,7 +53,7 @@ function MenubarMobile() {
                         </Menu.Item>
                         <Menu.Item key="2" icon={<UsergroupAddOutlined />}>
                             <LinkConfig href="/about-us">
-                                <a className="a-img" title="Giới thiệu">
+                                <a className="a-img" title="Giới thiệu" onClick={() => setOpenMenubar(!openMenubar)}>
                                     <span>Giới thiệu</span>
                                     <span className="label_">
                                     <i className="label " />
@@ -63,31 +63,31 @@ function MenubarMobile() {
                         </Menu.Item>
                         <SubMenu key="sub1" icon={<ShoppingOutlined />} title="Sản Phẩm">
                             <SubMenu key="sub2" title="Mũ bảo hiểm">
-                                <Menu.Item key="3">AGV</Menu.Item>
-                                <Menu.Item key="4">LS2</Menu.Item>
-                                <Menu.Item key="5">Yohe</Menu.Item>
-                                <Menu.Item key="6">Ego</Menu.Item>
+                                <Menu.Item key="3" onClick={() => setOpenMenubar(!openMenubar)}>AGV</Menu.Item>
+                                <Menu.Item key="4" onClick={() => setOpenMenubar(!openMenubar)}>LS2</Menu.Item>
+                                <Menu.Item key="5" onClick={() => setOpenMenubar(!openMenubar)}>Yohe</Menu.Item>
+                                <Menu.Item key="6" onClick={() => setOpenMenubar(!openMenubar)}>Ego</Menu.Item>
                             </SubMenu>
                             <SubMenu key="sub3" title="Đồ bảo hộ">
-                                <Menu.Item key="7">Áo bảo hộ</Menu.Item>
-                                <Menu.Item key="8">Găng bảo hộ</Menu.Item>
-                                <Menu.Item key="9">Giày bảo hộ</Menu.Item>
-                                <Menu.Item key="10">Balo</Menu.Item>
+                                <Menu.Item key="7" onClick={() => setOpenMenubar(!openMenubar)}>Áo bảo hộ</Menu.Item>
+                                <Menu.Item key="8" onClick={() => setOpenMenubar(!openMenubar)}>Găng bảo hộ</Menu.Item>
+                                <Menu.Item key="9" onClick={() => setOpenMenubar(!openMenubar)}>Giày bảo hộ</Menu.Item>
+                                <Menu.Item key="10" onClick={() => setOpenMenubar(!openMenubar)}>Balo</Menu.Item>
                             </SubMenu>
                             <SubMenu key="sub4" title="Phụ kiện">
-                                <Menu.Item key="11">Kính mũ</Menu.Item>
-                                <Menu.Item key="12">Tai nghe</Menu.Item>
-                                <Menu.Item key="13">Trùm đầu</Menu.Item>
-                                <Menu.Item key="14">Đuôi gió</Menu.Item>
+                                <Menu.Item key="11" onClick={() => setOpenMenubar(!openMenubar)}>Kính mũ</Menu.Item>
+                                <Menu.Item key="12" onClick={() => setOpenMenubar(!openMenubar)}>Tai nghe</Menu.Item>
+                                <Menu.Item key="13" onClick={() => setOpenMenubar(!openMenubar)}>Trùm đầu</Menu.Item>
+                                <Menu.Item key="14" onClick={() => setOpenMenubar(!openMenubar)}>Đuôi gió</Menu.Item>
                             </SubMenu>
-                            <Menu.Item key="15">Đồ chơi xe</Menu.Item>
-                            <Menu.Item key="16">Sản phẩm khuyến mãi</Menu.Item>
-                            <Menu.Item key="17">Sản phẩm mới</Menu.Item>
-                            <Menu.Item key="18">Sản phẩm nổi bật</Menu.Item>
+                            <Menu.Item key="15" onClick={() => setOpenMenubar(!openMenubar)}>Đồ chơi xe</Menu.Item>
+                            <Menu.Item key="16" onClick={() => setOpenMenubar(!openMenubar)}>Sản phẩm khuyến mãi</Menu.Item>
+                            <Menu.Item key="17" onClick={() => setOpenMenubar(!openMenubar)}>Sản phẩm mới</Menu.Item>
+                            <Menu.Item key="18" onClick={() => setOpenMenubar(!openMenubar)}>Sản phẩm nổi bật</Menu.Item>
                         </SubMenu>
                         <Menu.Item key="9" icon={<SolutionOutlined />}>
                             <LinkConfig href="/news">
-                                <a className="a-img" title="Tin tức">
+                                <a className="a-img" title="Tin tức" onClick={() => setOpenMenubar(!openMenubar)}>
                                 <span>Tin tức</span>
                                 <span className="label_">
                                     <i className="label " />
@@ -97,7 +97,7 @@ function MenubarMobile() {
                         </Menu.Item>
                         <Menu.Item key="10" icon={<PhoneOutlined />}>
                             <LinkConfig href="/contact">
-                                <a className="a-img" title="Liên hệ">
+                                <a className="a-img" title="Liên hệ" onClick={() => setOpenMenubar(!openMenubar)}>
                                 <span>Liên hệ</span>
                                 <span className="label_">
                                     <i className="label " />

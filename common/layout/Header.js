@@ -21,9 +21,12 @@ export default function Header() {
           <div className="container">
             <div className="row d-flex">
               <div className="col-lg-3 col-md-3 header-logo">
-                <a href="/" title="Logo">
-                  <img src={getStrapiMedia(logo[0])} alt="logo do bao ho"  style={{paddingRight: '25px'}}/>
-                </a>
+                <LinkConfig href="/">
+                  <a title="Logo">
+                    <img src={getStrapiMedia(logo[0])} alt="logo do bao ho"  style={{paddingRight: '25px'}}/>
+                  </a>
+                </LinkConfig>	
+                
               </div>
               <div className="col-lg-9 col-md-9 header-content">
                 <div className="header-topbar">

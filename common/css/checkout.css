@@ -1391,3 +1391,22 @@ a, .radio__label__icon, .payment-due__price, .spinner--active, .ui-tag__label, .
 .thankyou-page .order-summary {
     background-color: #fafafa;
 }
+.label_transport {
+    padding-top: .4em;
+}
+#shippingMethodList .ship {
+    padding: .85rem 1rem;
+    margin-bottom: 0;
+}
+#checkoutForm .sidebar::after {
+    background: unset;
+}
+#checkoutForm .sidebar__header {
+    display: block;
+}
+#checkoutForm aside.sidebar {
+    padding-bottom: 40px;
+}
+#checkoutForm .section__header {
+    margin-bottom: 0;
+}

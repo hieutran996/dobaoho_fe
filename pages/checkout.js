@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Layout from "../components/layout";
 import customData from '../common/data/data.json';
 import { Select } from 'antd';
-import { ConsoleSqlOutlined, PayCircleOutlined } from '@ant-design/icons';
+import { PlusOutlined, MinusOutlined,CloseOutlined } from '@ant-design/icons';
 
 const { Option } = Select;
 
@@ -101,7 +101,6 @@ function Checkout(props) {
                             <div className="section__header">
                                 <div className="layout-flex">
                                 <h2 className="section__title layout-flex__item layout-flex__item--stretch">
-                                    <i className="fa fa-id-card-o fa-lg section__title--icon hide-on-desktop" />
                                     Thông tin nhận hàng
                                 </h2>
                                 </div>
@@ -234,22 +233,17 @@ function Checkout(props) {
                             <div className="section__header">
                                 <div className="layout-flex">
                                 <h2 className="section__title layout-flex__item layout-flex__item--stretch">
-                                    <i className="fa fa-truck fa-lg section__title--icon hide-on-desktop" />
                                     Vận chuyển
                                 </h2>
                                 </div>
                             </div>
+                            <label className="field__label label_transport">
+                                Phương thức vận chuyển
+                            </label>
                             <div className="section__content" id="shippingMethodList">
-                                <div className="alert alert--loader spinner spinner--active hide" >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="spinner-loader">
-                                    <use href="#spinner" />
-                                </svg>
-                                </div>
-                                <div className="alert alert-retry alert--danger hide" >
-                                <span data-bind="loadingShippingErrorMessage">Không thể load phí vận chuyển. Vui lòng thử lại</span> <i className="fa fa-refresh" />
-                                </div>
-                                <div className="alert alert--info">
-                                Vui lòng nhập thông tin giao hàng
+                                
+                                <div className="alert alert--info ship">
+                                Giao hàng tận nơi, miễn phí vận chuyển
                                 </div>
                             </div>
                             </section>
@@ -257,7 +251,6 @@ function Checkout(props) {
                             <div className="section__header">
                                 <div className="layout-flex">
                                 <h2 className="section__title layout-flex__item layout-flex__item--stretch">
-                                    <i className="fa fa-credit-card fa-lg section__title--icon hide-on-desktop" />
                                     Thanh toán
                                 </h2>
                                 </div>
@@ -270,11 +263,8 @@ function Checkout(props) {
                                         <input name="paymentMethod" id="paymentMethod-483665" type="radio" className="input-radio" data-bind="paymentMethod" defaultValue={483665} defaultChecked />
                                     </div>
                                     <label htmlFor="paymentMethod-483665" className="radio__label">
-                                        <span className="radio__label__primary">Thanh toán khi giao hàng (COD)</span>
+                                        <span className="radio__label__primary">Thanh toán khi nhận hàng (COD)</span>
                                     </label>
-                                    </div>
-                                    <div className="content-box__row__desc" data-bind-show="paymentMethod == 483665">
-                                    <p>Bạn chỉ phải thanh toán khi nhận được hàng</p>
                                     </div>
                                 </div>
                                 </div>
@@ -283,12 +273,9 @@ function Checkout(props) {
                         </div>
                         </article>
                         <div className="field__input-btn-wrapper field__input-btn-wrapper--vertical hide-on-desktop">
-                        <button type="submit" className="btn btn-checkout spinner" data-bind-class="{'spinner--active': isSubmitingCheckout}" data-bind-disabled="isSubmitingCheckout || isLoadingReductionCode">
-                            <span className="spinner-label">ĐẶT HÀNG</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="spinner-loader">
-                            <use href="#spinner" />
-                            </svg>
-                        </button>
+                        <div className="text-center mb-5 pb-5 mt-5">
+                            <button type="button" className="btn btn-primary text-weight-bold">Hoàn tất thanh toán</button>
+                        </div>
                         <a href="/cart" className="previous-link">
                             <i className="previous-link__arrow">❮</i>
                             <span className="previous-link__content">Quay về giỏ hàng</span>
@@ -307,143 +294,172 @@ function Checkout(props) {
                     </div>
                     <div className="sidebar__content">
                         <div id="order-summary" className="order-summary order-summary--is-collapsed">
-                        <div className="order-summary__sections">
-                            <div className="order-summary__section order-summary__section--product-list order-summary__section--is-scrollable order-summary--collapse-element">
-                            <table className="product-table">
-                                <caption className="visually-hidden">Chi tiết đơn hàng</caption>
-                                <thead className="product-table__header">
-                                <tr>
-                                    <th>
-                                    <span className="visually-hidden">Ảnh sản phẩm</span>
-                                    </th>
-                                    <th>
-                                    <span className="visually-hidden">Mô tả</span>
-                                    </th>
-                                    <th>
-                                    <span className="visually-hidden">Sổ lượng</span>
-                                    </th>
-                                    <th>
-                                    <span className="visually-hidden">Đơn giá</span>
-                                    </th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr className="product">
-                                    <td className="product__image">
-                                    <div className="product-thumbnail">
-                                        <div className="product-thumbnail__wrapper" data-tg-static>
-                                        <img src="//bizweb.dktcdn.net/thumb/thumb/100/408/894/products/20.jpg?v=1604028085530" alt="" className="product-thumbnail__image" />
+                        <div id="kt_quick_cart">
+                                    {/*begin::Content*/}
+                                    <div className="offcanvas-content">
+                                        {/*begin::Wrapper*/}
+                                        <div className="offcanvas-wrapper mb-5 scroll-pull scroll ps ps--active-y scroll_cart">
+                                            {/*begin::Item*/}
+                                            <div className="d-flex align-items-center justify-content-between py-8">
+                                                <div className="d-flex flex-column mr-2">
+                                                <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
+                                                <span className="text-muted">Mũ bảo hiểm</span>
+                                                <div className="d-flex align-items-center mt-2">
+                                                    <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
+                                                    <span className="text-muted mr-1">x</span>
+                                                    <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
+                                                </div>
+                                                </div>
+                                                <a href="#" className="symbol symbol-70 flex-shrink-0">
+                                                <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
+                                                </a>
+                                            </div>
+                                            {/*end::Item*/}
+                                            <div className="separator separator-solid" />
+                                            {/*begin::Item*/}
+                                            <div className="d-flex align-items-center justify-content-between py-8">
+                                                <div className="d-flex flex-column mr-2">
+                                                <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
+                                                <span className="text-muted">Mũ bảo hiểm</span>
+                                                <div className="d-flex align-items-center mt-2">
+                                                    <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
+                                                    <span className="text-muted mr-1">x</span>
+                                                    <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
+                                                </div>
+                                                </div>
+                                                <a href="#" className="symbol symbol-70 flex-shrink-0">
+                                                <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
+                                                </a>
+                                            </div>
+                                            {/*end::Item*/}
+                                            <div className="separator separator-solid" />
+                                            {/*begin::Item*/}
+                                            <div className="d-flex align-items-center justify-content-between py-8">
+                                                <div className="d-flex flex-column mr-2">
+                                                <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
+                                                <span className="text-muted">Mũ bảo hiểm</span>
+                                                <div className="d-flex align-items-center mt-2">
+                                                    <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
+                                                    <span className="text-muted mr-1">x</span>
+                                                    <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
+                                                </div>
+                                                </div>
+                                                <a href="#" className="symbol symbol-70 flex-shrink-0">
+                                                <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
+                                                </a>
+                                            </div>
+                                            {/*end::Item*/}
+                                            <div className="separator separator-solid" />
+                                            {/*begin::Item*/}
+                                            <div className="d-flex align-items-center justify-content-between py-8">
+                                                <div className="d-flex flex-column mr-2">
+                                                <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
+                                                <span className="text-muted">Mũ bảo hiểm</span>
+                                                <div className="d-flex align-items-center mt-2">
+                                                    <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
+                                                    <span className="text-muted mr-1">x</span>
+                                                    <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
+                                                </div>
+                                                </div>
+                                                <a href="#" className="symbol symbol-70 flex-shrink-0">
+                                                <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
+                                                </a>
+                                            </div>
+                                            {/*end::Item*/}
+                                            <div className="separator separator-solid" />
+                                            {/*begin::Item*/}
+                                            <div className="d-flex align-items-center justify-content-between py-8">
+                                                <div className="d-flex flex-column mr-2">
+                                                <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
+                                                <span className="text-muted">Mũ bảo hiểm</span>
+                                                <div className="d-flex align-items-center mt-2">
+                                                    <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
+                                                    <span className="text-muted mr-1">x</span>
+                                                    <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
+                                                </div>
+                                                </div>
+                                                <a href="#" className="symbol symbol-70 flex-shrink-0">
+                                                <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
+                                                </a>
+                                            </div>
+                                            {/*end::Item*/}
+                                            <div className="separator separator-solid" />
+                                            {/*begin::Item*/}
+                                            <div className="d-flex align-items-center justify-content-between py-8">
+                                                <div className="d-flex flex-column mr-2">
+                                                <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
+                                                <span className="text-muted">Mũ bảo hiểm</span>
+                                                <div className="d-flex align-items-center mt-2">
+                                                    <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
+                                                    <span className="text-muted mr-1">x</span>
+                                                    <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
+                                                </div>
+                                                </div>
+                                                <a href="#" className="symbol symbol-70 flex-shrink-0">
+                                                <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
+                                                </a>
+                                            </div>
+                                            {/*end::Item*/}
+                                            <div className="separator separator-solid" />
+                                            {/*begin::Item*/}
+                                            <div className="d-flex align-items-center justify-content-between py-8">
+                                                <div className="d-flex flex-column mr-2">
+                                                <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
+                                                <span className="text-muted">Mũ bảo hiểm</span>
+                                                <div className="d-flex align-items-center mt-2">
+                                                    <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
+                                                    <span className="text-muted mr-1">x</span>
+                                                    <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
+                                                </div>
+                                                </div>
+                                                <a href="#" className="symbol symbol-70 flex-shrink-0">
+                                                <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
+                                                </a>
+                                            </div>
+                                            {/*end::Item*/}
+                                            <div className="separator separator-solid" />
+                                            {/*begin::Item*/}
+                                            <div className="d-flex align-items-center justify-content-between py-8">
+                                                <div className="d-flex flex-column mr-2">
+                                                <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
+                                                <span className="text-muted">Mũ bảo hiểm</span>
+                                                <div className="d-flex align-items-center mt-2">
+                                                    <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
+                                                    <span className="text-muted mr-1">x</span>
+                                                    <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
+                                                </div>
+                                                </div>
+                                                <a href="#" className="symbol symbol-70 flex-shrink-0">
+                                                <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
+                                                </a>
+                                            </div>
+                                            {/*end::Item*/}
+                                            <div className="separator separator-solid" />
+                                        {/*end::Separator*/}
                                         </div>
-                                        <span className="product-thumbnail__quantity">1</span>
-                                    </div>
-                                    </td>
-                                    <th className="product__description">
-                                    <span className="product__description__name">
-                                        MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *
-                                    </span>
-                                    </th>
-                                    <td className="product__quantity visually-hidden"><em>Số lượng:</em> 1</td>
-                                    <td className="product__price">
-                                    15.000.000₫
-                                    </td>
-                                </tr>
-                                <tr className="product">
-                                    <td className="product__image">
-                                    <div className="product-thumbnail">
-                                        <div className="product-thumbnail__wrapper" data-tg-static>
-                                        <img src="//bizweb.dktcdn.net/thumb/thumb/100/408/894/products/25.jpg?v=1604029328333" alt="" className="product-thumbnail__image" />
+                                        {/*end::Wrapper*/}
+                                        {/*begin::Purchase*/}
+                                        <div className="offcanvas-footer" kt-hidden-height={112} style={{}}>
+                                        <div className="d-flex align-items-center justify-content-between mb-4">
+                                            <span className="font-weight-bold text-muted font-size-sm mr-2">Tạm tính</span>
+                                            <span className="font-weight-bolder text-dark-50 text-right">20,000,000đ</span>
                                         </div>
-                                        <span className="product-thumbnail__quantity">1</span>
+                                        <div className="d-flex align-items-center justify-content-between mb-4">
+                                            <span className="font-weight-bold text-muted font-size-sm mr-2">Phí vận chuyển</span>
+                                            <span className="font-weight-bolder text-dark-50 text-right">30,000đ</span>
+                                        </div>
+                                        <div className="d-flex align-items-center justify-content-between mb-7">
+                                            <span className="font-weight-bold font-size-sm mr-2">Tổng cộng</span>
+                                            <span className="font-weight-bolder text-primary text-right">20,030,000đ</span>
+                                        </div>
+                                        <div className="text-right hide-on-mobile">
+                                            <button type="button" className="btn btn-primary text-weight-bold">Hoàn tất thanh toán</button>
+                                        </div>
+                                        </div>
+                                        {/*end::Purchase*/}
                                     </div>
-                                    </td>
-                                    <th className="product__description">
-                                    <span className="product__description__name">
-                                        BÚA KHOAN SỢI THỦY TINH 3 LB.
-                                    </span>
-                                    </th>
-                                    <td className="product__quantity visually-hidden"><em>Số lượng:</em> 1</td>
-                                    <td className="product__price">
-                                    10.499.000₫
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            </div>
-                            <div className="order-summary__section order-summary__section--discount-code" data-tg-refresh="refreshDiscount" id="discountCode">
-                            <h3 className="visually-hidden">Mã khuyến mại</h3>
-                            <div className="edit_checkout animate-floating-labels">
-                                <div className="fieldset">
-                                <div className="field  ">
-                                    <div className="field__input-btn-wrapper">
-                                    <div className="field__input-wrapper">
-                                        <label htmlFor="reductionCode" className="field__label">Nhập mã giảm giá</label>
-                                        <input name="reductionCode" id="reductionCode" type="text" className="field__input" autoComplete="off" data-bind-disabled="isLoadingReductionCode" data-bind-event-keypress="handleReductionCodeKeyPress(event)" data-define="{reductionCode: null}" data-bind="reductionCode" />
-                                    </div>
-                                    <button className="field__input-btn btn spinner btn--disabled" type="button" data-bind-disabled="isLoadingReductionCode || !reductionCode" data-bind-class="{'spinner--active': isLoadingReductionCode, 'btn--disabled': !reductionCode}" data-bind-event-click="applyReductionCode()" disabled>
-                                        <span className="spinner-label">Áp dụng</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="spinner-loader">
-                                        <use href="#spinner" />
-                                        </svg>
-                                    </button>
-                                    </div>
-                                    <p className="field__message field__message--error field__message--error-always-show hide" data-bind-show="!isLoadingReductionCode && isLoadingReductionCodeError" data-bind="loadingReductionCodeErrorMessage">Có lỗi xảy ra khi áp dụng khuyến mãi. Vui lòng thử lại</p>
+                                    {/*end::Content*/}
                                 </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div className="order-summary__section order-summary__section--total-lines order-summary--collapse-element" data-define="{subTotalPriceText: '25.499.000₫'}" data-tg-refresh="refreshOrderTotalPrice" id="orderSummary">
-                            <table className="total-line-table">
-                                <caption className="visually-hidden">Tổng giá trị</caption>
-                                <thead>
-                                <tr>
-                                    <td><span className="visually-hidden">Mô tả</span></td>
-                                    <td><span className="visually-hidden">Giá tiền</span></td>
-                                </tr>
-                                </thead>
-                                <tbody className="total-line-table__tbody">
-                                <tr className="total-line total-line--subtotal">
-                                    <th className="total-line__name">
-                                    Tạm tính
-                                    </th>
-                                    <td className="total-line__price">25.499.000₫</td>
-                                </tr>
-                                <tr className="total-line total-line--shipping-fee">
-                                    <th className="total-line__name">
-                                    Phí vận chuyển
-                                    </th>
-                                    <td className="total-line__price" data-bind="getTextShippingPrice()">-</td>
-                                </tr>
-                                </tbody>
-                                <tfoot className="total-line-table__footer">
-                                <tr className="total-line payment-due">
-                                    <th className="total-line__name">
-                                    <span className="payment-due__label-total">
-                                        Tổng cộng
-                                    </span>
-                                    </th>
-                                    <td className="total-line__price">
-                                    <span className="payment-due__price" data-bind="getTextTotalPrice()">25.499.000₫</span>
-                                    </td>
-                                </tr>
-                                </tfoot>
-                            </table>
-                            </div>
-                            <div className="order-summary__nav field__input-btn-wrapper hide-on-mobile layout-flex--row-reverse">
-                            <button type="submit" className="btn btn-checkout spinner" data-bind-class="{'spinner--active': isSubmitingCheckout}" data-bind-disabled="isSubmitingCheckout || isLoadingReductionCode">
-                                <span className="spinner-label">ĐẶT HÀNG</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="spinner-loader">
-                                <use href="#spinner" />
-                                </svg>
-                            </button>
-                            <a href="/cart" className="previous-link">
-                                <i className="previous-link__arrow">❮</i>
-                                <span className="previous-link__content">Quay về giỏ hàng</span>
-                            </a>
-                            </div>
-                            <div id="common-alert-sidebar" data-tg-refresh="refreshError">
-                            <div className="alert alert--danger hide-on-mobile hide" data-bind-show="!isSubmitingCheckout && isSubmitingCheckoutError" data-bind="submitingCheckoutErrorMessage">Có lỗi xảy ra khi xử lý. Vui lòng thử lại</div>
-                            </div>
-                        </div>
                         </div>
                     </div>
                     </aside>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { CloseOutlined, PlusOutlined,MinusOutlined } from '@ant-design/icons';
-
+import Link from "next/link";
 //Recoil
 import {
     useRecoilState
@@ -66,7 +66,8 @@ function Cart() {
                         <span className="font-weight-bolder text-primary text-right">20,030,000đ</span>
                     </div>
                     <div className="text-right">
-                        <button type="button" className="btn btn-primary text-weight-bold">Tiến hành thanh toán</button>
+                        
+                        <Link href="/checkout" title="Thanh toán"><button type="button" className="btn btn-primary text-weight-bold" onClick={() => setStatusCart(!statusCart)} >Tiến hành thanh toán</button></Link>
                     </div>
                     </div>
                     {/*end::Purchase*/}
