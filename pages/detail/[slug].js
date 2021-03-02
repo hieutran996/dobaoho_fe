@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Tabs,InputNumber,Breadcrumb } from 'antd'
+import { Tabs,InputNumber,Breadcrumb,Select } from 'antd'
 import { fetchAPI } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media"
 import Link from "next/link"
@@ -9,6 +9,8 @@ import MDReactComponent from 'markdown-react-js';
 
 
 const { TabPane } = Tabs;
+
+const { Option } = Select;
 
 const limit = 8
 
@@ -96,6 +98,10 @@ const Detail = ({product,global}) => {
         console.log('changed', value);
     }
 
+    const handleChange = (value) => {
+        console.log('changed', value);
+    }
+
     return (
         <Layout>
             <div id="detail_product">
@@ -180,7 +186,31 @@ const Detail = ({product,global}) => {
                                             <span className="stock-brand-title"><strong>Tình trạng:</strong></span>
                                             <span className="a-stock">Còn hàng</span>
                                             </div>
-                                            <div className="product_sku" id="sku"><span className="fnew">Mã sản phẩm:</span> {product.slug}</div>
+                                            <div className="product_sku" id="sku">
+                                                <span className="fnew">Mã sản phẩm:</span> {product.slug}
+                                            </div>
+                                            <div className="field field--show-floating-label p-0 mb-3">
+                                                <div className="field__input-wrapper field__input-wrapper--select2">
+                                                <label htmlFor="billingProvince" className="fnew">Kích thước: </label>
+                                                
+                                                </div>
+                                            </div>
+                                            <Select
+                                                    style={{ width: "20%" }}
+                                                    defaultValue="S"
+                                                    optionFilterProp="children"
+                                                    filterOption={(input, option) =>
+                                                    option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                                                    }
+                                                >   
+                                                    {
+                                                        ['S', 'M', 'L', 'XL', 'XXL'].map((value,index) => {
+                                                            return(
+                                                                <Option key={index}>{value}</Option>
+                                                            )
+                                                        })
+                                                    }
+                                                </Select>
                                             <div className="add-to-box form-product ">
                                             <div className="add-to-cart">
                                                 <form action="/cart/add" method="post" encType="multipart/form-data" id="add-to-cart-form" className="form-inline">
@@ -188,7 +218,7 @@ const Detail = ({product,global}) => {
                                                         <label className="hqty hidden-xs fixprice box">Số lượng</label>
                                                         <div className="hqty ct2 pull-left fixprice box">
                                                         <div className=" pull-left">
-                                                            <InputNumber size="large" min={1} defaultValue={1} onChange={onChangeInput} />
+                                                            <InputNumber size="large" min={1} defaultValue={1} onChange={onChangeInput} style={{ width: "20%" }}/>
                                                         </div>
                                                         </div>
                                                         <div className="pull-left ct2 fixprice">

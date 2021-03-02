@@ -41,7 +41,7 @@ const MyApp = ({ Component, pageProps }) => {
     window.fbAsyncInit = function() {
       FB.init({
           xfbml            : true,
-          version          : 'v9.0'
+          version          : 'v10.0'
         });
       };
 
@@ -51,7 +51,7 @@ const MyApp = ({ Component, pageProps }) => {
       js = d.createElement(s); js.id = id;
       js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    }(document, 'script', 'facebook-jssdk'))
 
     setTimeout(() => {
       var iframe_title = document.getElementsByTagName("iframe");
@@ -132,12 +132,11 @@ const MyApp = ({ Component, pageProps }) => {
       {/* facebook mess */}
       <div id="fb-root"></div>
       <div className="fb-customerchat"
-        attribution="setup_tool"
-        title="fb chat"
-        page_id="870142283376883"
-        logged_in_greeting="Hi!  Tôi có thể giúp gì cho bạn?"
-        logged_out_greeting="Hi!  Tôi có thể giúp gì cho bạn?">
-      </div>
+      attribution="setup_tool"
+      page_id="104832761587094"
+      logged_in_greeting="Hãy liên hệ với chúng tôi để được những ưu đãi tốt nhất về sản phẩm"
+      logged_out_greeting="Hãy liên hệ với chúng tôi để được những ưu đãi tốt nhất về sản phẩm">
+    </div>
     </RecoilRoot>
   );
 };

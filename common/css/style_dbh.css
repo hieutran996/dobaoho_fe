@@ -286,7 +286,7 @@ input {
 button, input[type="submit"] {
     cursor: pointer;
 }
-input[type="text"], input[type="search"], input[type="password"], input[type="email"], input[type="file"], input[type="number"], input[type="tel"], textarea, select {
+input[type="text"],input.ant-input-number-input, input[type="search"], input[type="password"], input[type="email"], input[type="file"], input[type="number"], input[type="tel"], textarea, select {
     display: block;
     width: 100%;
     margin-bottom: 0;
@@ -318,7 +318,7 @@ input[type="text"][disabled], input[type="text"].disabled, input[type="search"][
     max-width: 100%;
     display: block;
     height: calc(2em + 1.3rem + 2px);
-    padding: .65rem 1rem;
+    padding: .5rem 1rem;
     display: block;
     width: 100%;
     font-weight: 400;
@@ -346,6 +346,9 @@ input[type="checkbox"], input[type="radio"] {
     display: inline;
     margin: 0;
     padding: 0;
+}
+#detail_product .ant-input-number {
+    border: unset;
 }
 select {
     -webkit-appearance: none;
@@ -510,7 +513,7 @@ label.error {
 .search_form svg path, .search_form svg rect,
 .foo-contact svg path, .foo-contact svg rect,
 .section_why_choose svg path, .section_why_choose svg rect,
-#detail_product svg path, #detail_product svg rect {
+#detail_product .policy-product svg path, #detail_product .policy-product svg rect {
     fill: #fdd400;
 }
 .flexbox, .awe-popup {

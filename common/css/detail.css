@@ -1052,18 +1052,20 @@ ul#product-detail-tab li {
 .img-magnifier-container {
     position:relative;
 }
-.img-magnifier-glass {
-    position: absolute;
-    border: 0px solid #000;
-    border-radius: 0%;
-    cursor: none;
-    /*Set the size of the magnifier glass:*/
-    width: 200px;
-    height: 200px;
-    visibility: hidden;
-}
-.img-magnifier-container:hover .img-magnifier-glass {
-    visibility: visible;
+@media (min-width: 1024px) {
+    .img-magnifier-glass {
+        position: absolute;
+        border: 0px solid #000;
+        border-radius: 0%;
+        cursor: none;
+        /*Set the size of the magnifier glass:*/
+        width: 200px;
+        height: 200px;
+        visibility: hidden;
+    }
+    .img-magnifier-container:hover .img-magnifier-glass {
+        visibility: visible;
+    }
 }
 .ant-tabs-tab-btn {
     font-weight: 500;
