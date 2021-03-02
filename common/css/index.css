@@ -1062,3 +1062,13 @@
 .ant-menu-submenu span{
     font-size: 16px;
 }
+.ant-back-top {
+    right: 110px!important;
+    bottom: 37px!important;
+}
+@media (max-width: 991px) {
+    .ant-back-top{
+        right: 43px!important;
+        bottom: 110px!important;
+    }
+}
