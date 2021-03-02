@@ -52,13 +52,12 @@ const MyApp = ({ Component, pageProps }) => {
       js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'))
-
-    setTimeout(() => {
-      var iframe_title = document.getElementsByTagName("iframe");
-      for (let index = 0; index < iframe_title.length; index++) {
-        iframe_title[index].title = "facebook_htweb_chat"
-      }    
-    }, 3000)
+    // setTimeout(() => {
+    //   var iframe_title = document.getElementsByTagName("iframe");
+    //   for (let index = 0; index < iframe_title.length; index++) {
+    //     iframe_title[index].title = "facebook_htweb_chat"
+    //   }    
+    // }, 3000)
   }, [])
   
 
