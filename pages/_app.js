@@ -4,20 +4,6 @@ import Head from "next/head";
 import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
-
-import '../common/css/checkout.css'
-import '../common/css/noindex.css'
-import '../common/css/bootstrap_css.css'
-import '../common/css/index.css'
-import '../common/css/login.css'
-import '../common/css/site.css'
-import '../common/css/style_dbh.css'
-import '../common/css/collection.css'
-import '../common/css/cssCart.css'
-import '../common/css/detail.css'
-
-
-
 //recoil
 import {
   RecoilRoot
@@ -31,6 +17,18 @@ import MenubarMobile from '../common/layout/MenubarMobile'
 //layout
 import Header from '../common/layout/Header'
 import ImageLazy from 'next/image'
+// Css
+import '../common/css/checkout.css'
+import '../common/css/noindex.css'
+import '../common/css/bootstrap_css.css'
+import '../common/css/index.css'
+import '../common/css/login.css'
+import '../common/css/site.css'
+import '../common/css/style_dbh.css'
+import '../common/css/collection.css'
+import '../common/css/cssCart.css'
+import '../common/css/detail.css'
+
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
@@ -113,7 +111,9 @@ const MyApp = ({ Component, pageProps }) => {
         />
       </Head>
       <GlobalContext.Provider value={global}>
-        <Header />
+        {
+          router.pathname.split('/')[1] !== 'checkout' && <Header />
+        }
         <Component {...pageProps} />
       </GlobalContext.Provider>
       <BackTop>

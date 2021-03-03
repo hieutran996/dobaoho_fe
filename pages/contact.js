@@ -57,10 +57,10 @@ const Contact = () => {
                                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <h2>Liên hệ với chúng tôi</h2>
                                 </div>
-                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
                                     <input type="text" placeholder="Họ và tên" className="input-control" required  name="name" />
                                 </div>
-                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
                                     <input type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email2" className="input-control"  name="email" />
                                 </div>
                                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">

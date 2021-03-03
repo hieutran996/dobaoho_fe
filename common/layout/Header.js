@@ -94,34 +94,36 @@ export default function Header() {
                                 <div className="mega-content">
                                   <div className="nav-block nav-block-center">
                                     <ul className="level0 row">
-                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/dung-cu-dien" title="Mũ bảo hiểm"><span>Mũ bảo hiểm</span></a></h2> 
+                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><LinkConfig href="/product/mu-bao-hiem"><a title="Mũ bảo hiểm"><span>Mũ bảo hiểm</span></a></LinkConfig></h2> 
                                         <ul className="level1">
-                                          <li className="level2"> <a href="/may-nen-khi" title="Máy nén khí"><span>AGV</span></a> </li>
-                                          <li className="level2"> <a href="/cat-va-uon-cap" title="Cắt và uốn cáp"><span>LS2</span></a> </li>
-                                          <li className="level2"> <a href="/bo-dung-cu-ket-hop" title="Bộ dụng cụ kết hợp"><span>Yohe</span></a> </li>
-                                          <li className="level2"> <a href="/cong-cu-cat" title="Công cụ cắt"><span>Ego</span></a> </li>
+                                          <li className="level2"><LinkConfig href="/product/ls-2"><a title="Mũ LS"><span>LS2</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/yohe"><a title="Mũ Yohe"><span>Yohe</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/ego"><a title="Mũ Ego"><span>Ego</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/bulldog"><a title="Mũ Bulldog"><span>Bulldog</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/zeus"><a title="Mũ Zeus"><span>Zeus</span></a></LinkConfig></li>
                                         </ul>
                                       </li>
-                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/dung-cu-cam-tay" title="Đồ bảo hộ"><span>Đồ bảo hộ</span></a></h2> 
+                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><LinkConfig href="/product/do-bao-ho"><a title="Đồ bảo hộ"><span>Đồ bảo hộ</span></a></LinkConfig></h2> 
                                         <ul className="level1">
-                                          <li className="level2"> <a href="/riu-bua-thanh-keo" title="Rìu, Búa & Thanh kéo"><span>Áo bảo hộ</span></a> </li>
-                                          <li className="level2"> <a href="/kep" title="Kẹp"><span>Găng bảo hộ</span></a> </li>
-                                          <li className="level2"> <a href="/cua-tay" title="Cưa tay"><span>Giày bảo hộ</span></a> </li>
-                                          <li className="level2"> <a href="/o-cam-bo-tac-dong" title="Ổ cắm & Bộ tác động"><span>Balo</span></a> </li>
+                                          <li className="level2"><LinkConfig href="/product/ao-bao-ho"><a title="Áo bảo hộ"><span>Áo bảo hộ</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/quan-bao-ho"><a title="Quần bảo hộ"><span>Quần bảo hộ</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/gang-bao-ho"><a title="Găng bảo hộ"><span>Găng bảo hộ</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/giay-bao-ho"><a title="Giày bảo hộ"><span>Giày bảo hộ</span></a></LinkConfig></li>
                                         </ul>
                                       </li>
-                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/phu-kien" title="Phụ kiện"><span>Phụ kiện</span></a></h2> 
+                                      <li className="level1 parent item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><LinkConfig href="/product/phu-kien"><a title="Phụ kiện"><span>Phụ kiện</span></a></LinkConfig></h2> 
                                         <ul className="level1">
-                                          <li className="level2"> <a href="/chat-mai-mon" title="Chất mài mòn"><span>Kính mũ</span></a> </li>
-                                          <li className="level2"> <a href="/neo-chot" title="Neo & Chốt"><span>Tai nghe</span></a> </li>
-                                          <li className="level2"> <a href="/pin-bo-sac" title="Pin & Bộ sạc"><span>Trùm đầu</span></a> </li>
-                                          <li className="level2"> <a href="/luoi-cua-tron-1" title="Lưỡi cưa tròn"><span>Đuôi gió</span></a> </li>
+                                          <li className="level2"><LinkConfig href="/product/kinh-mu"><a title="Kính mũ"><span>Kính mũ</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/tai-nghe"><a title="Tai nghe"><span>Tai nghe</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/trum-dau"><a title="Trùm đầu"><span>Trùm đầu</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/duoi-gio"><a title="Đuôi gió"><span>Đuôi gió</span></a></LinkConfig></li>
+                                          <li className="level2"><LinkConfig href="/product/balo"><a title="Balo"><span>Balo</span></a></LinkConfig></li>
                                         </ul>
                                       </li>
-                                      <li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/do-bao-ho" title="Đồ bảo hộ"><span>Đồ chơi xe</span></a> </h2>
-                                      </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/san-pham-khuyen-mai" title="Sản phẩm khuyến mãi"><span>Sản phẩm khuyến mãi</span></a> </h2>
-                                      </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/san-pham-moi" title="Sản phẩm mới"><span>Sản phẩm mới</span></a> </h2>
-                                      </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><a href="/san-pham-noi-bat" title="Sản phẩm nổi bật"><span>Sản phẩm nổi bật</span></a> </h2>
+                                      <li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><LinkConfig href="/product/do-choi-xe"><a title="Đồ chơi xe"><span>Đồ chơi xe</span></a></LinkConfig></h2>
+                                      </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><LinkConfig href="/product/san-pham-khuyen-mai"><a title="Sản phẩm khuyến mãi"><span>Sản phẩm khuyến mãi</span></a></LinkConfig></h2>
+                                      </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><LinkConfig href="/product/san-pham-moi"><a title="Sản phẩm mới"><span>Sản phẩm mới</span></a></LinkConfig></h2>
+                                      </li><li className="level1 item col-lg-3 col-md-3 col-sm-3"><h2 className="h4"><LinkConfig href="/product/san-pham-noi-bat"><a title="Sản phẩm nổi bật"><span>Sản phẩm nổi bật</span></a></LinkConfig></h2>
                                       </li></ul>
                                   </div>
                                 </div>

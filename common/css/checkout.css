@@ -108,7 +108,7 @@ body, .content, .content .wrap, .main, .main__content, .step, .content>form {
     line-height: 1.12;
 }
 @media(min-width:1000px) {
-    .main {
+    #checkoutForm .main {
     width: 52%;
     padding: 2em 2em 0 2em;
 }
@@ -556,7 +556,7 @@ body, .content, .content .wrap, .main, .main__content, .step, .content>form {
     padding: 0;
     position: absolute;
 }
-.sidebar::after {
+#checkoutForm .sidebar::after {
     content: "";
     display: block;
     width: 300%;
@@ -584,7 +584,7 @@ body, .content, .content .wrap, .main, .main__content, .step, .content>form {
 }
 .multistep .sidebar__header, .multistep .sidebar__content {
     padding-left: 10%}
-.sidebar::after {
+#checkoutForm .sidebar::after {
     left: 0;
     background-position: left top;
     -webkit-box-shadow: 1px 0 0 #e1e1e1 inset;
@@ -1391,9 +1391,6 @@ a, .radio__label__icon, .payment-due__price, .spinner--active, .ui-tag__label, .
 .thankyou-page .order-summary {
     background-color: #fafafa;
 }
-.label_transport {
-    padding-top: .4em;
-}
 #shippingMethodList .ship {
     padding: .85rem 1rem;
     margin-bottom: 0;
@@ -1409,4 +1406,16 @@ a, .radio__label__icon, .payment-due__price, .spinner--active, .ui-tag__label, .
 }
 #checkoutForm .section__header {
     margin-bottom: 0;
+}
+.section_pay {
+    padding-top: 10px;
+}
+.section_pay .section__content .content-box__row {
+    padding: .85rem 1rem!important;
+}
+.section_pay .content-box {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e4e6ef;
+    border-radius: .42rem;
 }
