@@ -13,6 +13,7 @@
     "@tanem/react-nprogress": "^3.0.50",
     "antd": "^4.9.3",
     "axios": "^0.21.1",
+    "babel-plugin-inline-react-svg": "^2.0.1",
     "markdown-react-js": "^1.0.2",
     "moment": "^2.24.0",
     "next": "^10.0.0",

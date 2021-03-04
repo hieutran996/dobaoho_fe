@@ -4465,6 +4465,14 @@ a.btn.button.buy_.btn-proceed-cl.close-pop {
     padding-top: 5px;
     position: relative;
 }
+#product .col-item {
+    padding-top: 0!important;
+}
+#product .ant-skeleton,
+#product .ant-skeleton-avatar {
+    width: 100%;
+    height: 100%;
+}
 .col-item:before {
     content: "";
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -4935,4 +4943,7 @@ a.btn.button.buy_.btn-proceed-cl.close-pop {
 .banner a:hover:before, .banner a:hover:after {
     left: 0;
     top: 0;
+}
+.d-none {
+    display: none!important;
 }

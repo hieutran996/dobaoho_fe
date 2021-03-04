@@ -1,44 +1,54 @@
 import { useEffect, useState } from "react"
-import { Spin,Skeleton,Breadcrumb } from 'antd'
+import { Spin,Skeleton,Breadcrumb,Radio } from 'antd'
 import Link from "next/link"
+import { fetchAPI } from "../../lib/api";
+import { getStrapiMedia } from "../../lib/media"
+import Seo from "../../components/seo"
 
 const limit = 8
 
-const Theme = () => {
+const radioStyle = {
+  display: 'block',
+  height: '30px',
+  lineHeight: '30px',
+  marginBottom: '5px',
+  fontWeight: 'normal'
+};
 
+const Products = ({brand,product}) => {
   const [state, setState] = useState({
-    crrThemes: [],
+    crrProducts: [],
     activePage: 1,
-    loading: true
+    loading: true,
+    valueSortPrice: 1,
   })
 
-  // const seo = {
-  //   metaTitle: seoPage !== null && seoPage.name,
-  //   metaDescription: seoPage !== null && seoPage.slug,
-  //   shareImage: seoPage !== null && seoPage.image_store,
-  //   checkSeo: true,
-  // };
+  const seo = {
+    metaTitle: brand.name,
+    metaDescription: brand.slug,
+    checkSeo: true,
+  };
 
-  // useEffect(() => {
-  //   setState({
-  //     loading: true,
-  //     crrThemes: [],
-  //     activePage: 1
-  //   })
-  //   setTimeout(() => {
-  //     PaginationPage(1)
-  //   }, 600);
-  // }, [props_themes])
+  useEffect(() => {
+    setState({
+      loading: true,
+      crrProducts: [],
+      activePage: 1
+    })
+    setTimeout(() => {
+      PaginationPage(1)
+    }, 600);
+  }, [product])
   
-  // const PaginationPage = (activePageIndex) => {
-  //   const offset = (activePageIndex - 1) * limit;
-  //   const crrValueThemes = props_themes.slice(0, offset + limit);
-  //   setState({
-  //     loading: false,
-  //     crrThemes: crrValueThemes,
-  //     activePage: activePageIndex
-  //   })
-  // };
+  const PaginationPage = (activePageIndex) => {
+    const offset = (activePageIndex - 1) * limit;
+    const crrValue = product.slice(0, offset + limit);
+    setState({
+      loading: false,
+      crrProducts: crrValue,
+      activePage: activePageIndex
+    })
+  };
 
   const getMoreTheme = () => {
     setState({
@@ -50,43 +60,51 @@ const Theme = () => {
     }, 600);
   }
 
-  // const sortData = (value) => {    
-  //   switch (value) {
-  //     case 'price-asc':
-  //       props_themes.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-  //       break;
-  //     case 'price-desc':
-  //       props_themes.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
-  //       break;
-  //     case 'alpha-asc':
-  //       props_themes.sort((a, b) => {
-  //         if(a.name < b.name) { return -1; }
-  //         if(a.name > b.name) { return 1; }
-  //         return 0;
-  //       });
-  //       break;
-  //     case 'alpha-desc':
-  //       props_themes.sort((a, b) => {
-  //         if(a.name > b.name) { return -1; }
-  //         if(a.name < b.name) { return 1; }
-  //         return 0;
-  //       });
-  //       break;
-  //   }
+  const sortData = (value) => {    
+    switch (value) {
+      case 'price-asc':
+        product.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+        break;
+      case 'price-desc':
+        product.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+        break;
+      case 'alpha-asc':
+        product.sort((a, b) => {
+          if(a.name < b.name) { return -1; }
+          if(a.name > b.name) { return 1; }
+          return 0;
+        });
+        break;
+      case 'alpha-desc':
+        product.sort((a, b) => {
+          if(a.name > b.name) { return -1; }
+          if(a.name < b.name) { return 1; }
+          return 0;
+        });
+        break;
+    }
   
-  //   setState({
-  //     loading: true,
-  //     crrThemes: [],
-  //     activePage: 1
-  //   })
-  //   setTimeout(() => {
-  //     PaginationPage(1)
-  //   }, 600);
-  // }
-  
+    setState({
+      ...state,
+      loading: true,
+      crrProducts: [],
+      activePage: 1
+    })
+    setTimeout(() => {
+      PaginationPage(1)
+    }, 600);
+  }
+
+  const onChangeSortPrice = e => {
+    setState({
+      ...state,
+      valueSortPrice: e.target.value,
+    })
+  };
 
   return (
     <div id="product">
+      <Seo seo={seo} />
       <section className="bread-crumb">
         <span className="crumb-border" />
         <div className="container">
@@ -97,13 +115,10 @@ const Theme = () => {
                   <Link href="/">Trang chủ</Link>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                  <Link href="/store">
-                    <a>Sản phẩm</a>
-                  </Link>
+                  <Link href="/product">Sản phẩm</Link>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                  {/* {seoPage !== null && seoPage.name} */}
-                  Máy nén khí
+                  {brand.name}
                 </Breadcrumb.Item>
               </Breadcrumb>
             </div>
@@ -121,63 +136,113 @@ const Theme = () => {
                 <div className="sort-cate-left">
                   <h3>Xếp theo:</h3>
                   <ul>
-                    <li className="btn-quick-sort default">
-                      <a href="javascript:;" onclick="sortby('default')" title="Mặc định"><i />Mặc định</a>
-                    </li>
                     <li className="btn-quick-sort alpha-asc">
-                      <a href="javascript:;" onclick="sortby('alpha-asc')" title="Tên A-Z"><i />Tên A-Z</a>
+                      <a onClick={() => sortData('alpha-asc')}  title="Tên A-Z"><i />Tên A-Z</a>
                     </li>
                     <li className="btn-quick-sort alpha-desc">
-                      <a href="javascript:;" onclick="sortby('alpha-desc')" title="Tên Z-A"><i />Tên Z-A</a>
-                    </li>
-                    <li className="btn-quick-sort position-desc">
-                      <a href="javascript:;" onclick="sortby('created-desc')" title="Hàng mới"><i />Hàng mới</a>
+                      <a onClick={() => sortData('alpha-desc')}  title="Tên Z-A"><i />Tên Z-A</a>
                     </li>
                     <li className="btn-quick-sort price-asc">
-                      <a href="javascript:;" onclick="sortby('price-asc')" title="Giá thấp đến cao"><i />Giá thấp đến cao</a>
+                      <a onClick={() => sortData('price-asc')}  title="Giá thấp đến cao"><i />Giá thấp đến cao</a>
                     </li>
                     <li className="btn-quick-sort price-desc">
-                      <a href="javascript:;" onclick="sortby('price-desc')" title="Giá cao xuống thấp"><i />Giá cao xuống thấp</a>
+                      <a onClick={() => sortData('price-desc')}  title="Giá cao xuống thấp"><i />Giá cao xuống thấp</a>
                     </li>
                   </ul>
                 </div>
               </div>
               <section className="products-view-grid collection_reponsive">
-                <div className="row">		
-                  <div className="col-xs-6 col-sm-3 col-md-3 col-lg-3 product-col">
-                    <div className="item_product_main ">
-                      <div className="col-item">
-                        <div className="product-thumb">
-                          <a href="/than-may-khoan-dong-luc-dung-pin-18v-dewalt-dcd996n-kr-khong-choi-than" className="thumb" title="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)">
-                            <img className="lazyload loaded" src="images/sp7_1.png" data-src="https://bizweb.dktcdn.net/100/408/894/products/sp7.png?v=1603967585000" alt="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)" data-was-processed="true" />
-                          </a>
-                          <div className="actions hidden-xs hidden-sm">
-                            <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564913" encType="multipart/form-data">
-                            </form>       
-                          </div>
-                        </div>
-                        <div className="product-info">
-                          <h3 className="title"> <a href="/than-may-khoan-dong-luc-dung-pin-18v-dewalt-dcd996n-kr-khong-choi-than" title="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)">Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than) </a> </h3>
-                          <div className="content">
-                            <div className="item-price">    
-                              <div className="price-box"> 
-                                <span className="special-price"> 
-                                  Liên hệ
-                                </span> 
+                <div className="row">
+                  {
+                    state.crrProducts.map((value,index) => {
+                      return(
+                        <div className="col-xs-6 col-sm-3 col-md-3 col-lg-3 product-col" key={index}>
+                          <div className="item_product_main ">
+                            <div className="col-item">
+                              <div className="product-thumb">
+                                <Link href={`/product/${value.slug}`}>
+                                  <a className="thumb" title={value.name}>
+                                    <img className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} />
+                                  </a>
+                                </Link>
+                                
+                                <div className="actions hidden-xs hidden-sm">
+                                  <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                    Thêm vào giỏ hàng
+                                  </button>        
+                                </div>
                               </div>
-                            </div>
+                              <div className="product-info">
+                                <h3 className="title">
+                                  <Link href={`/product/${value.slug}`}>
+                                    <a title={value.name}>
+                                      {value.name}
+                                    </a>
+                                  </Link>
+                                </h3>
+                                <div className="content">
+                                  <div className="item-price">    
+                                    <div className="price-box"> 
+                                      <span className="special-price"> 
+                                        {value.price}₫
+                                      </span> 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="thumbs-list">
+                                {
+                                  value.image.map((val,i) => {
+                                    return(
+                                      <div className="thumbs-list-item" key={i}>
+                                        <img className="lazyload loaded" src={getStrapiMedia(val)} alt={value.name} />
+                                      </div>
+                                    )
+                                  })
+                                }
+                                
+                              </div>
+                            </div>	
                           </div>
-                        </div>
-                        <div className="thumbs-list">
-                          <div className="thumbs-list-item active">
-                            <img className="lazyload loaded" src="images/sp7.png" data-src="//bizweb.dktcdn.net/thumb/small/100/408/894/products/sp7.png?v=1603967585000" data-img="//bizweb.dktcdn.net/thumb/large/100/408/894/products/sp7.png?v=1603967585000" alt="Thân máy khoan động lực dùng pin 18V Dewalt DCD996N-KR (không chổi than)" data-was-processed="true" />
-                          </div>
-                        </div>
-                      </div>	
-                    </div>
-                  </div>		
+                        </div>	
+                      )
+                    })
+                  }			
                 </div>
+                {
+                state.loading 
+                &&
+                <div className="row list-items favorite-themes">
+                  {
+                    [1,2,3,4].map((value) => {
+                      return(
+                        <div className="col-xs-6 col-sm-3 col-md-3 col-lg-3 product-col" key={value}>
+                          <div className="item_product_main ">
+                            <div className="col-item">
+                              <div className="product-thumb">
+                                <Skeleton.Avatar active shape='square'/>
+                              </div>
+                              <div className="product-info">
+                                <Skeleton active paragraph={{ rows: 1, width: '100%' }} />
+                              </div>
+                            </div>	
+                          </div>
+                        </div>
+                      )
+                    })
+                  }
+                </div>
+              }
+              {
+                state.crrProducts.length < product.length
+                &&
+                <div className="text-center button_see_more mt-5">
+                  <Spin tip="Loading..." size="large" spinning={state.loading}></Spin>
+                  <button type="button" className={`btn btn-primary text-weight-bold ${state.loading && 'd-none'}`} onClick={getMoreTheme}>Xem thêm giao diện</button>
+                </div>
+              }
               </section>
+              
             </div>
           </section>
           <div className="dqdt-sidebar sidebar left-content col-xs-12 col-lg-3 col-md-3 col-sm-12 col-lg-pull-9 col-md-pull-9 margin-top-10">
@@ -192,125 +257,23 @@ const Theme = () => {
                       <h2 className="title-head margin-top-0"><span>Lọc giá</span></h2>
                     </div>
                     <div className="aside-content filter-group">
-                      <ul>
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-duoi-100-000d">
-                              <input type="checkbox" id="filter-duoi-100-000d"  data-group="Khoảng giá" data-field="price_min" data-text="Dưới 100.000đ" defaultValue="(<100000)" data-operator="OR" />
-                              <i className="fa" />
-                              Giá dưới 100.000đ
-                            </label>
-                          </span>
-                        </li>
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-100-000d-200-000d">
-                              <input type="checkbox" id="filter-100-000d-200-000d"  data-group="Khoảng giá" data-field="price_min" data-text="100.000đ - 200.000đ" defaultValue="(>=100000 AND <=200000)" data-operator="OR" />
-                              <i className="fa" />
-                              100.000đ - 200.000đ							
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-200-000d-500-000d">
-                              <input type="checkbox" id="filter-200-000d-500-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="200.000đ - 500.000đ" defaultValue="(>=200000 AND <=500000)" data-operator="OR" />
-                              <i className="fa" />
-                              200.000đ - 500.000đ							
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-500-000d-1000000d">
-                              <input type="checkbox" id="filter-500-000d-1000000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="500.000đ - 1000000đ" defaultValue="(>=500000 AND <=1000000)" data-operator="OR" />
-                              <i className="fa" />
-                              500.000đ - 1000000đ							
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-1000000d-2000000d">
-                              <input type="checkbox" id="filter-1000000d-2000000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="1000000đ - 2000000đ" defaultValue="(>1000000 AND <2000000)" data-operator="OR" />
-                              <i className="fa" />
-                              1000000đ - 2000000đ							
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-tren2000000d">
-                              <input type="checkbox" id="filter-tren2000000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="Trên 2000000đ" defaultValue="(>2000000)" data-operator="OR" />
-                              <i className="fa" />
-                              Giá trên 2000000đ
-                            </label>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </aside>
-                  <aside className="aside-item filter-tag-style-1 clearfix">
-                    <div className="module-title">
-                      <h2 className="title-head margin-top-0"><span>Màu sắc</span></h2>
-                    </div>
-                    <div className="aside-content filter-group clearfix">
-                      <ul style={{overflow: 'visible'}}>
-                        <li className="filter-item color filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-den">
-                              <input type="checkbox" id="filter-den" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Đen" defaultValue="(Đen)" data-operator="OR" />
-                              <i className="fa den" style={{backgroundColor: '#000'}} />
-                              Đen
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item color filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-do">
-                              <input type="checkbox" id="filter-do" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Đỏ" defaultValue="(Đỏ)" data-operator="OR" />
-                              <i className="fa do" style={{backgroundColor: '#FF0000'}} />
-                              Đỏ
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item color filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-trang">
-                              <input type="checkbox" id="filter-trang" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Trắng" defaultValue="(Trắng)" data-operator="OR" />
-                              <i className="fa trang" style={{backgroundColor: '#fff', border: '1px solid #ebebeb'}} />
-                              Trắng
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item color filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-da-cam">
-                              <input type="checkbox" id="filter-da-cam" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Da Cam" defaultValue="(Da Cam)" data-operator="OR" />
-                              <i className="fa da-cam" style={{backgroundColor: '#FF4000'}} />
-                              Da Cam
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item color filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-hong">
-                              <input type="checkbox" id="filter-hong" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Hồng" defaultValue="(Hồng)" data-operator="OR" />
-                              <i className="fa hong" style={{backgroundColor: '#FA58AC'}} />
-                              Hồng
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item color filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-vang">
-                              <input type="checkbox" id="filter-vang" onchange="toggleFilter(this)" data-group="tag1" data-field="tags" data-text="Vàng" defaultValue="(Vàng)" data-operator="OR" />
-                              <i className="fa vang" style={{backgroundColor: '#F4FA58'}} />
-                              Vàng
-                            </label>
-                          </span>
-                        </li>	
-                      </ul>
+                      <Radio.Group onChange={onChangeSortPrice} value={state.valueSortPrice}>
+                        <Radio style={radioStyle} value={1}>
+                          Giá dưới 100.000đ
+                        </Radio>
+                        <Radio style={radioStyle} value={2}>
+                          100.000đ - 500.000đ
+                        </Radio>
+                        <Radio style={radioStyle} value={3}>
+                          500.000đ - 1.000.000đ
+                        </Radio>
+                        <Radio style={radioStyle} value={4}>
+                          1.000.000đ - 2.000.000đ
+                        </Radio>
+                        <Radio style={radioStyle} value={5}>
+                          Giá trên 2.000.000đ
+                        </Radio>
+                      </Radio.Group>
                     </div>
                   </aside>
                 </div>
@@ -318,14 +281,34 @@ const Theme = () => {
             </div>
           </div>
         </div>
-        <div id="open-filters" className="open-filters hidden-lg hidden-md">
+        {/* <div id="open-filters" className="open-filters hidden-lg hidden-md">
           <span className="fter">
           </span>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
+export async function getStaticPaths() {
+  const brands = await fetchAPI("/brands");
+  return {
+    paths: brands.map((brand) => ({
+      params: {
+        slug: brand.slug,
+      },
+    })),
+    fallback: false,
+  };
+}
 
-export default Theme;
+export async function getStaticProps({ params }) {
+  const brand = await fetchAPI(`/brands?slug=${params.slug}`);
+  return {
+    props: { brand: brand[0], product: brand[0].products  },
+    revalidate: 1,
+  };
+}
+
+
+export default Products;

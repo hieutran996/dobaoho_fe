@@ -175,17 +175,7 @@ export default function Header() {
           <div className="container">
             <div className="row">
               <div className="col-lg-5 col-md-5 col-left hidden-xs hidden-sm">
-                <div className="hotline-header">
-                  <a href="tel:1800.095" title="Hotline">
-                    <img src="fonts/icon-hotline.svg" alt="Tìm kiếm" style={{height: '35px'}} />
-                    1800.095
-                  </a>
-                </div>
                 <div className="search-box">
-                  <a>
-                    <img src="fonts/icon-search.svg" alt="Tìm kiếm" style={{height: '20px'}} />
-                    Tìm kiếm
-                  </a>
                   <div className="header_search search_form">
                     <form className="input-group search-bar search_form" action="/search" method="get" role="search">		
                       <input type="search" name="query" defaultValue placeholder="Tìm kiếm..." className="change_pl input-group-field st-default-search-input search-text" autoComplete="off" />
@@ -204,20 +194,6 @@ export default function Header() {
                 <a href="/" title="Logo">
                   <img src={getStrapiMedia(logo[0])} alt="logo do bao ho" />
                 </a>
-              </div>
-              <div className="col-lg-5 col-md-5 hidden-xs hidden-sm topbar-login">
-                <div className="top-cart-contain">
-                  <div className="mini-cart text-xs-center">
-                    <div className="heading-cart">
-                      <a title="Giỏ hàng" onClick={() => setCart(true)}>
-                        <img src="fonts/icon-cart.svg" alt="Giỏ hàng" style={{height: '35px'}} />
-                        <span className="cartCount count_item_pr">0</span>
-                        Giỏ hàng
-                      </a>
-                    </div>
-
-                  </div>
-                </div>
               </div>
               <div className="hidden-lg hidden-md col-sm-12 col-xs-12 search-box">
                 <div className="menu-bar button-menu hidden-md hidden-lg f-left">
