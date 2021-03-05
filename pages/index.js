@@ -50,7 +50,7 @@ const dataSpecialInWeek = {
   toy_bike: []
 }
 
-const Home = ({ homepage }) => {
+const Home = ({ homepage,news,accessories,other_products }) => {
   const [tabActive,setTabActive] = useState('helmet')
 
   const onClickSpecialTab = (event) => {
@@ -59,12 +59,12 @@ const Home = ({ homepage }) => {
   return (
     <Layout>
       <Seo seo={homepage.seo} />
-      <div className="page-body">
+      <div className="page-body dash_board">
         <section className="awe-section-1">	
           <div id="magik-slideshow" className="magik-slideshow slick-initialized slick-slider">
             <Carousel autoplay autoplaySpeed={3000}>
               <div>
-                <a href="#" tabIndex={0}>
+                <a href="#">
                   <picture>
                     <source media="(min-width: 992px)" srcSet="images/homepage/agv_helmet.jpeg" />
                     <source media="(min-width: 569px)" srcSet="images/homepage/agv_helmet.jpeg" />
@@ -167,9 +167,9 @@ const Home = ({ homepage }) => {
                       </a>
                     </h2>
                     <ul className="link_list hidden-xs">
-                      <li><Link className="ef" href="/" title="Trang chủ">Trang chủ</Link></li>
                       <li><Link className="ef" href="/about-us" title="Giới thiệu">Giới thiệu</Link></li>
-                      <li><Link className="ef" href="/news" title="Tin tức">Tin tức</Link></li>
+                      <li><Link className="ef" href="/product" title="Sản phẩm">Sản phẩm</Link></li>
+                      <li><Link className="ef" href="/new" title="Tin tức">Tin tức</Link></li>
                       <li><Link className="ef" href="/contact" title="Liên hệ">Liên hệ</Link></li>
                     </ul>
                   </div>
@@ -644,126 +644,31 @@ const Home = ({ homepage }) => {
                   </h2>
                   <div className="section_content">
                     <div className="row">
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bua-khoan-soi-thuy-tinh-3-lb" className="thumb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">
-                              <img className="lazyload loaded" src="images/25_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/25.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bua-khoan-soi-thuy-tinh-3-lb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">BÚA KHOAN SỢI THỦY TINH 3 LB. </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">10.499.000₫</span>
+                      {
+                        accessories.map((value) => {
+                          return(
+                            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item" key={value._id}>
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <Link href={`/detail/${value.slug}`} className="thumb">
+                                    <a title={value.name}><ImageLazy layout='fill' className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} /></a>
+                                  </Link>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"><Link href={`/detail/${value.slug}`} ><a title={value.name}>{value.name}</a></Link></h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price">{value.price}₫</span>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">
-                              <img className="lazyload loaded" src="images/24_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/24.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">11.000.000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" className="thumb" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">
-                              <img className="lazyload loaded" src="images/23_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/23.jpg?v=1604029278000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bo-cuon-phan-6-1" className="thumb" title="BỘ CUỘN PHẤN 6:1">
-                              <img className="lazyload loaded" src="images/22_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/22.jpg?v=1604029251000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bo-cuon-phan-6-1" title="BỘ CUỘN PHẤN 6:1">BỘ CUỘN PHẤN 6:1 </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/sung-bam-ghim-bang-soi-carbon" className="thumb" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">
-                              <img className="lazyload loaded" src="images/21_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/21.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/sung-bam-ghim-bang-soi-carbon" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">SÚNG BẤM GHIM BẰNG SỢI CARBON </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">
-                              <img className="lazyload loaded" src="images/20.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX * </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">15.000.000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                          )
+                        })
+                      }
                     </div>
                   </div>
                 </div>
@@ -775,126 +680,31 @@ const Home = ({ homepage }) => {
                   </h2>
                   <div className="section_content">
                     <div className="row">
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bua-khoan-soi-thuy-tinh-3-lb" className="thumb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">
-                              <img className="lazyload loaded" src="images/25_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/25.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bua-khoan-soi-thuy-tinh-3-lb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">BÚA KHOAN SỢI THỦY TINH 3 LB. </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">10.499.000₫</span>
+                      {
+                        other_products.map((value) => {
+                          return(
+                            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item" key={value._id}>
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <Link href={`/detail/${value.slug}`} className="thumb">
+                                    <a title={value.name}><ImageLazy layout='fill' className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} /></a>
+                                  </Link>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"><Link href={`/detail/${value.slug}`} ><a title={value.name}>{value.name}</a></Link></h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price">{value.price}₫</span>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">
-                              <img className="lazyload loaded" src="images/24_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/24.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">11.000.000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" className="thumb" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">
-                              <img className="lazyload loaded" src="images/23_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/23.jpg?v=1604029278000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bo-cuon-phan-6-1" className="thumb" title="BỘ CUỘN PHẤN 6:1">
-                              <img className="lazyload loaded" src="images/22_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/22.jpg?v=1604029251000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bo-cuon-phan-6-1" title="BỘ CUỘN PHẤN 6:1">BỘ CUỘN PHẤN 6:1 </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/sung-bam-ghim-bang-soi-carbon" className="thumb" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">
-                              <img className="lazyload loaded" src="images/21_1.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/21.jpg?v=1604029219000" alt="SÚNG BẤM GHIM BẰNG SỢI CARBON" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/sung-bam-ghim-bang-soi-carbon" title="SÚNG BẤM GHIM BẰNG SỢI CARBON">SÚNG BẤM GHIM BẰNG SỢI CARBON </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price"> 
-                                    Liên hệ
-                                  </span> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">
-                              <img className="lazyload loaded" src="images/20.jpg" data-src="https://bizweb.dktcdn.net/100/408/894/products/20.jpg?v=1604028085000" alt="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *" data-was-processed="true" />
-                            </a>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX *">MÁY THỔI KHÍ CÓ DÂY / KHÔNG DÂY 20V MAX * </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">15.000.000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                          )
+                        })
+                      }
                     </div>
                   </div>
                 </div>
@@ -903,7 +713,7 @@ const Home = ({ homepage }) => {
           </section>
         </section>
         <section className="awe-section-9">	
-          <section className="section_blog_danhgia">
+          <section className="section_blog_danhgia mb-5">
             <div className="container">
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 section-block">
@@ -918,40 +728,23 @@ const Home = ({ homepage }) => {
                       <div aria-live="polite" className="slick-list draggable">
                         <div className="slick-track" role="listbox" >
                           <div className="slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide40">
-                            <div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
-                              <div className="blog-img">
-                                <a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>
-                                  <picture>
-                                    <source media="(min-width: 1200px)" srcSet="images/tin-tuc-6_1.jpg" />
-                                    <source media="(min-width: 992px)" srcSet="images/tin-tuc-6_1.jpg" />
-                                    <source media="(min-width: 569px)" srcSet="images/tin-tuc-6_1.jpg" />
-                                    <source media="(min-width: 480px)" srcSet="images/tin-tuc-6.jpg" />
-                                    <img src="images/tin-tuc-6.jpg" alt="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" />
-                                  </picture>  
-                                </a>
-                              </div>
-                              <div className="blog-content">
-                                <h3><a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light</a> </h3>
-                                <div className="justify des">TOWSON, MD (ngày 16 tháng 4 năm 2020) - DEWALT công...</div>
-                              </div>
-                            </div>
-                            <div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}}>
-                              <div className="blog-img">
-                                <a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>
-                                  <picture>
-                                    <source media="(min-width: 1200px)" srcSet="images/tin-tuc-6_1.jpg" />
-                                    <source media="(min-width: 992px)" srcSet="images/tin-tuc-6_1.jpg" />
-                                    <source media="(min-width: 569px)" srcSet="images/tin-tuc-6_1.jpg" />
-                                    <source media="(min-width: 480px)" srcSet="images/tin-tuc-6.jpg" />
-                                    <img src="images/tin-tuc-6.jpg" alt="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" />
-                                  </picture>  
-                                </a>
-                              </div>
-                              <div className="blog-content">
-                                <h3><a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" tabIndex={0}>DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light</a> </h3>
-                                <div className="justify des">TOWSON, MD (ngày 16 tháng 4 năm 2020) - DEWALT công...</div>
-                              </div>
-                            </div>
+                            {
+                              news.map((value) => {
+                                return(
+                                  <div className="item item-blog-index" style={{width: '100%', display: 'inline-block'}} key={value._id}>
+                                    <div className="blog-img">
+                                      <Link href={`/new/${value.slug}`}>
+                                        <a title={value.name}><ImageLazy layout='responsive' width={100} height={65} src={getStrapiMedia(value.image)} alt={value.name} /></a>
+                                      </Link>
+                                    </div>
+                                    <div className="blog-content">
+                                      <h3><Link href={`/new/${value.slug}`}><a title={value.title} tabIndex={0}>{value.name}</a></Link></h3>
+                                      <div className="justify des">{value.title}</div>
+                                    </div>
+                                  </div>
+                                )
+                              })
+                            }
                         </div>
                       </div>
                     </div>
@@ -968,13 +761,10 @@ const Home = ({ homepage }) => {
                             <div className="item slick-slide slick-cloned">
                               <div className="inner">
                                 <div className="thumb">
-                                  <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_2.jpg?1610636210110" alt="Toni" />
+                                  <ImageLazy layout='fixed' width={120} height={120} className="img-responsive lazyload loaded" src="/images/homepage/hai.jpg" alt="Đỗ Viết Hải" />
                                 </div>
                                 <div className="name">
                                   Hải Đỗ
-                                </div>
-                                <div className="job">
-                                  CEO QT Group
                                 </div>
                                 <div className="des">
                                   Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc Hiếu Trần phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm đồ bảo hộ tốt nhất Việt Nam, tôi tin chắc điều đó.
@@ -984,13 +774,10 @@ const Home = ({ homepage }) => {
                             <div className="item slick-slide slick-current slick-active">
                               <div className="inner">
                                 <div className="thumb">
-                                  <img className="img-responsive lazyload loaded" src="images/img_danhgia_1.jpg" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/img_danhgia_1.jpg?1610636210110" alt="Nguyễn Anh Dũng" data-was-processed="true" />
+                                  <ImageLazy layout='fixed' width={120} height={120} className="img-responsive lazyload loaded" src="/images/homepage/anh_tri_cho.jpg" alt="Nguyễn Minh Trí" />
                                 </div>
                                 <div className="name">
                                   Trí Nguyễn
-                                </div>
-                                <div className="job">
-                                  CEO TT Group    
                                 </div>
                                 <div className="des">
                                   Sản phẩm chất lượng, tư vấn nhiệt tình. Chúc Hiếu Trần phát triển mạnh mẽ hơn nữa và sớm trở thành nơi cung cấp sản phẩm đồ bảo hộ tốt nhất Việt Nam, tôi tin chắc điều đó.
@@ -1007,41 +794,6 @@ const Home = ({ homepage }) => {
             </div>
           </section>
         </section>
-        <div className="sec_brand">
-          <div className="container">
-            <div className="slick_brand slick-initialized slick-slider"><button type="button" data-role="none" className="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true" style={{display: 'block'}}>Previous</button>
-              <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox" style={{opacity: 1, width: '1309px', transform: 'translate3d(0px, 0px, 0px)'}}><div className="item slick-slide slick-current slick-active" data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide20" style={{width: '187px'}}>
-                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
-                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand1.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand1.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
-                    </a>
-                  </div><div className="item slick-slide slick-active" data-slick-index={1} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide21" style={{width: '187px'}}>
-                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
-                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand2.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand2.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
-                    </a>
-                  </div><div className="item slick-slide slick-active" data-slick-index={2} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide22" style={{width: '187px'}}>
-                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
-                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand3.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand3.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
-                    </a>
-                  </div><div className="item slick-slide slick-active" data-slick-index={3} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide23" style={{width: '187px'}}>
-                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
-                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand4.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand4.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
-                    </a>
-                  </div><div className="item slick-slide slick-active" data-slick-index={4} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide24" style={{width: '187px'}}>
-                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
-                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand5.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand5.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
-                    </a>
-                  </div><div className="item slick-slide slick-active" data-slick-index={5} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide25" style={{width: '187px'}}>
-                    <a href="#" title="ND đồ bảo hộ" tabIndex={0}>
-                      <img className="img-responsive lazyload loaded" src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand6.jpg?1611839274323" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand6.jpg?1611839274323" alt="ND đồ bảo hộ" data-was-processed="true" />
-                    </a>
-                  </div><div className="item slick-slide" data-slick-index={6} aria-hidden="true" tabIndex={-1} role="option" aria-describedby="slick-slide26" style={{width: '187px'}}>
-                    <a href title="Hiếu Trần" tabIndex={-1}>
-                      <img className="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/408/894/themes/794154/assets/brand7.jpg?1611839274323" alt="Hiếu Trần" />
-                    </a>
-                  </div></div></div>
-              <button type="button" data-role="none" className="slick-next slick-arrow" aria-label="Next" role="button" style={{display: 'block'}} aria-disabled="false">Next</button></div>
-          </div>
-        </div>
       </div>
     </Layout>
   );
@@ -1049,12 +801,15 @@ const Home = ({ homepage }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [homepage] = await Promise.all([
-    fetchAPI("/homepage")
+  const [homepage,news, accessories,other_products] = await Promise.all([
+    fetchAPI("/homepage"),
+    fetchAPI("/news"),
+    fetchAPI("/brands?slug=phu-kien"),
+    fetchAPI("/brands?slug=san-pham-khac")
   ]);
 
   return {
-    props: {homepage},
+    props: {homepage,news, accessories: accessories[0].products, other_products: other_products[0].products},
     revalidate: 1,
   };
 }

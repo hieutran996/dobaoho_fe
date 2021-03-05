@@ -86,7 +86,7 @@ function MenubarMobile() {
                             <Menu.Item key="18" onClick={() => setOpenMenubar(!openMenubar)}>Sản phẩm nổi bật</Menu.Item>
                         </SubMenu>
                         <Menu.Item key="9" icon={<SolutionOutlined />}>
-                            <LinkConfig href="/news">
+                            <LinkConfig href="/new">
                                 <a className="a-img" title="Tin tức" onClick={() => setOpenMenubar(!openMenubar)}>
                                 <span>Tin tức</span>
                                 <span className="label_">

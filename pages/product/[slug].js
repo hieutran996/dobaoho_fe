@@ -160,7 +160,7 @@ const Products = ({brand,product}) => {
                           <div className="item_product_main ">
                             <div className="col-item">
                               <div className="product-thumb">
-                                <Link href={`/product/${value.slug}`}>
+                                <Link href={`/detail/${value.slug}`}>
                                   <a className="thumb" title={value.name}>
                                     <img className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} />
                                   </a>
@@ -174,7 +174,7 @@ const Products = ({brand,product}) => {
                               </div>
                               <div className="product-info">
                                 <h3 className="title">
-                                  <Link href={`/product/${value.slug}`}>
+                                  <Link href={`/detail/${value.slug}`}>
                                     <a title={value.name}>
                                       {value.name}
                                     </a>

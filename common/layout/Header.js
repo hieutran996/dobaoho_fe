@@ -129,7 +129,7 @@ export default function Header() {
                                 </div>
                               </li>
                               <li className="nav-item ">		
-                                <LinkConfig href="/news">
+                                <LinkConfig href="/new">
                                   <a className="a-img" title="Tin tức">
                                     <span>Tin tức</span>
                                     <span className="label_">

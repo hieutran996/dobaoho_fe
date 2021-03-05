@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
+import Image from 'next/image'
+import Link from "next/link"
 import { Tabs,InputNumber,Breadcrumb,Select } from 'antd'
+import MDReactComponent from 'markdown-react-js';
 import { fetchAPI } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media"
-import Link from "next/link"
 import Layout from "../../components/layout";
-import ImageLazy from 'next/image'
-import MDReactComponent from 'markdown-react-js';
+import Seo from "../../components/seo"
+
 
 
 const { TabPane } = Tabs;
@@ -14,9 +16,7 @@ const { Option } = Select;
 
 const limit = 8
 
-const Detail = ({product,global}) => {
-    console.log(product)
-    console.log(global)
+const Detail = ({product,product_hot}) => {
     const [state, setState] = useState({
         crrThemes: [],
         activePage: 1,
@@ -80,18 +80,13 @@ const Detail = ({product,global}) => {
         }
     }, [])
 
-    // const seo = {
-    //   metaTitle: seoPage !== null && seoPage.name,
-    //   metaDescription: seoPage !== null && seoPage.slug,
-    //   shareImage: seoPage !== null && seoPage.image[0],
-    //   checkSeo: true,
-    // };
+    const seo = {
+      metaTitle: product.name,
+      metaDescription: product.name,
+      shareImage: product.image[0],
+      checkSeo: true,
+    };
 
-    const TAGS = {
-        html: 'table', // root node, replaced by default
-        strong: 'b',
-        em: 'i'
-    }
        
 
     const onChangeInput = (value) => {
@@ -104,28 +99,26 @@ const Detail = ({product,global}) => {
 
     return (
         <Layout>
+            <Seo seo={seo} />
             <div id="detail_product">
                 <section className="bread-crumb">
                     <span className="crumb-border" />
                     <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12 col-md-12 col-xs-12 a-left">
-                        <Breadcrumb>
-                            <Breadcrumb.Item>
-                            <Link href="/">Trang chủ</Link>
-                            </Breadcrumb.Item>
-                            <Breadcrumb.Item>
-                            <Link href="/store">
-                                <a>Sản phẩm</a>
-                            </Link>
-                            </Breadcrumb.Item>
-                            <Breadcrumb.Item>
-                            {/* {seoPage !== null && seoPage.name} */}
-                            Máy nén khí
-                            </Breadcrumb.Item>
-                        </Breadcrumb>
+                        <div className="row">
+                            <div className="col-lg-12 col-md-12 col-xs-12 a-left">
+                            <Breadcrumb>
+                                <Breadcrumb.Item>
+                                    <Link href="/">Trang chủ</Link>
+                                </Breadcrumb.Item>
+                                <Breadcrumb.Item>
+                                    <Link href="/store"><a>Sản phẩm</a></Link>
+                                </Breadcrumb.Item>
+                                <Breadcrumb.Item>
+                                    {product.name}
+                                </Breadcrumb.Item>
+                            </Breadcrumb>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </section>  
                 <div>
@@ -176,7 +169,7 @@ const Detail = ({product,global}) => {
                                             <div className="special-price"><span className="price product-price">{product.price}₫</span> 
                                                 <meta itemProp="price" />
                                                 <meta itemProp="priceCurrency" content="VND" />
-                                            </div> {/* Giá */}
+                                            </div>
                                             <link itemProp="availability" href="http://schema.org/InStock" />
                                             <meta itemProp="url" content="https://nd-tool.mysapo.net/may-thoi-khi-co-day-khong-day-20v-max" />
                                             </div>
@@ -189,28 +182,34 @@ const Detail = ({product,global}) => {
                                             <div className="product_sku" id="sku">
                                                 <span className="fnew">Mã sản phẩm:</span> {product.slug}
                                             </div>
-                                            <div className="field field--show-floating-label p-0 mb-3">
-                                                <div className="field__input-wrapper field__input-wrapper--select2">
-                                                <label htmlFor="billingProvince" className="fnew">Kích thước: </label>
-                                                
-                                                </div>
-                                            </div>
-                                            <Select
-                                                    style={{ width: "20%" }}
-                                                    defaultValue="S"
-                                                    optionFilterProp="children"
-                                                    filterOption={(input, option) =>
-                                                    option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                                                    }
-                                                >   
-                                                    {
-                                                        ['S', 'M', 'L', 'XL', 'XXL'].map((value,index) => {
-                                                            return(
-                                                                <Option key={index}>{value}</Option>
-                                                            )
-                                                        })
-                                                    }
-                                                </Select>
+                                            {
+                                                product.size 
+                                                &&
+                                                <>
+                                                    <div className="field field--show-floating-label p-0 mb-3">
+                                                        <div className="field__input-wrapper field__input-wrapper--select2">
+                                                        <label htmlFor="billingProvince" className="fnew">Kích thước: </label>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                    <Select
+                                                            style={{ width: "20%" }}
+                                                            defaultValue="S"
+                                                            optionFilterProp="children"
+                                                            filterOption={(input, option) =>
+                                                            option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                                                            }
+                                                        >   
+                                                            {
+                                                                ['S', 'M', 'L', 'XL', 'XXL'].map((value,index) => {
+                                                                    return(
+                                                                        <Option key={index}>{value}</Option>
+                                                                    )
+                                                                })
+                                                            }
+                                                    </Select>
+                                                </>
+                                            }
                                             <div className="add-to-box form-product ">
                                             <div className="add-to-cart">
                                                 <form action="/cart/add" method="post" encType="multipart/form-data" id="add-to-cart-form" className="form-inline">
@@ -225,7 +224,7 @@ const Detail = ({product,global}) => {
                                                         <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
                                                             <span>Thêm vào giỏ hàng</span>
                                                         </button>
-                                                        <a href="javascript:;" data-id={37700810} data-qty={1} className="buy-now">Mua ngay</a>
+                                                        <a className="buy-now">Mua ngay</a>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -240,7 +239,7 @@ const Detail = ({product,global}) => {
                                     <div className="bg clearfix">
                                         <Tabs >
                                             <TabPane tab="Thông tin chi tiết" key="1">
-                                                <MDReactComponent text={product.description} tags={TAGS} /> 
+                                                <MDReactComponent text={product.description} /> 
                                             </TabPane>
                                             <TabPane tab="Hướng dẫn mua hàng" key="2">
                                                 <p>Content of Tab Pane 2</p>
@@ -319,86 +318,33 @@ const Detail = ({product,global}) => {
                                     </a>
                                 </h2>
                                 <div className="section_content">
-                                    <div className="item">
-                                    <div className="col-item">
-                                        <div className="product-thumb">
-                                        <a href="/bua-khoan-soi-thuy-tinh-3-lb" className="thumb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">
-                                            <img className="lazyload loaded" src="https://bizweb.dktcdn.net/100/408/894/products/25.jpg?v=1604029328000" data-src="https://bizweb.dktcdn.net/100/408/894/products/25.jpg?v=1604029328000" alt="BÚA KHOAN SỢI THỦY TINH 3 LB." data-was-processed="true" />
-                                        </a>
-                                        </div>
-                                        <div className="product-info">
-                                        <h3 className="title"> <a href="/bua-khoan-soi-thuy-tinh-3-lb" title="BÚA KHOAN SỢI THỦY TINH 3 LB.">BÚA KHOAN SỢI THỦY TINH 3 LB. </a> </h3>
-                                        <div className="content">
-                                            <div className="item-price">    
-                                            <div className="price-box"> 
-                                                <span className="special-price">10.499.000₫</span>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div className="item">
-                                    <div className="col-item">
-                                        <div className="product-thumb">
-                                        <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">
-                                            <img className="lazyload loaded" src="https://bizweb.dktcdn.net/100/408/894/products/24.jpg?v=1604029308000" data-src="https://bizweb.dktcdn.net/100/408/894/products/24.jpg?v=1604029308000" alt="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI" data-was-processed="true" />
-                                        </a>
-                                        </div>
-                                        <div className="product-info">
-                                        <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI">BỘ THAY LỐP CỜ LÊ MÔ MEN LÁI </a> </h3>
-                                        <div className="content">
-                                            <div className="item-price">    
-                                            <div className="price-box"> 
-                                                <span className="special-price">11.000.000₫</span>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div className="item">
-                                    <div className="col-item">
-                                        <div className="product-thumb">
-                                        <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" className="thumb" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">
-                                            <img className="lazyload loaded" src="https://bizweb.dktcdn.net/100/408/894/products/23.jpg?v=1604029278000" data-src="https://bizweb.dktcdn.net/100/408/894/products/23.jpg?v=1604029278000" alt="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP" data-was-processed="true" />
-                                        </a>
-                                        </div>
-                                        <div className="product-info">
-                                        <h3 className="title"> <a href="/dao-tien-ich-co-the-thu-vao-cao-cap" title="DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP">DAO TIỆN ÍCH CÓ THỂ THU VÀO CAO CẤP </a> </h3>
-                                        <div className="content">
-                                            <div className="item-price">    
-                                            <div className="price-box"> 
-                                                <span className="special-price"> 
-                                                Liên hệ
-                                                </span> 
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div className="item">
-                                    <div className="col-item">
-                                        <div className="product-thumb">
-                                        <a href="/bo-cuon-phan-6-1" className="thumb" title="BỘ CUỘN PHẤN 6:1">
-                                            <img className="lazyload loaded" src="https://bizweb.dktcdn.net/100/408/894/products/22.jpg?v=1604029251000" data-src="https://bizweb.dktcdn.net/100/408/894/products/22.jpg?v=1604029251000" alt="BỘ CUỘN PHẤN 6:1" data-was-processed="true" />
-                                        </a>
-                                        </div>
-                                        <div className="product-info">
-                                        <h3 className="title"> <a href="/bo-cuon-phan-6-1" title="BỘ CUỘN PHẤN 6:1">BỘ CUỘN PHẤN 6:1 </a> </h3>
-                                        <div className="content">
-                                            <div className="item-price">    
-                                            <div className="price-box"> 
-                                                <span className="special-price"> 
-                                                Liên hệ
-                                                </span> 
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
+                                    {
+                                        product_hot.map((value) => {
+                                            return(
+                                                <div className="item" key={value._id}>
+                                                    <div className="col-item">
+                                                        <div className="product-thumb">
+                                                            <Link href={`/detail/${value.slug}`}>
+                                                                <a title={value.name} className="thumb">
+                                                                    <Image layout='fill' src={getStrapiMedia(value.image[0])} className="lazyload loaded" alt={value.name} />
+                                                                </a>
+                                                            </Link>
+                                                        </div>
+                                                        <div className="product-info">
+                                                        <h3 className="title"><Link href={`/detail/${value.slug}`}><a title={value.name}>{value.name}</a></Link></h3>
+                                                        <div className="content">
+                                                            <div className="item-price">    
+                                                            <div className="price-box"> 
+                                                                <span className="special-price">{value.price}₫</span>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )
+                                        })
+                                    }
                                 </div>
                                 </div>
                                 <div className="sbar-product-middle">
@@ -721,9 +667,10 @@ export async function getStaticPaths() {
   
 export async function getStaticProps({ params }) {
     const product = await fetchAPI(`/products?slug=${params.slug}`);
+    const product_hot = await fetchAPI(`/brands?slug=san-pham-noi-bat`);
     return {
-    props: { product: product[0]  },
-    revalidate: 1,
+        props: { product: product[0], product_hot: product_hot[0].products  },
+        revalidate: 1,
     };
 }
 
