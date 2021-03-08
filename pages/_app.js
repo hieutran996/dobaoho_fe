@@ -98,7 +98,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Loading isRouteChanging={state.isRouteChanging} key={state.loadingKey} />
       <Head>
         <meta charSet="utf-8" />
-        <title>Quần Áo Bảo Hộ Lao Động, Găng Tay Bảo Hộ, Giày Ủng Bảo Hộ, Kính Bảo Hộ, Mũ Kính Bảo Hộ Lao Động. Trang Thiết Bị Bảo Hộ Lao Động Các Loại Tại Bảo</title>
+        <title>Chuyên cung cấp mũ bảo hiểm fullface, mũ Yohe, mũ LS2, mũ 3/4. Ngoài ra còn có phụ kiện găng tay, đồ bảo hộ biker chuyên nghiệp. Với sự am hiểu sâu sắc tư vấn sản phẩm phù hợp cho khách hàng.</title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="shortcut icon" href={getStrapiMedia(global.favicon)} />

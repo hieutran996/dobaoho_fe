@@ -1,10 +1,17 @@
 import { Breadcrumb } from 'antd'
 import Link from "next/link"
 import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const AboutUs = () => {
-  return (
+
+    const seo = {
+        metaTitle: "Giới thiệu về đồ bảo hộ Hiếu Trần",
+    };
+
+    return (
         <Layout>
+            <Seo seo={seo} />
             <section className="bread-crumb">
                 <span className="crumb-border" />
                 <div className="container">

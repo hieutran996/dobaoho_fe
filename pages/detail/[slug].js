@@ -243,11 +243,11 @@ const Detail = ({product,product_hot}) => {
                                             <TabPane tab="Thông tin chi tiết" key="1">
                                                 <MDReactComponent text={product.description} /> 
                                             </TabPane>
-                                            <TabPane tab="Hướng dẫn mua hàng" key="2">
+                                            {/* <TabPane tab="Hướng dẫn mua hàng" key="2">
                                                 <p>Content of Tab Pane 2</p>
                                                 <p>Content of Tab Pane 2</p>
                                                 <p>Content of Tab Pane 2</p>
-                                            </TabPane>
+                                            </TabPane> */}
                                         </Tabs>
                                         <div id="productTabContent" className="tab-content">
                                             <div className="tab-pane fade in active show" id="product_tabs_description">
