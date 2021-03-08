@@ -163,7 +163,7 @@ const Home = ({ homepage,news,accessories,other_products }) => {
                       </a>
                     </h2>
                     <ul className="link_list hidden-xs">
-                      <li><Link className="ef" href="/about-us" title="Giới thiệu">Giới thiệu</Link></li>
+                      <li><Link className="ef" href="/aboutUs" title="Giới thiệu">Giới thiệu</Link></li>
                       <li><Link className="ef" href="/product" title="Sản phẩm">Sản phẩm</Link></li>
                       <li><Link className="ef" href="/new" title="Tin tức">Tin tức</Link></li>
                       <li><Link className="ef" href="/contact" title="Liên hệ">Liên hệ</Link></li>

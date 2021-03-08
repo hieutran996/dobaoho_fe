@@ -71,7 +71,7 @@ export default function Header() {
                                 </LinkConfig>			
                               </li>
                               <li className="nav-item ">
-                                <LinkConfig href="/about-us">
+                                <LinkConfig href="/aboutUs">
                                   <a className="a-img" title="Giới thiệu">
                                     <span>Giới thiệu</span>
                                     <span className="label_">

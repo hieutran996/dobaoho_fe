@@ -52,7 +52,7 @@ function MenubarMobile() {
                             </LinkConfig>	
                         </Menu.Item>
                         <Menu.Item key="2" icon={<UsergroupAddOutlined />}>
-                            <LinkConfig href="/about-us">
+                            <LinkConfig href="/aboutUs">
                                 <a className="a-img" title="Giới thiệu" onClick={() => setOpenMenubar(!openMenubar)}>
                                     <span>Giới thiệu</span>
                                     <span className="label_">
