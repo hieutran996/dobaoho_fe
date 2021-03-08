@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 //image
 import ImageLazy from 'next/image'
+import Image from 'next/image'
 //api
 import { fetchAPI } from "../lib/api";
 import { getStrapiMedia } from "../lib/media";
@@ -63,15 +64,10 @@ const Home = ({ homepage,news,accessories,other_products }) => {
         <section className="awe-section-1">	
           <div id="magik-slideshow" className="magik-slideshow slick-initialized slick-slider">
             <Carousel autoplay autoplaySpeed={3000}>
-              <div>
-                <a href="#">
-                  <picture>
-                    <source media="(min-width: 992px)" srcSet="images/homepage/agv_helmet.jpeg" />
-                    <source media="(min-width: 569px)" srcSet="images/homepage/agv_helmet.jpeg" />
-                    <source media="(min-width: 480px)" srcSet="images/homepage/agv_helmet.jpeg" />
-                    <img src="images/homepage/agv_helmet.jpeg" alt="Agv" />
-                  </picture>
-                </a>
+              <div className="carousel_center">
+                <Link href={`/detail/agv_helmet.jpeg`} title="AGV">
+                  <Image layout='intrinsic' width={768} height={768}  src={`/images/homepage/agv_helmet.jpeg`} alt="AGV" />
+                </Link>
               </div>
             </Carousel>
           </div>

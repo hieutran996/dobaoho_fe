@@ -111,7 +111,7 @@ const Detail = ({product,product_hot}) => {
                                     <Link href="/">Trang chủ</Link>
                                 </Breadcrumb.Item>
                                 <Breadcrumb.Item>
-                                    <Link href="/store"><a>Sản phẩm</a></Link>
+                                    <Link href="/product"><a>Sản phẩm</a></Link>
                                 </Breadcrumb.Item>
                                 <Breadcrumb.Item>
                                     {product.name}
@@ -144,15 +144,17 @@ const Detail = ({product,product_hot}) => {
                                                     <div id="gallery_02" className="ons owl_width no-padding thumbnail-product thumb_product_details slick_margin slick-initialized slick-slider" style={{}}>
                                                         <div aria-live="polite" className="slick-list draggable">
                                                             <div className="slick-track" role="listbox" style={{opacity: 1, width: '325px', transform: 'translate3d(0px, 0px, 0px)'}}>
-                                                                <div className="item slick-slide slick-current slick-active" style={{width: '97px'}}>
-                                                                    <img alt={product.name} src={getStrapiMedia(product.image[0])} />
-                                                                </div>
-                                                                <div className="item slick-slide slick-active"  style={{width: '97px'}}>
-                                                                    <img alt={product.name} src={getStrapiMedia(product.image[1])} />
-                                                                </div>
-                                                                <div className="item slick-slide slick-active" style={{width: '97px'}}>
-                                                                    <img alt={product.name} src={getStrapiMedia(product.image[0])} />
-                                                                </div>
+                                                                {
+                                                                    product.image.map((value) => {
+                                                                        return(
+                                                                            <div className="item slick-slide slick-current slick-active"  style={{width: '97px'}}>
+                                                                                <a title={product.name} className="active">
+                                                                                    <Image layout='fill' src={getStrapiMedia(value)} alt={product.name} />
+                                                                                </a>
+                                                                            </div>
+                                                                        )
+                                                                    })
+                                                                }
                                                             </div>
                                                         </div>
                                                     </div>
