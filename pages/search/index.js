@@ -4,9 +4,17 @@ import Link from "next/link"
 import { useRouter } from 'next/router'
 import { fetchAPI } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media"
+import Seo from "../../components/seo"
 
 const Search = () => {
   const router = useRouter()
+
+  const seo = {
+    metaTitle: `Kết quả tìm kiếm - ${router.query.query}`,
+    metaDescription: router.query.query,
+    checkSeo: true,
+  };
+
   const [state, setState] = useState({
     crrProducts: [],
     loading: true
@@ -60,6 +68,7 @@ const Search = () => {
   
   return (
     <div id="product">
+      <Seo seo={seo} />
       <section className="bread-crumb">
         <span className="crumb-border" />
         <div className="container">
