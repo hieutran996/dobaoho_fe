@@ -63,10 +63,10 @@ const Products = ({brand,product}) => {
   const sortData = (value) => {    
     switch (value) {
       case 'price-asc':
-        product.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+        product.sort((a, b) => parseInt(a.price.replace(',','')) - parseInt(b.price.replace(',','')));
         break;
       case 'price-desc':
-        product.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+        product.sort((a, b) => parseInt(b.price.replace(',','')) - parseInt(a.price.replace(',','')));
         break;
       case 'alpha-asc':
         product.sort((a, b) => {

@@ -74,7 +74,7 @@ function Cart() {
                 </div>
                 {/*end::Content*/}
                 </div>
-                {statusCart && <div class="offcanvas-overlay"  onClick={() => setStatusCart(!statusCart)}></div>}
+                {statusCart && <div className="offcanvas-overlay"  onClick={() => setStatusCart(!statusCart)}></div>}
         </div>
     );
 }

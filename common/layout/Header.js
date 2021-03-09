@@ -1,4 +1,4 @@
-import React,{ useContext } from 'react'
+import React,{ useContext, useState } from 'react'
 import LinkConfig from "../link_config"
 //Recoil
 import {
@@ -7,14 +7,28 @@ import {
 import { openCart, statusMenubar } from '../../recoil/atom'
 import { GlobalContext } from "../../pages/_app";
 import { getStrapiMedia } from "../../lib/media";
+import { useRouter } from 'next/router'
+
 
 export default function Header() {
   const setCart = useSetRecoilState(openCart);
   const setMenubar = useSetRecoilState(statusMenubar);
-  const { favicon, logo } = useContext(GlobalContext);
-  const imageUrl = getStrapiMedia(favicon);
+  const { logo } = useContext(GlobalContext);
+  const [valueSearch, setValueSearch] = useState('')
+  const router = useRouter()
 
+  const onChangeValueSearch = (event) => {
+    setValueSearch(event.target.value)
+  }
 
+  const onKeyDownSearch = (event) => {
+    if (event.key === 'Enter') {router.push(`/search?query=${event.target.value}`)}
+  }
+
+  const onClickSearch = () => {
+    router.push(`/search?query=${valueSearch}`)
+  }
+  
   return (
     <header className="header">
         <div className="header-wrapper hidden-xs hidden-sm">
@@ -39,16 +53,16 @@ export default function Header() {
                         <path d="M190.707,180.101l-47.078-47.077c11.702-14.072,18.752-32.142,18.752-51.831C162.381,36.423,125.959,0,81.191,0  C36.422,0,0,36.423,0,81.193c0,44.767,36.422,81.187,81.191,81.187c19.688,0,37.759-7.049,51.831-18.751l47.079,47.078  c1.464,1.465,3.384,2.197,5.303,2.197c1.919,0,3.839-0.732,5.304-2.197C193.637,187.778,193.637,183.03,190.707,180.101z M15,81.193  C15,44.694,44.693,15,81.191,15c36.497,0,66.189,29.694,66.189,66.193c0,36.496-29.692,66.187-66.189,66.187  C44.693,147.38,15,117.689,15,81.193z" />
                       </svg>
                       <div className="header_search search_form">
-                        <form className="input-group search-bar search_form" action="/search" method="get" role="search">		
-                          <input type="search" name="query" placeholder="Tìm kiếm..." className="change_pl input-group-field st-default-search-input search-text" autoComplete="on" />
+                        <div className="input-group search-bar search_form">		
+                          <input type="search" name="query" placeholder="Tìm kiếm..." className="change_pl input-group-field st-default-search-input search-text" value={valueSearch} onChange={onChangeValueSearch} onKeyDown={onKeyDownSearch} />
                           <span className="input-group-btn">
-                            <button className="btn icon-fallback-text">
+                            <button className="btn icon-fallback-text" onClick={onClickSearch}>
                               <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 192.904 192.904" style={{enableBackground: 'new 0 0 192.904 192.904'}} xmlSpace="preserve">
                                 <path d="M190.707,180.101l-47.078-47.077c11.702-14.072,18.752-32.142,18.752-51.831C162.381,36.423,125.959,0,81.191,0  C36.422,0,0,36.423,0,81.193c0,44.767,36.422,81.187,81.191,81.187c19.688,0,37.759-7.049,51.831-18.751l47.079,47.078  c1.464,1.465,3.384,2.197,5.303,2.197c1.919,0,3.839-0.732,5.304-2.197C193.637,187.778,193.637,183.03,190.707,180.101z M15,81.193  C15,44.694,44.693,15,81.191,15c36.497,0,66.189,29.694,66.189,66.193c0,36.496-29.692,66.187-66.189,66.187  C44.693,147.38,15,117.689,15,81.193z" />
                               </svg>
                             </button>
                           </span>
-                        </form>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -177,16 +191,16 @@ export default function Header() {
               <div className="col-lg-5 col-md-5 col-left hidden-xs hidden-sm">
                 <div className="search-box">
                   <div className="header_search search_form">
-                    <form className="input-group search-bar search_form" action="/search" method="get" role="search">		
-                      <input type="search" name="query" defaultValue placeholder="Tìm kiếm..." className="change_pl input-group-field st-default-search-input search-text" autoComplete="off" />
+                    <div className="input-group search-bar search_form">		
+                      <input type="search" name="query" defaultValue placeholder="Tìm kiếm..." className="change_pl input-group-field st-default-search-input search-text" value={valueSearch} onChange={onChangeValueSearch} onKeyDown={onKeyDownSearch} />
                       <span className="input-group-btn">
-                        <button className="btn icon-fallback-text">
+                        <button className="btn icon-fallback-text" onClick={onClickSearch}>
                           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 192.904 192.904" style={{enableBackground: 'new 0 0 192.904 192.904'}} xmlSpace="preserve">
                             <path d="M190.707,180.101l-47.078-47.077c11.702-14.072,18.752-32.142,18.752-51.831C162.381,36.423,125.959,0,81.191,0  C36.422,0,0,36.423,0,81.193c0,44.767,36.422,81.187,81.191,81.187c19.688,0,37.759-7.049,51.831-18.751l47.079,47.078  c1.464,1.465,3.384,2.197,5.303,2.197c1.919,0,3.839-0.732,5.304-2.197C193.637,187.778,193.637,183.03,190.707,180.101z M15,81.193  C15,44.694,44.693,15,81.191,15c36.497,0,66.189,29.694,66.189,66.193c0,36.496-29.692,66.187-66.189,66.187  C44.693,147.38,15,117.689,15,81.193z" />
                           </svg>
                         </button>
                       </span>
-                    </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -212,10 +226,10 @@ export default function Header() {
                   </a>
                 </div>
                 <div className="header_search search_form">
-                  <form className="input-group search-bar search_form" action="/search" method="get" role="search">		
-                    <input type="search" name="query" placeholder="Tìm kiếm..." className="change_pl input-group-field st-default-search-input search-text" autoComplete="on" />
+                  <form className="input-group search-bar search_form" >		
+                    <input type="search" name="query" placeholder="Tìm kiếm..." className="change_pl input-group-field st-default-search-input search-text" value={valueSearch} onChange={onChangeValueSearch} onKeyDown={onKeyDownSearch} />
                     <span className="input-group-btn">
-                      <button className="btn icon-fallback-text">
+                      <button className="btn icon-fallback-text" onClick={onClickSearch}>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 192.904 192.904" style={{enableBackground: 'new 0 0 192.904 192.904'}} xmlSpace="preserve">
                           <path d="M190.707,180.101l-47.078-47.077c11.702-14.072,18.752-32.142,18.752-51.831C162.381,36.423,125.959,0,81.191,0  C36.422,0,0,36.423,0,81.193c0,44.767,36.422,81.187,81.191,81.187c19.688,0,37.759-7.049,51.831-18.751l47.079,47.078  c1.464,1.465,3.384,2.197,5.303,2.197c1.919,0,3.839-0.732,5.304-2.197C193.637,187.778,193.637,183.03,190.707,180.101z M15,81.193  C15,44.694,44.693,15,81.191,15c36.497,0,66.189,29.694,66.189,66.193c0,36.496-29.692,66.187-66.189,66.187  C44.693,147.38,15,117.689,15,81.193z" />
                         </svg>

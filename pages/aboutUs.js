@@ -2,6 +2,7 @@ import { Breadcrumb } from 'antd'
 import Link from "next/link"
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import { fetchAPI } from "../lib/api";
 
 const AboutUs = () => {
 
@@ -46,5 +47,17 @@ const AboutUs = () => {
         </Layout>
     );
 };
+
+export async function getStaticProps() {
+    // Run API calls in parallel
+    const [news] = await Promise.all([
+      fetchAPI("/news")
+    ]);
+  
+    return {
+      props: {news},
+      revalidate: 1,
+    };
+}
 
 export default AboutUs;
