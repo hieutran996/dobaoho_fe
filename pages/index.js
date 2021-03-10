@@ -5,6 +5,7 @@ import Flip from 'react-reveal/Flip'
 import LightSpeed from 'react-reveal/LightSpeed'
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import AddToCart from "../components/addToCart"
 //image
 import ImageLazy from 'next/image'
 import Image from 'next/image'
@@ -15,45 +16,16 @@ import Link from "next/link";
 import { Carousel } from 'antd';
 import { useState } from 'react';
 
-const dataSpecialInWeek = {
-  helmet: [
-    {
-      name: 'Mũ Yohe 977',
-      price: '1,300,000',
-      oldPrice: null,
-      nameFile: 'yohe-977_gloss_solid.jpg',
-      url: 'yohe-977-gloss-solid'
-    },
-    {
-      name: 'Mũ Yohe 978 Plus',
-      price: '1,400,000',
-      oldPrice: null,
-      nameFile: 'yohe-978-plus.jpg',
-      url: 'yohe-978-plus'
-    },
-    {
-      name: 'Mũ Yohe 967 Plus',
-      price: '1,500,000',
-      oldPrice: '1,800,000',
-      nameFile: 'yohe-967-plus.jpg',
-      url: 'yohe-967-plus'
-    },
-    {
-      name: 'Mũ Lật Hàm Yohe 938',
-      price: '1,700,000',
-      oldPrice: null,
-      nameFile: 'yohe-938_matt_solid_black.jpg',
-      url: 'yohe-938-matt-solid-black'
-    }
-  ],
-  protective_gear: [],
-  accessories: [],
-  toy_bike: []
-}
 
-const Home = ({ homepage,news,accessories,other_products }) => {
+
+const Home = ({ homepage,news,accessories,other_products,bestsell_products,featured_helmet,featured_protective_gear,featured_accessories,featured_toy_bike }) => {
   const [tabActive,setTabActive] = useState('helmet')
-
+  const dataSpecialInWeek = {
+    helmet: featured_helmet,
+    protective_gear: featured_protective_gear,
+    accessories: featured_accessories,
+    toy_bike: featured_toy_bike
+  }
   const onClickSpecialTab = (event) => {
     setTabActive(event.currentTarget.dataset.name)
   }
@@ -72,35 +44,6 @@ const Home = ({ homepage,news,accessories,other_products }) => {
             </Carousel>
           </div>
         </section>
-        <section className="awe-section-2">	
-          <section className="section_banner">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 banner-1">
-                  <div className="banner">
-                    <a href="#" title="Mũ Ego">
-                      <img className="img-responsive lazyload loaded" src="images/homepage/ego-e7.jpg"  alt="Mũ Ego" data-was-processed="true" />
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 banner-2">
-                  <div className="banner">
-                    <a href="#" title="Mũ LS2">
-                      <img className="img-responsive lazyload loaded" src="images/homepage/ls2-carbon.jpg"  alt="Mũ LS2" data-was-processed="true" />
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 banner-3">
-                  <div className="banner">
-                    <a href="#" title="Mũ Yohe">
-                      <img className="img-responsive lazyload loaded" src="images/homepage/yohe-978-plus.jpg"  alt="Mũ Yohe" data-was-processed="true" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </section>
         <section className="awe-section-3">	
           <section className="section_deal_hot_product">
             <div className="container">
@@ -115,20 +58,23 @@ const Home = ({ homepage,news,accessories,other_products }) => {
                     <div className="slick_deal_hot slick-initialized slick-slider">
                       <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox"><div className="item slick-slide slick-current slick-active" style={{width: '100%'}} data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide10">
                             <div className="col-item pt-0">
-                              <div className="sale-label sale-top-right"><span>- 
-                                  10% 
-                                </span></div>
+                              {/* <div className="sale-label sale-top-right">
+                                <span>
+                                  - 10% 
+                                </span>
+                              </div> */}
                               <div className="product-thumb">
-                                <a href="/may-khoan-pin-18v-dewalt-dcd796m2-1" className="thumb" title="Mũ Fullface LS2 Challenger Carbon FF327" tabIndex={0}>
-                                  <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/LS2-FF327-Challenger-Carbon.jpg" alt="Mũ Fullface LS2 Challenger Carbon FF327" />
-                                </a>
+                                <Link href={`/detail/mu-fullface-ls-2-challenger-carbon-ff-327`} title="Mũ Fullface LS2 Challenger Carbon FF327">
+                                  <a className="thumb" title="Mũ Fullface LS2 Challenger Carbon FF327" id="parent_cart_ls-2-challenger-carbon">
+                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/LS2-FF327-Challenger-Carbon.jpg" alt="Mũ Fullface LS2 Challenger Carbon FF327" />
+                                  </a>
+                                </Link>
                                 <div className="actions hidden-xs hidden-sm">
-                                  <form action="/cart/add" method="post" className="variants" data-id="product-actions-19564843" encType="multipart/form-data">
-                                    <input type="hidden" name="variantId" tabIndex={0} />
-                                    <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" tabIndex={0}>
+                                  <div className="variants">
+                                    <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart("ls-2-challenger-carbon")}>
                                       Thêm vào giỏ hàng
                                     </button>
-                                  </form>       
+                                  </div>       
                                 </div>
                               </div>
                               <div className="clockdiv" data-countdown="2021/12/12" style={{display: 'block !important'}}><div className="date-time time-day"><span className="days"><b>3</b><small>Ngày</small></span></div><span className="clocks" /><div className="date-time time-hour"><span className="hours "><b>08</b><small>Giờ</small></span></div><span className="clocks" /><div className="date-time time-min"><span className="minutes "><b>32</b><small>Phút</small></span></div><span className="clocks" /><div className="date-time time-sec"><span className="seconds"><b>06</b><small>Giây</small></span></div></div>
@@ -516,24 +462,26 @@ const Home = ({ homepage,news,accessories,other_products }) => {
                         </ul>
                       </div>
                       <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                        <div className="tab-content current mt-0">
+                        <div className="tab-content current mt-0 mb-0">
                           <div className="row">
                             {
                               dataSpecialInWeek[tabActive].map((value,index) => {
                                 return(
                                   <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6" key={index}>
-                                    <div className="col-item">
+                                    <div className="col-item" >
                                       <div className="product-thumb">
-                                        <Link href={`/detail/${value.url}`} className="thumb" title={value.name}>
-                                          <ImageLazy layout='fill' className="lazyload loaded" src={`/images/homepage/banchay/${value.nameFile}`} alt={value.name} />
+                                        <Link href={`/detail/${value.url}`} title={value.name}>
+                                          <a className="thumb" title={value.name} id={`parent_cart_${value._id}`}>
+                                            <ImageLazy layout='fill' className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} />
+                                          </a>
                                         </Link>
                                         <div className="actions hidden-xs hidden-sm">
-                                          <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
+                                          <div action="/cart/add" method="post" className="variants">
                                             <input type="hidden" name="variantId" defaultValue={37700810} />
-                                            <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                            <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart(value._id)}>
                                               Thêm vào giỏ hàng
                                             </button>
-                                          </form>       
+                                          </div>       
                                         </div>
                                       </div>
                                       <div className="product-info">
@@ -797,15 +745,29 @@ const Home = ({ homepage,news,accessories,other_products }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [homepage,news, accessories,other_products] = await Promise.all([
+  const [homepage,news, accessories,other_products,bestsell_products, featured_helmet, featured_protective_gear,featured_accessories,featured_toy_bike] = await Promise.all([
     fetchAPI("/homepage"),
     fetchAPI("/news"),
     fetchAPI("/brands?slug=phu-kien"),
-    fetchAPI("/brands?slug=san-pham-khac")
+    fetchAPI("/brands?slug=san-pham-khac"),
+    fetchAPI("/brands?slug=san-pham-ban-chay"),
+    fetchAPI("/brands?slug=mu-bao-hiem-noi-bat-trong-tuan"),
+    fetchAPI("/brands?slug=do-bao-ho-noi-bat-trong-tuan"),
+    fetchAPI("/brands?slug=phu-kien-noi-bat-trong-tuan"),
+    fetchAPI("/brands?slug=do-choi-xe-noi-bat-trong-tuan")
   ]);
 
   return {
-    props: {homepage,news, accessories: accessories[0].products, other_products: other_products[0].products},
+    props: {
+      homepage,news,
+      accessories: accessories[0].products, 
+      other_products: other_products[0].products, 
+      bestsell_products: bestsell_products[0].products,
+      featured_helmet: featured_helmet[0].products, 
+      featured_protective_gear: featured_protective_gear[0].products, 
+      featured_accessories: featured_accessories[0].products, 
+      featured_toy_bike: featured_toy_bike[0].products
+    },
     revalidate: 1,
   };
 }

@@ -29,7 +29,6 @@ const Detail = ({product,product_hot}) => {
             mq = window.matchMedia("(min-width: 1024px)")
         }
         mQ()
-        console.log(mq)
         if (mq.matches) {
             let imgID = 'imageZoom'
             let zoom = 1.5

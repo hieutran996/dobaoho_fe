@@ -171,7 +171,7 @@ export default function Header() {
                   <div className="header-control">
                     <div className="top-cart-contain">
                       <div className="mini-cart text-xs-center">
-                        <div className="heading-cart icon_shopping">
+                        <div className="heading-cart icon_shopping" id="cart_shopping">
                           <a title="Giỏ hàng" onClick={() => setCart(true)} >
                             <svg viewBox="0 0 19 23"> <path d="M0 22.985V5.995L2 6v.03l17-.014v16.968H0zm17-15H2v13h15v-13zm-5-2.882c0-2.04-.493-3.203-2.5-3.203-2 0-2.5 1.164-2.5 3.203v.912H5V4.647C5 1.19 7.274 0 9.5 0 11.517 0 14 1.354 14 4.647v1.368h-2v-.912z" fill="#222" /> </svg>
                             <span className="cartCount count_item_pr">0</span>

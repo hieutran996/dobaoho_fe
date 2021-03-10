@@ -28,7 +28,7 @@ import '../common/css/style_dbh.css'
 import '../common/css/collection.css'
 import '../common/css/cssCart.css'
 import '../common/css/detail.css'
-
+import '../common/css/animationCart.css'
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});

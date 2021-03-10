@@ -3,11 +3,11 @@ import { Spin,Skeleton,Breadcrumb } from 'antd'
 import Link from "next/link"
 import { fetchAPI } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media"
+import AddToCart from "../../components/addToCart"
 
 const limit = 8
 
 const AllProduct = ({product}) => {
-  console.log(product)
   const [state, setState] = useState({
     crrProducts: [],
     activePage: 1,
@@ -131,17 +131,16 @@ const AllProduct = ({product}) => {
                     state.crrProducts.map((value,index) => {
                       return(
                         <div className="col-xs-6 col-sm-3 col-md-3 col-lg-3 product-col" key={index}>
-                          <div className="item_product_main ">
+                          <div className="item_product_main">
                             <div className="col-item">
                               <div className="product-thumb">
                                 <Link href={`/detail/${value.slug}`}>
                                   <a className="thumb" title={value.name}>
-                                    <img className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} />
+                                    <img className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} id={`parent_cart_${value._id}`} />
                                   </a>
                                 </Link>
-                                
                                 <div className="actions hidden-xs hidden-sm">
-                                  <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
+                                  <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart(value._id)}>
                                     Thêm vào giỏ hàng
                                   </button>        
                                 </div>
@@ -231,62 +230,7 @@ const AllProduct = ({product}) => {
                       <h2 className="title-head margin-top-0"><span>Lọc giá</span></h2>
                     </div>
                     <div className="aside-content filter-group">
-                      <ul>
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-duoi-100-000d">
-                              <input type="checkbox" id="filter-duoi-100-000d"  data-group="Khoảng giá" data-field="price_min" data-text="Dưới 100.000đ" defaultValue="(<100000)" data-operator="OR" />
-                              <i className="fa" />
-                              Giá dưới 100.000đ
-                            </label>
-                          </span>
-                        </li>
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-100-000d-200-000d">
-                              <input type="checkbox" id="filter-100-000d-200-000d"  data-group="Khoảng giá" data-field="price_min" data-text="100.000đ - 200.000đ" defaultValue="(>=100000 AND <=200000)" data-operator="OR" />
-                              <i className="fa" />
-                              100.000đ - 200.000đ							
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-200-000d-500-000d">
-                              <input type="checkbox" id="filter-200-000d-500-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="200.000đ - 500.000đ" defaultValue="(>=200000 AND <=500000)" data-operator="OR" />
-                              <i className="fa" />
-                              200.000đ - 500.000đ							
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-500-000d-1000000d">
-                              <input type="checkbox" id="filter-500-000d-1000000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="500.000đ - 1000000đ" defaultValue="(>=500000 AND <=1000000)" data-operator="OR" />
-                              <i className="fa" />
-                              500.000đ - 1.000.000đ							
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-1000000d-2000000d">
-                              <input type="checkbox" id="filter-1000000d-2000000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="1000000đ - 2000000đ" defaultValue="(>1000000 AND <2000000)" data-operator="OR" />
-                              <i className="fa" />
-                              1.000.000đ - 2.000.000đ							
-                            </label>
-                          </span>
-                        </li>	
-                        <li className="filter-item filter-item--check-box filter-item--green">
-                          <span>
-                            <label htmlFor="filter-tren2000000d">
-                              <input type="checkbox" id="filter-tren2000000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="Trên 2000000đ" defaultValue="(>2000000)" data-operator="OR" />
-                              <i className="fa" />
-                              Giá trên 2.000.000đ
-                            </label>
-                          </span>
-                        </li>
-                      </ul>
+
                     </div>
                   </aside>
                 </div>
