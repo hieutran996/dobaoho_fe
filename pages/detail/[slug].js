@@ -16,7 +16,7 @@ const { Option } = Select;
 
 const limit = 8
 
-const Detail = ({product,product_hot}) => {
+const Detail = ({product,product_hot,news}) => {
     const [state, setState] = useState({
         crrThemes: [],
         activePage: 1,
@@ -367,56 +367,24 @@ const Detail = ({product,product_hot}) => {
                                     </h2>
                                     <div className="section_content">
                                         <div className="mini">
-                                        <div className="item item-blog-index">
-                                            <div className="blog-img">
-                                            <a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light">
-                                                <img className="lazyload loaded" src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-6.jpg?v=1603964981993" data-src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-6.jpg?v=1603964981993" alt="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light" data-was-processed="true" />
-                                            </a>
-                                            </div>
-                                            <div className="blog-content">
-                                            <h3><a href="/dewalt-cong-bo-hai-san-pham-moi-bluetooth-radio-va-task-light" title="DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light">DEWALT công bố hai sản phẩm mới: Bluetooth® Radio và Task Light</a> </h3>
-                                            </div>
-                                        </div>
-                                        <div className="item item-blog-index">
-                                            <div className="blog-img">
-                                            <a href="/dewalt-hoi-sinh-dong-luu-tru-di-dong-voi-toughsystem-2-0" title="DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0">
-                                                <img className="lazyload loaded" src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-5.jpg?v=1603964952870" data-src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-5.jpg?v=1603964952870" alt="DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0" data-was-processed="true" />
-                                            </a>
-                                            </div>
-                                            <div className="blog-content">
-                                            <h3><a href="/dewalt-hoi-sinh-dong-luu-tru-di-dong-voi-toughsystem-2-0" title="DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0">DEWALT hồi sinh dòng lưu trữ di động với ToughSystem 2.0</a> </h3>
-                                            </div>
-                                        </div>
-                                        <div className="item item-blog-index">
-                                            <div className="blog-img">
-                                            <a href="/dewalt-cong-bo-kim-bam-hang-rao-khong-day-20v-max" title="DEWALT công bố kim bấm hàng rào không dây 20V MAX *">
-                                                <img className="lazyload loaded" src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-4.jpg?v=1603964926610" data-src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-4.jpg?v=1603964926610" alt="DEWALT công bố kim bấm hàng rào không dây 20V MAX *" data-was-processed="true" />
-                                            </a>
-                                            </div>
-                                            <div className="blog-content">
-                                            <h3><a href="/dewalt-cong-bo-kim-bam-hang-rao-khong-day-20v-max" title="DEWALT công bố kim bấm hàng rào không dây 20V MAX *">DEWALT công bố kim bấm hàng rào không dây 20V MAX *</a> </h3>
-                                            </div>
-                                        </div>
-                                        <div className="item item-blog-index">
-                                            <div className="blog-img">
-                                            <a href="/dewalt-cong-bo-may-cha-nham-to-20v-max-xr-1-4" title="DEWALT công bố Máy chà nhám tờ 20V MAX * XR 1/4">
-                                                <img className="lazyload loaded" src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-3.jpg?v=1603964903370" data-src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-3.jpg?v=1603964903370" alt="DEWALT công bố Máy chà nhám tờ 20V MAX * XR 1/4" data-was-processed="true" />
-                                            </a>
-                                            </div>
-                                            <div className="blog-content">
-                                            <h3><a href="/dewalt-cong-bo-may-cha-nham-to-20v-max-xr-1-4" title="DEWALT công bố Máy chà nhám tờ 20V MAX * XR 1/4">DEWALT công bố Máy chà nhám tờ 20V MAX * XR 1/4</a> </h3>
-                                            </div>
-                                        </div>
-                                        <div className="item item-blog-index">
-                                            <div className="blog-img">
-                                            <a href="/dewalt-ra-mat-hai-giai-phap-sac-moi" title="DEWALT ra mắt hai giải pháp sạc mới">
-                                                <img className="lazyload loaded" src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-2.jpg?v=1603964877570" data-src="//bizweb.dktcdn.net/thumb/large/100/408/894/articles/tin-tuc-2.jpg?v=1603964877570" alt="DEWALT ra mắt hai giải pháp sạc mới" data-was-processed="true" />
-                                            </a>
-                                            </div>
-                                            <div className="blog-content">
-                                            <h3><a href="/dewalt-ra-mat-hai-giai-phap-sac-moi" title="DEWALT ra mắt hai giải pháp sạc mới">DEWALT ra mắt hai giải pháp sạc mới</a> </h3>
-                                            </div>
-                                        </div>
+                                            {
+                                                news.map((value) => {
+                                                    return(
+                                                        <div className="item item-blog-index">
+                                                            <div className="blog-img">
+                                                                <Link href={`/detail/${value.slug}`}>
+                                                                    <a title={value.name} className="thumb">
+                                                                        <Image layout='responsive' width={100} height={65} src={getStrapiMedia(value.image)} className="lazyload loaded" alt={value.name} />
+                                                                    </a>
+                                                                </Link>
+                                                            </div>
+                                                            <div className="blog-content">
+                                                            <h3><Link href={`/detail/${value.slug}`}><a title={value.name}>{value.name}</a></Link></h3>
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                         </div>
                                     </div>
                                     </div>
@@ -449,8 +417,9 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const product = await fetchAPI(`/products?slug=${params.slug}`);
     const product_hot = await fetchAPI(`/brands?slug=san-pham-noi-bat`);
+    const news = await fetchAPI(`/news`);
     return {
-        props: { product: product[0], product_hot: product_hot[0].products  },
+        props: { product: product[0], product_hot: product_hot[0].products, news  },
         revalidate: 1,
     };
 }

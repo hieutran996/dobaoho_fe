@@ -6,7 +6,7 @@ import LinkConfig from "../link_config"
 import {
     useRecoilState
   } from 'recoil';
-import {statusMenubar} from '../../recoil/atom';
+import {StatusMenubar} from '../../recoil/atom';
 import { Menu } from 'antd';
 import { HomeOutlined,UsergroupAddOutlined, ShoppingOutlined, PhoneOutlined,SolutionOutlined } from '@ant-design/icons';
 
@@ -16,7 +16,7 @@ const { SubMenu } = Menu;
 const rootSubmenuKeys = ['sub1'];
 
 function MenubarMobile() {
-    const [openMenubar,setOpenMenubar] = useRecoilState(statusMenubar);
+    const [openMenubar,setOpenMenubar] = useRecoilState(StatusMenubar);
 
     const [openKeys, setOpenKeys] = React.useState(['']);
 

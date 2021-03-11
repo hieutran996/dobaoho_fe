@@ -15,7 +15,33 @@ import { getStrapiMedia } from "../lib/media";
 import Link from "next/link";
 import { Carousel } from 'antd';
 import { useState } from 'react';
+import Countdown from 'react-countdown';
 
+// Random component
+const Completionist = () => <span>You are good to go!</span>;
+ 
+// Renderer callback with condition
+const renderer = ({ days,hours, minutes, seconds }) => {
+  return (
+    <div className="clockdiv" style={{display: 'block !important', paddingLeft: 5}}>
+      <div className="date-time time-day">
+        <span className="days"><b>{days}</b><small>Ngày</small></span>
+      </div>
+      <span className="clocks" />
+      <div className="date-time time-hour">
+        <span className="hours "><b>{hours}</b><small>Giờ</small></span>
+      </div>
+      <span className="clocks" />
+      <div className="date-time time-min">
+        <span className="minutes "><b>{minutes}</b><small>Phút</small></span>
+      </div>
+      <span className="clocks" />
+      <div className="date-time time-sec">
+        <span className="seconds"><b>{seconds}</b><small>Giây</small></span>
+      </div>
+    </div>
+  );
+};
 
 
 const Home = ({ homepage,news,accessories,other_products,bestsell_products,featured_helmet,featured_protective_gear,featured_accessories,featured_toy_bike }) => {
@@ -57,44 +83,55 @@ const Home = ({ homepage,news,accessories,other_products,bestsell_products,featu
                   <div className="section_content">
                     <div className="slick_deal_hot slick-initialized slick-slider">
                       <div aria-live="polite" className="slick-list draggable"><div className="slick-track" role="listbox"><div className="item slick-slide slick-current slick-active" style={{width: '100%'}} data-slick-index={0} aria-hidden="false" tabIndex={-1} role="option" aria-describedby="slick-slide10">
-                            <div className="col-item pt-0">
-                              {/* <div className="sale-label sale-top-right">
-                                <span>
-                                  - 10% 
-                                </span>
-                              </div> */}
-                              <div className="product-thumb">
-                                <Link href={`/detail/mu-fullface-ls-2-challenger-carbon-ff-327`} title="Mũ Fullface LS2 Challenger Carbon FF327">
-                                  <a className="thumb" title="Mũ Fullface LS2 Challenger Carbon FF327" id="parent_cart_ls-2-challenger-carbon">
-                                    <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/LS2-FF327-Challenger-Carbon.jpg" alt="Mũ Fullface LS2 Challenger Carbon FF327" />
-                                  </a>
-                                </Link>
-                                <div className="actions hidden-xs hidden-sm">
-                                  <div className="variants">
-                                    <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart("ls-2-challenger-carbon")}>
-                                      Thêm vào giỏ hàng
-                                    </button>
-                                  </div>       
-                                </div>
-                              </div>
-                              <div className="clockdiv" data-countdown="2021/12/12" style={{display: 'block !important'}}><div className="date-time time-day"><span className="days"><b>3</b><small>Ngày</small></span></div><span className="clocks" /><div className="date-time time-hour"><span className="hours "><b>08</b><small>Giờ</small></span></div><span className="clocks" /><div className="date-time time-min"><span className="minutes "><b>32</b><small>Phút</small></span></div><span className="clocks" /><div className="date-time time-sec"><span className="seconds"><b>06</b><small>Giây</small></span></div></div>
-                              <div className="product-info">
-                                <div className="product_type" />
-                                <h3 className="title"> <a href="/may-khoan-pin-18v-dewalt-dcd796m2-1" title="Mũ Fullface LS2 Challenger Carbon FF327" tabIndex={0}>Mũ LS2 Challenger Carbon FF327 </a> </h3>
-                                <div className="content">
-                                  <div className="item-price">    
-                                    <div className="price-box"> 
-                                      <span className="special-price"> 
-                                        9,900,000₫
-                                      </span>
-                                      {/* <span className="old-price"> 
-                                        900,000₫
-                                      </span> */}
+                            {
+                              featured_helmet.map((value) => {
+                                if (value.slug === "mu-fullface-ls-2-challenger-carbon-ff-327") {
+                                  return(
+                                    <div className="col-item pt-0" key={value._id}>
+                                      <div className="sale-label sale-top-right">
+                                        <span>
+                                          - 10% 
+                                        </span>
+                                      </div>
+                                      <div className="product-thumb">
+                                        <Link href={`/detail/${value.slug}`} title={value.name}>
+                                          <a className="thumb" title={value.name} id={`parent_cart_${value._id}`}>
+                                            <ImageLazy layout='fill' className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} />
+                                          </a>
+                                        </Link>
+                                        <div className="actions hidden-xs hidden-sm">
+                                          <div className="variants">
+                                            <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart(value)}>
+                                              Thêm vào giỏ hàng
+                                            </button>
+                                          </div>       
+                                        </div>
+                                      </div>
+                                      <Countdown
+                                        date={Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30}
+                                        renderer={renderer}
+                                      />
+                                      <div className="product-info">
+                                        <div className="product_type" />
+                                        <h3 className="title"><Link href={`/detail/${value.slug}`} title={value.name}><a title={value.name} >{value.name} </a></Link></h3>
+                                        <div className="content">
+                                          <div className="item-price">    
+                                            <div className="price-box"> 
+                                              <span className="special-price"> 
+                                                9,900,000₫
+                                              </span>
+                                              {/* <span className="old-price"> 
+                                                900,000₫
+                                              </span> */}
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                                  )
+                                }
+                              })
+                            }
                           </div>
                         </div>
                       </div>
@@ -117,218 +154,40 @@ const Home = ({ homepage,news,accessories,other_products,bestsell_products,featu
                   </div>
                   <div className="section_content">
                     <div className="row">
-                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bua-khoan-soi-thuy-tinh-3-lb" className="thumb" title="Mũ Ego E-6">
-                              <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/ego-e6.jpg" alt="Mũ Ego E-6" />
-                            </a>
-                            <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568520" encType="multipart/form-data">
-                                <input type="hidden" name="variantId" defaultValue={37701058} />
-                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                  Thêm vào giỏ hàng
-                                </button>
-                              </form>       
-                            </div>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bua-khoan-soi-thuy-tinh-3-lb" title="Mũ Ego E-6">Mũ Ego E-6 </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">880,000₫</span>
+                      {
+                        bestsell_products.map((value) => {
+                          return(
+                            <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item" key={value._id}>
+                              <div className="col-item">
+                                <div className="product-thumb">
+                                  <Link href={`/detail/${value.slug}`} title={value.name}>
+                                    <a className="thumb" title={value.name} id={`parent_cart_${value._id}`}>
+                                      <ImageLazy layout='fill' className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} />
+                                    </a>
+                                  </Link>
+                                  <div className="actions hidden-xs hidden-sm">
+                                    <div className="variants">
+                                      <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart(value)}>
+                                        Thêm vào giỏ hàng
+                                      </button>
+                                    </div>       
+                                  </div>
+                                </div>
+                                <div className="product-info">
+                                  <h3 className="title"><Link href={`/detail/${value.slug}`} title={value.name}><a title={value.name}>{value.name}</a></Link></h3>
+                                  <div className="content">
+                                    <div className="item-price">    
+                                      <div className="price-box"> 
+                                        <span className="special-price">{value.price}₫</span>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="Mũ Ego E-7">
-                             <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/EGO-E-7-Gloss-Black-Orange.jpg" alt="Mũ Ego E-7" />                            </a>
-                            <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568517" encType="multipart/form-data">
-                                <input type="hidden" name="variantId" defaultValue={37701054} />
-                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                  Thêm vào giỏ hàng
-                                </button>
-                              </form>       
-                            </div>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="Mũ Ego E-7">Mũ Ego E-7 Gloss Black Orange</a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">780,000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="Mũ Ego E-8">
-                             <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/ego-e8.jpg" alt="Mũ Ego E-8" />                            </a>
-                            <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568517" encType="multipart/form-data">
-                                <input type="hidden" name="variantId" defaultValue={37701054} />
-                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                  Thêm vào giỏ hàng
-                                </button>
-                              </form>       
-                            </div>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="Mũ Ego E-8">Mũ Ego E-8 </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">780,000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="Mũ Ego E-8 Plus">
-                             <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/ego-e8-plus.jpg" alt="Mũ Ego E-8 Plus" />                            </a>
-                            <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568517" encType="multipart/form-data">
-                                <input type="hidden" name="variantId" defaultValue={37701054} />
-                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                  Thêm vào giỏ hàng
-                                </button>
-                              </form>       
-                            </div>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="Mũ Ego E-8 Plus">Mũ Ego E-8 Plus </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">820,000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/bo-thay-lop-co-le-mo-men-lai" className="thumb" title="Mũ Ego E-8 SV">
-                             <ImageLazy layout='fill'  className="lazyload loaded" src="/images/homepage/banchay/ego-e8-sv.jpg" alt="Mũ Ego E-8 SV" />                            </a>
-                            <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568517" encType="multipart/form-data">
-                                <input type="hidden" name="variantId" defaultValue={37701054} />
-                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                  Thêm vào giỏ hàng
-                                </button>
-                              </form>       
-                            </div>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/bo-thay-lop-co-le-mo-men-lai" title="Mũ Ego E-8 SV">Mũ Ego E-8 SV </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">820,000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Ego E-9">
-                            <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/ego-e9-black_yellow.jpg" alt="Mũ Ego E-9" />
-                            </a>
-                            <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
-                                <input type="hidden" name="variantId" defaultValue={37700810} />
-                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                  Thêm vào giỏ hàng
-                                </button>
-                              </form>       
-                            </div>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Ego E-9">Mũ Ego E-9 </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">980,000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 978 Plus">
-                            <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-978-plus.jpg" alt="Mũ Yohe 978 Plus" />
-                            </a>
-                            <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
-                                <input type="hidden" name="variantId" defaultValue={37700810} />
-                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                  Thêm vào giỏ hàng
-                                </button>
-                              </form>       
-                            </div>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 978 Plus">Mũ Yohe 978 Plus </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">1,400,000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-6 item">
-                        <div className="col-item">
-                          <div className="product-thumb">
-                            <a href="/may-thoi-khi-co-day-khong-day-20v-max" className="thumb" title="Mũ Yohe 981 Matt Black">
-                            <ImageLazy layout='fill' className="lazyload loaded" src="/images/homepage/banchay/yohe-981-matt_black.jpg" alt="Mũ Yohe 981 Matt Black" />
-                            </a>
-                            <div className="actions hidden-xs hidden-sm">
-                              <form action="/cart/add" method="post" className="variants" data-id="product-actions-19568364" encType="multipart/form-data">
-                                <input type="hidden" name="variantId" defaultValue={37700810} />
-                                <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng">
-                                  Thêm vào giỏ hàng
-                                </button>
-                              </form>       
-                            </div>
-                          </div>
-                          <div className="product-info">
-                            <h3 className="title"> <a href="/may-thoi-khi-co-day-khong-day-20v-max" title="Mũ Yohe 981 Matt Black">Mũ Yohe 981 Matt Black </a> </h3>
-                            <div className="content">
-                              <div className="item-price">    
-                                <div className="price-box"> 
-                                  <span className="special-price">1,500,000₫</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                          )
+                        })
+                      }
                     </div>
                   </div>
                 </div>
@@ -360,13 +219,13 @@ const Home = ({ homepage,news,accessories,other_products,bestsell_products,featu
                           </a>
                         </h3>
                         <div className="menu-cat">
-                          <a href="/dung-cu-dien" title="AGV">AGV</a>
-                          <a href="/dung-cu-cam-tay" title="LS2">LS2</a>
-                          <a href="/phu-kien" title="Yohe">Yohe</a>
-                          <a href="/do-bao-ho" title="Ego">Ego</a>
-                          <a href="/ngoai-troi" title="BullDog">BullDog</a>
+                          <Link href="/product/ls-2" title="LS2"><a title="LS2">LS2</a></Link>
+                          <Link href="/product/yohe" title="Yohe"><a title="Yohe">Yohe</a></Link>
+                          <Link href="/product/ego" title="Ego"><a title="Ego">Ego</a></Link>
+                          <Link href="/product/bulldog" title="BullDog"><a title="BullDog">BullDog</a></Link>
+                          <Link href="/product/zeus" title="Zeus"><a title="Zeus">Zeus</a></Link>
                         </div>
-                        <a className="view-more" href="#" title="Xem tất cả">Xem tất cả</a>
+                        <Link href="/product" title="Xem tất cả"><a className="view-more" title="Xem tất cả">Xem tất cả</a></Link>
                       </div>
                     </div>
                   </div>
@@ -470,7 +329,7 @@ const Home = ({ homepage,news,accessories,other_products,bestsell_products,featu
                                   <div className="item col-lg-3 col-md-3 col-sm-3 col-xs-6" key={index}>
                                     <div className="col-item" >
                                       <div className="product-thumb">
-                                        <Link href={`/detail/${value.url}`} title={value.name}>
+                                        <Link href={`/detail/${value.slug}`} title={value.name}>
                                           <a className="thumb" title={value.name} id={`parent_cart_${value._id}`}>
                                             <ImageLazy layout='fill' className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} />
                                           </a>
@@ -478,14 +337,14 @@ const Home = ({ homepage,news,accessories,other_products,bestsell_products,featu
                                         <div className="actions hidden-xs hidden-sm">
                                           <div action="/cart/add" method="post" className="variants">
                                             <input type="hidden" name="variantId" defaultValue={37700810} />
-                                            <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart(value._id)}>
+                                            <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart(value)}>
                                               Thêm vào giỏ hàng
                                             </button>
                                           </div>       
                                         </div>
                                       </div>
                                       <div className="product-info">
-                                        <h3 className="title"> <Link href={`/detail/${value.url}`} title={value.name}>{value.name}</Link> </h3>
+                                        <h3 className="title"> <Link href={`/detail/${value.slug}`} title={value.name}>{value.name}</Link> </h3>
                                         <div className="content">
                                           <div className="item-price">    
                                             <div className="price-box"> 

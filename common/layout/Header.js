@@ -1,20 +1,21 @@
-import React,{ useContext, useState } from 'react'
+import React,{ useContext, useEffect, useState } from 'react'
 import LinkConfig from "../link_config"
 //Recoil
 import {
   useSetRecoilState
 } from 'recoil'
-import { openCart, statusMenubar } from '../../recoil/atom'
+import { OpenCart, StatusMenubar } from '../../recoil/atom'
 import { GlobalContext } from "../../pages/_app";
 import { getStrapiMedia } from "../../lib/media";
 import { useRouter } from 'next/router'
 
 
 export default function Header() {
-  const setCart = useSetRecoilState(openCart);
-  const setMenubar = useSetRecoilState(statusMenubar);
+  const setCart = useSetRecoilState(OpenCart);
+  const setMenubar = useSetRecoilState(StatusMenubar);
   const { logo } = useContext(GlobalContext);
   const [valueSearch, setValueSearch] = useState('')
+  const [listCart, setListCart] = useState([])
   const router = useRouter()
 
   const onChangeValueSearch = (event) => {
@@ -28,6 +29,17 @@ export default function Header() {
   const onClickSearch = () => {
     router.push(`/search?query=${valueSearch}`)
   }
+  
+  useEffect(() => {
+    var currentListCart = localStorage.getItem('listcart');
+    if (currentListCart === null) {
+        currentListCart = []
+    } else {
+        currentListCart = JSON.parse(currentListCart)
+    }
+
+    setListCart(currentListCart)
+  }, [])
   
   return (
     <header className="header">
@@ -174,7 +186,7 @@ export default function Header() {
                         <div className="heading-cart icon_shopping" id="cart_shopping">
                           <a title="Giỏ hàng" onClick={() => setCart(true)} >
                             <svg viewBox="0 0 19 23"> <path d="M0 22.985V5.995L2 6v.03l17-.014v16.968H0zm17-15H2v13h15v-13zm-5-2.882c0-2.04-.493-3.203-2.5-3.203-2 0-2.5 1.164-2.5 3.203v.912H5V4.647C5 1.19 7.274 0 9.5 0 11.517 0 14 1.354 14 4.647v1.368h-2v-.912z" fill="#222" /> </svg>
-                            <span className="cartCount count_item_pr">0</span>
+                            <span className="cartCount count_item_pr">{listCart.length}</span>
                           </a>
                         </div> 	
                       </div>
@@ -242,7 +254,7 @@ export default function Header() {
                     <div className="heading-cart">
                       <a title="Giỏ hàng" onClick={() => setCart(true)}>
                         <svg viewBox="0 0 19 23"> <path d="M0 22.985V5.995L2 6v.03l17-.014v16.968H0zm17-15H2v13h15v-13zm-5-2.882c0-2.04-.493-3.203-2.5-3.203-2 0-2.5 1.164-2.5 3.203v.912H5V4.647C5 1.19 7.274 0 9.5 0 11.517 0 14 1.354 14 4.647v1.368h-2v-.912z" fill="#222" /> </svg>
-                        <span className="cartCount count_item_pr" id="cart-total">0</span>
+                        <span className="cartCount count_item_pr" id="cart-total">{listCart.length}</span>
                       </a>
                     </div>	
                   </div>

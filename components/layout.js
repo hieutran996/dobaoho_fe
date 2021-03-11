@@ -1,11 +1,11 @@
 //Recoil
 import { useRecoilState } from 'recoil'
-import { statusMenubar } from '../recoil/atom'
+import { StatusMenubar } from '../recoil/atom'
 //layout
 import Footer from '../common/layout/Footer'
 
 const Layout = ({ children }) => {
-    const [status, setStatus] = useRecoilState(statusMenubar);
+    const [status, setStatus] = useRecoilState(StatusMenubar);
 
     return(
         <div id="container">

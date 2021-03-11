@@ -140,7 +140,7 @@ const AllProduct = ({product}) => {
                                   </a>
                                 </Link>
                                 <div className="actions hidden-xs hidden-sm">
-                                  <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart(value._id)}>
+                                  <button className="button btn-cart add_to_cart" title="Thêm vào giỏ hàng" onClick={() => AddToCart(value)}>
                                     Thêm vào giỏ hàng
                                   </button>        
                                 </div>

@@ -209,13 +209,13 @@
     -ms-flex-negative: 0!important;
     flex-shrink: 0!important;
 }
-.symbol.symbol-70>img {
+.symbol.symbol-70 img {
     width: 100%;
     max-width: 70px;
     height: 70px;
 }
 @media (min-width: 1400px){
-    .symbol>img {
+    .symbol img {
         width: 100%;
         max-width: 50px;
         height: 50px;

@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CloseOutlined, PlusOutlined,MinusOutlined } from '@ant-design/icons';
 import Link from "next/link";
+import ImageLazy from 'next/image'
+import { getStrapiMedia } from "../lib/media";
 //Recoil
 import {
     useRecoilState
   } from 'recoil';
-import {openCart} from '../recoil/atom';
+import {OpenCart,AddToCart} from '../recoil/atom';
 
 function Cart() {
-    const [statusCart,setStatusCart] = useRecoilState(openCart);
+    const [statusCart,setStatusCart] = useRecoilState(OpenCart);
+    const [listaddToCart, setListAddToCart] = useRecoilState(AddToCart)
+
+    useEffect(() => {
+        var currentListCart = localStorage.getItem('listcart')
+        if (currentListCart === null) {
+            currentListCart = []
+        } else {
+            currentListCart = JSON.parse(currentListCart)
+        }
+
+        currentListCart
+
+        setListAddToCart(currentListCart)
+    }, [])
+
+    console.log(listaddToCart)
+
     return (
         <div>
             <div id="kt_quick_cart" className={`offcanvas offcanvas-right p-10 ${statusCart && 'offcanvas-on'}`}>
@@ -24,42 +43,51 @@ function Cart() {
                 <div className="offcanvas-content">
                     {/*begin::Wrapper*/}
                     <div className="offcanvas-wrapper mb-5 scroll-pull scroll ps ps--active-y scroll_cart" style={{overflow: 'hidden'}}>
-                        {/*begin::Item*/}
-                        <div className="d-flex align-items-center justify-content-between py-8">
-                            <div className="d-flex flex-column mr-2">
-                            <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">Mũ AGV</a>
-                            <span className="text-muted">Mũ bảo hiểm</span>
-                            <div className="d-flex align-items-center mt-2">
-                                <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">20,000,000đ</span>
-                                <span className="text-muted mr-1">x</span>
-                                <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">1</span>
-                                <a href="#" className="btn btn-xs btn-light-success btn-icon mr-2">
-                                <MinusOutlined />
-                                </a>
-                                <a href="#" className="btn btn-xs btn-light-success btn-icon">
-                                <PlusOutlined />
-                                </a>
-                            </div>
-                            </div>
-                            <a href="#" className="symbol symbol-70 flex-shrink-0">
-                            <img src="https://motorstore.vn/wp-content/uploads/2018/03/AGV-K1-BLACK-800x800.jpg" alt="AGV" />
-                            </a>
-                        </div>
-                        {/*end::Item*/}
-                    
-                    <div className="separator separator-solid" />
-                    {/*end::Separator*/}
+                        {
+                            listaddToCart.map((value) => {
+                                return(
+                                    <>
+                                        {/*begin::Item*/}
+                                        <div className="d-flex align-items-center justify-content-between py-8" key={value._id}>
+                                            <div className="d-flex flex-column mr-2">
+                                            <a href="#" className="font-weight-bold text-dark-75 font-size-lg text-hover-primary">{value.name}</a>
+                                            <span className="text-muted">Giá x Số lượng</span>
+                                            <div className="d-flex align-items-center mt-2">
+                                                <span className="font-weight-bold mr-1 text-dark-75 font-size-lg">{new Intl.NumberFormat({ style: 'currency', currency: 'VND' }).format(value.price)}đ</span>
+                                                <span className="text-muted mr-1">x</span>
+                                                <span className="font-weight-bold mr-2 text-dark-75 font-size-lg">{value.count}</span>
+                                                <a href="#" className="btn btn-xs btn-light-success btn-icon mr-2">
+                                                <MinusOutlined />
+                                                </a>
+                                                <a href="#" className="btn btn-xs btn-light-success btn-icon">
+                                                <PlusOutlined />
+                                                </a>
+                                            </div>
+                                            </div>
+                                            <Link href={`/detail/${value.slug}`} title={value.name}>
+                                                <a className="thumb" title={value.name} id={`parent_cart_${value._id}`}>
+                                                    <ImageLazy width={85} height={85} className="lazyload loaded" src={getStrapiMedia(value.image[0])} alt={value.name} />
+                                                </a>
+                                            </Link>
+                                        </div>
+                                        {/*end::Item*/}
+                                        <div className="separator separator-solid" />
+                                        {/*end::Separator*/}
+                                    </>
+                                )
+                            })
+                        }
                     </div>
                     {/*end::Wrapper*/}
                     {/*begin::Purchase*/}
-                    <div className="offcanvas-footer" kt-hidden-height={112} style={{}}>
+                    <div className="offcanvas-footer">
                     <div className="d-flex align-items-center justify-content-between mb-4">
                         <span className="font-weight-bold text-muted font-size-sm mr-2">Tạm tính</span>
                         <span className="font-weight-bolder text-dark-50 text-right">20,000,000đ</span>
                     </div>
                     <div className="d-flex align-items-center justify-content-between mb-4">
                         <span className="font-weight-bold text-muted font-size-sm mr-2">Phí vận chuyển</span>
-                        <span className="font-weight-bolder text-dark-50 text-right">30,000đ</span>
+                        <span className="font-weight-bolder text-dark-50 text-right">Miễn Phí</span>
                     </div>
                     <div className="d-flex align-items-center justify-content-between mb-7">
                         <span className="font-weight-bold font-size-sm mr-2">Tổng cộng</span>
